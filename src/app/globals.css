@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* ========================= */
+/* 🎭 Custom Fonts */
+/* ========================= */
+
+@font-face {
+  font-family: "VastagoGrotesk";
+  src: url("/fonts/VastagoGrotesk-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VastagoGrotesk";
+  src: url("/fonts/VastagoGrotesk-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VastagoGrotesk";
+  src: url("/fonts/VastagoGrotesk-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VastagoGrotesk";
+  src: url("/fonts/VastagoGrotesk-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VastagoGrotesk";
+  src: url("/fonts/VastagoGrotesk-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 🎭 Utility Classes */
+.font-vastago { font-family: "VastagoGrotesk", sans-serif; }
+.font-vastago-bold { font-family: "VastagoGrotesk", sans-serif; font-weight: 700; }
+.font-vastago-light { font-family: "VastagoGrotesk", sans-serif; font-weight: 300; }
+
+/* ========================= */
+/* 🎭 Base Theme Setup */
+/* ========================= */
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: #030438;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================= */
+/* 🌟 Floating, Buzzing, and Glowing Effects */
+/* ========================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-left {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-right {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes buzz {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(3deg) scale(1.05); }
+  50% { transform: rotate(-3deg) scale(1.05); }
+  75% { transform: rotate(3deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-float-left {
+    animation: float-left 5s ease-in-out infinite;
+  }
+  .animate-float-right {
+    animation: float-right 5s ease-in-out infinite;
+  }
+  .animate-buzz {
+    animation: buzz 0.3s ease-in-out 3;
+  }
+  .animate-shimmer {
+    animation: shimmer 1.5s linear infinite;
+  }
+}
+
+/* ========================= */
+/* 🌟 Rotating & Glowing Stars */
+/* ========================= */
+@keyframes rotateGlow {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(10deg) scale(1.1); opacity: 0.8; }
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@layer utilities {
+  .animate-rotate-glow {
+    animation: rotateGlow 4s ease-in-out infinite;
+  }
+  .animate-spin-slow {
+    animation: spinSlow 10s linear infinite;
+  }
+}
+
+/* ========================= */
+/* 🔽 Smooth Bouncing Scroll Indicator */
+/* ========================= */
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounceSlow 2.5s ease-in-out infinite;
+  }
+}
