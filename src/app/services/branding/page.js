@@ -63,7 +63,7 @@ const BrandingServicePage = () => {
           {/* Title and Description Section */}
           <div className="mb-0 sm:mb-0 px-4 sm:px-8 md:px-12">
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              In today's competitive market, effective branding is essential for success. At Evietek, we understand that strong branding builds recognition and trust among customers. For instance, think about how instantly recognizable the golden arches of McDonald's are. That's the power of branding. Our branding services are designed to help your business create a memorable identity that resonates with your target audience. 
+              In today`s competitive market, effective branding is essential for success. At Evietek, we understand that strong branding builds recognition and trust among customers. For instance, think about how instantly recognizable the golden arches of McDonalds are. That`s the power of branding. Our branding services are designed to help your business create a memorable identity that resonates with your target audience. 
             </p>
           </div>
 
@@ -71,7 +71,7 @@ const BrandingServicePage = () => {
           <div className="mb-0 sm:mb-0">
             <WhyChoose
               heading="Why Choose Evietek For Branding Services"
-              description="Evietek's branding solutions are designed to establish a unique identity for your business, enhance brand recognition, and build lasting customer relationships."
+              description="Evietek`s branding solutions are designed to establish a unique identity for your business, enhance brand recognition, and build lasting customer relationships."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -94,7 +94,7 @@ const BrandingServicePage = () => {
                   description: "Flexible branding solutions that evolve with your business."
                 }
               ]}
-              bottomDescription="Our professionals will learn your brand values and goals to ensure our solutions suit your vision. Evietek's branding skills may wow your target audience in a competitive market."
+              bottomDescription="Our professionals will learn your brand values and goals to ensure our solutions suit your vision. Evietek`s branding skills may wow your target audience in a competitive market."
             />
           </div>
 
@@ -126,7 +126,7 @@ const BrandingServicePage = () => {
                 width: 400,
                 height: 300
               }}
-              bottomDescription="We deliver data-driven strategies, creative assets, and ongoing support to elevate your brand's visibility and drive growth. "
+              bottomDescription="We deliver data-driven strategies, creative assets, and ongoing support to elevate your brand`s visibility and drive growth. "
               additionalFeatures={[
                 "Comprehensive Brand Strategy",
                 "Consistent Visual Identity",

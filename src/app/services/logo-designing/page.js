@@ -59,17 +59,17 @@ const LogoDesignServicePage = () => {
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
             <p className="text-gray-600 leading-relaxed">
-              At Evietek, we understand the power of a well-designed logo. It's not just a graphic; it's the face of your brand. A professional logo establishes trust and makes your business memorable. When people see a strong logo, like the iconic golden arches or a swoosh, they instantly connect it to the brand's identity and promise.
+              At Evietek, we understand the power of a well-designed logo. It`s not just a graphic; it`s the face of your brand. A professional logo establishes trust and makes your business memorable. When people see a strong logo, like the iconic golden arches or a swoosh, they instantly connect it to the brand`s identity and promise.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              An attractive logo has the power to convey your brand's personality and principles instantly, making a long-lasting impact on consumers. In order to establish a name for oneself and differentiate oneself from the competition, it is essential.
+              An attractive logo has the power to convey your brand`s personality and principles instantly, making a long-lasting impact on consumers. In order to establish a name for oneself and differentiate oneself from the competition, it is essential.
             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0">
             <WhyChoose
-              heading="Why Choose Evietek's Logo Design Services"
+              heading="Why Choose Evietek`s Logo Design Services"
               description="A strong logo is the foundation of your brand identity. At Evietek, we craft visually compelling, meaningful and memorable logos that help your business stand out. Our design process blends creativity with strategy to deliver a logo that truly represents your brand."
               features={[
                 {
@@ -89,14 +89,14 @@ const LogoDesignServicePage = () => {
                   title: "Scalable Solutions for All Business Needs",
                 }
               ]}
-              bottomDescription="At Evietek, we don't just design logos—we build identities that leave a lasting impression. Let's craft your brand's visual signature today!"
+              bottomDescription="At Evietek, we don`t just design logos—we build identities that leave a lasting impression. Let`s craft your brand`s visual signature today!"
             />
           </div>
 
           {/* Features Section */}
           <div className="mb-0">
             <Feature
-              heading="Features of Evietek's Logo Design Services"
+              heading="Features of Evietek`s Logo Design Services"
               description="We create logos that are not just visually appealing but also strategically designed to strengthen your brand identity. At Evietek, we blend creativity with precision to deliver logos that leave a lasting impact."
               features={[
                 {

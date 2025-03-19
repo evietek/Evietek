@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "What about revisions?",
     answer:
-      " We’ll refine until it’s perfect. Pricing is flexible and customization is standard. At Evietek, we make sure every client’s needs are met seamlessly.",
+      " We’ll refine until it’s perfect. Pricing is flexible and customization is standard. At Evietek, we make sure every client`s needs are met seamlessly.",
   },
 ];
 
@@ -54,7 +54,7 @@ const ContentWritingServicePage = () => {
           <div className="mb-0 px-12">
 
             <p className="text-gray-600 leading-relaxed">
-            At Evietek, we know that great content drives results. Whether it’s making your brand stand out in a crowded digital space or engaging your audience with information they can’t ignore, quality content is the foundation of success. Content writing services give your business the boost it needs by delivering compelling words that resonate. These services are designed to elevate your online presence by aligning your message with your audience's expectations.  
+            At Evietek, we know that great content drives results. Whether it’s making your brand stand out in a crowded digital space or engaging your audience with information they can’t ignore, quality content is the foundation of success. Content writing services give your business the boost it needs by delivering compelling words that resonate. These services are designed to elevate your online presence by aligning your message with your audience`s expectations.  
 
 We can assist you in reaching your marketing objectives and developing a stronger relationship with your target audience by applying our skills in creating interesting and educational material. Collaborate with Evietek to produce content that does more than just attract viewers; it motivates them to take action.  
             </p>
@@ -64,7 +64,7 @@ We can assist you in reaching your marketing objectives and developing a stronge
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Content Writing Services"
-              description="Evietek’s expert content writing services enhance your brand’s voice and online presence. Helping you reach your audience with interesting and useful content is our team of professional writers' specialty. Allow us to elevate your brand through high-quality, customized content that drives results. "
+              description="Evietek’s expert content writing services enhance your brand’s voice and online presence. Helping you reach your audience with interesting and useful content is our team of professional writers` specialty. Allow us to elevate your brand through high-quality, customized content that drives results. "
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -91,7 +91,7 @@ We can assist you in reaching your marketing objectives and developing a stronge
           <div className="mb-0">
             <Feature
               heading="Feature of Content Writing Services"
-              description="Evietek’s content writing services are crafted to engage, inform and drive conversions. Our experienced writers specialize in producing compelling, SEO-friendly content that appeals to your target audience. Allow us to assist you in increasing your brand's online visibility and achieving your marketing objectives."
+              description="Evietek’s content writing services are crafted to engage, inform and drive conversions. Our experienced writers specialize in producing compelling, SEO-friendly content that appeals to your target audience. Allow us to assist you in increasing your brand`  s online visibility and achieving your marketing objectives."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
