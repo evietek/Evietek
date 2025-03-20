@@ -63,10 +63,10 @@ const WebApplicationServicePage = () => {
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
             <p className="text-gray-600 leading-relaxed">
-              In today's digital world, web applications are essential for businesses. At Evietek, we know that a well-developed web application can enhance user experience and improve operational efficiency. For example, a restaurant can use an online reservation system to streamline bookings and improve customer service. Our web application development services are designed to meet your specific needs and help your business thrive.
+              In today`s digital world, web applications are essential for businesses. At Evietek, we know that a well-developed web application can enhance user experience and improve operational efficiency. For example, a restaurant can use an online reservation system to streamline bookings and improve customer service. Our web application development services are designed to meet your specific needs and help your business thrive.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              Our team of skilled developers can realize your every idea, whether it's a personalized e-commerce platform or an intuitive user interface. Get in touch with us right now to go over how a customized web application solution might help your company grow to the next degree.
+              Our team of skilled developers can realize your every idea, whether it`s a personalized e-commerce platform or an intuitive user interface. Get in touch with us right now to go over how a customized web application solution might help your company grow to the next degree.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ const WebApplicationServicePage = () => {
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Web Application Development Services?"
-              description="Evietek's Web Application Development Services empower businesses with custom, scalable and secure solutions tailored to their needs. Our expert developers build high-performance applications that enhance user engagement and streamline business operations."
+              description="Evietek`s Web Application Development Services empower businesses with custom, scalable and secure solutions tailored to their needs. Our expert developers build high-performance applications that enhance user engagement and streamline business operations."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -105,7 +105,7 @@ const WebApplicationServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of Web Application Development"
-              description="Evietek's Web Application Development services provide cutting-edge solutions with seamless integration, user-friendly interfaces and real-time performance monitoring to ensure business efficiency and growth."
+              description="Evietek`s Web Application Development services provide cutting-edge solutions with seamless integration, user-friendly interfaces and real-time performance monitoring to ensure business efficiency and growth."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -129,7 +129,7 @@ const WebApplicationServicePage = () => {
                 width: 400,
                 height: 300
               }}
-              bottomDescription="This leads to higher productivity and customer satisfaction. Putting innovation and quality first, Evietek creates trustworthy solutions that help businesses succeed in today's tough digital world."
+              bottomDescription="This leads to higher productivity and customer satisfaction. Putting innovation and quality first, Evietek creates trustworthy solutions that help businesses succeed in today`s tough digital world."
               additionalFeatures={[
                 "Comprehensive Application Coverage",
                 "Automated Maintenance & Updates",

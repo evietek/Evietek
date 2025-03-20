@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
+import Image from 'next/image';
 
 // The main component that handles all variations
 const CaseStudyContent = ({ 
@@ -127,10 +128,12 @@ const ContentBlock = ({
           animate={isInView ? "visible" : "hidden"}
           variants={imageVariants}
         >
-          <img 
+          <Image 
             src={image.src} 
             alt={image.alt || "Content illustration"} 
             className="w-full h-auto rounded"
+            width={image.width || 800}
+            height={image.height || 600}
           />
         </motion.div>
       )}
@@ -225,10 +228,12 @@ const AdditionalContent = ({
           animate={isInView ? "visible" : "hidden"}
           variants={nestedImageVariants}
         >
-          <img 
+          <Image 
             src={image.src} 
             alt={image.alt || "Content illustration"} 
             className="w-full h-auto rounded"
+            width={image.width || 800}
+            height={image.height || 600}
           />
         </motion.div>
       )}

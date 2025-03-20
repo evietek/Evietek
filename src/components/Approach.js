@@ -3,6 +3,7 @@
 import React from "react";
 import KeyPointCard from "./KeyPointCard";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Approach = () => {
   const containerVariants = {
@@ -97,10 +98,12 @@ const Approach = () => {
             variants={imageVariants}
           >
             <div className="relative">
-              <img 
+              <Image 
                 src="/About_Us/5.png"
                 alt="Expert Web Developer"
                 className="w-full transition-transform duration-700 group-hover:scale-110"
+                width={800}
+                height={600}
               />
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
                             transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />

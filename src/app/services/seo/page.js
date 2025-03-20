@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "What is SEO and why is it important?",
     answer:
-      "SEO, or search engine optimization, improves your website's visibility in search engine results, helping attract more organic traffic and potential customers.",
+      "SEO, or search engine optimization, improves your website`s visibility in search engine results, helping attract more organic traffic and potential customers.",
   },
   {
     question: "How long does it take to see results from SEO?",
@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "What services do SEO agencies provide?",
     answer:
-      "SEO agencies offer services such as site audits, keyword research, content strategy development and link building to enhance your website's online presence.",
+      "SEO agencies offer services such as site audits, keyword research, content strategy development and link building to enhance your website`s online presence.",
   },
   {
     question: "Do I need to provide anything to the SEO agency?",
@@ -63,18 +63,18 @@ const SEOServicePage = () => {
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
             <p className="text-gray-600 leading-relaxed">
-              In today's digital marketplace, having a strong online presence is crucial. At Evietek, we understand that effective SEO (Search Engine Optimization) is key to achieving this. Good SEO improves your website's visibility on search engines, helping potential customers find you easily. Imagine a local bakery that wants to attract more customers; without proper SEO, they might remain hidden while competitors thrive.
+              In today`s digital marketplace, having a strong online presence is crucial. At Evietek, we understand that effective SEO (Search Engine Optimization) is key to achieving this. Good SEO improves your website`s visibility on search engines, helping potential customers find you easily. Imagine a local bakery that wants to attract more customers; without proper SEO, they might remain hidden while competitors thrive.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              The local bakery and other businesses can enhance their online visibility and connect with their target audience by utilizing Evietek's comprehensive SEO services. We use strategic SEO to increase website traffic and sales.
+              The local bakery and other businesses can enhance their online visibility and connect with their target audience by utilizing Evietek`s comprehensive SEO services. We use strategic SEO to increase website traffic and sales.
             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0">
             <WhyChoose
-              heading="Why Choose Evietek's SEO Services?"
-              description="Evietek's SEO Services are essential for enhancing your online visibility, driving organic traffic and ensuring your business stays ahead in search rankings. By optimizing every aspect of your digital presence, we provide a robust strategy for long-term growth and success."
+              heading="Why Choose Evietek`s SEO Services?"
+              description="Evietek`s SEO Services are essential for enhancing your online visibility, driving organic traffic and ensuring your business stays ahead in search rankings. By optimizing every aspect of your digital presence, we provide a robust strategy for long-term growth and success."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -100,7 +100,7 @@ const SEOServicePage = () => {
           {/* Features Section */}
           <div className="mb-0">
             <Feature
-              heading="Features of Evietek's SEO Services"
+              heading="Features of Evietek`s SEO Services"
               description="We provide cutting-edge SEO strategies with data-driven insights, real-time monitoring and seamless integration to boost your online presence and search engine rankings."
               features={[
                 {

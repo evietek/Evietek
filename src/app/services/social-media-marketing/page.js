@@ -62,7 +62,7 @@ const SocialMediaMarketingServicePage = () => {
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
             <p className="text-gray-600 leading-relaxed">
-              In today's digital world, social media marketing is essential for any business. At Evietek, we know that effective social media strategies can significantly enhance your brand's visibility and customer engagement. For instance, a local coffee shop can attract new customers by sharing enticing photos of their latest brews on Instagram. By leveraging social media, businesses can connect with their audience in meaningful ways. 
+              In today`s digital world, social media marketing is essential for any business. At Evietek, we know that effective social media strategies can significantly enhance your brand`s visibility and customer engagement. For instance, a local coffee shop can attract new customers by sharing enticing photos of their latest brews on Instagram. By leveraging social media, businesses can connect with their audience in meaningful ways. 
 
               This can lead to increased brand loyalty and ultimately drive sales. Additionally, social media platforms offer valuable insights into consumer behavior and preferences, allowing businesses to tailor their marketing efforts accordingly.
             </p>
@@ -72,7 +72,7 @@ const SocialMediaMarketingServicePage = () => {
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Social Media Marketing Services"
-              description="Evietek's Social Media Marketing solutions are designed to elevate your brand, enhance engagement, and drive growth across all platforms. Through data-driven strategies and creative content, we help you build a loyal online community and achieve measurable results."
+              description="Evietek`s Social Media Marketing solutions are designed to elevate your brand, enhance engagement, and drive growth across all platforms. Through data-driven strategies and creative content, we help you build a loyal online community and achieve measurable results."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -92,7 +92,7 @@ const SocialMediaMarketingServicePage = () => {
                 {
                   iconSrc: "/About_Us/4.svg",
                   title: "Scalable Solutions to Meet Business Goals",
-                  description: "Flexible strategies that adapt to your brand's growth and evolving needs."
+                  description: "Flexible strategies that adapt to your brand`s growth and evolving needs."
                 }
               ]}
               bottomDescription="We provide full-service social media management, content creation, and audience targeting to ensure your brand thrives in the digital landscape."
@@ -103,7 +103,7 @@ const SocialMediaMarketingServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of Social Media Marketing Services"
-              description="Evietek's Social Media Marketing solutions offer advanced strategies, real-time analytics, and user-friendly tools to enhance your brand's online presence and engagement."
+              description="Evietek`s Social Media Marketing solutions offer advanced strategies, real-time analytics, and user-friendly tools to enhance your brand`s online presence and engagement."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",

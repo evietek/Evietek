@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "How long does it take to complete a website design project?",
     answer:
-      "The timeline for completing a website design project can range from a few weeks to a few months, depending on the project's scope. ",
+      "The timeline for completing a website design project can range from a few weeks to a few months, depending on the project`s scope. ",
   },
   {
     question: "Will my website be mobile-friendly?",
@@ -23,9 +23,9 @@ const faqs = [
       "Yes, we ensure that all websites are designed to be responsive and mobile-friendly, providing a seamless experience across all devices.",
   },
   {
-    question: "Can I update the website myself after it's completed?",
+    question: "Can I update the website myself after it`s completed?",
     answer:
-      "Absolutely! We provide training and resources to help you manage and update your website independently once it's launched.",
+      "Absolutely! We provide training and resources to help you manage and update your website independently once it`s launched.",
   },
 ];
 
@@ -67,19 +67,19 @@ const WebDesignServicePage = () => {
             </h2>
             <div className="w-20 h-1 bg-blue-600 mb-8"></div>
             <p className="text-gray-600 leading-relaxed">
-              In today's digital landscape, a well-designed website is essential for any business. At Evietek, we recognize that your website is often the first impression customers have of your brand. A visually appealing and user-friendly site can significantly enhance user experience and build trust. Whether you run a local café or an online retail store, effective website design can help you stand out in a crowded market.
+              In today`s digital landscape, a well-designed website is essential for any business. At Evietek, we recognize that your website is often the first impression customers have of your brand. A visually appealing and user-friendly site can significantly enhance user experience and build trust. Whether you run a local café or an online retail store, effective website design can help you stand out in a crowded market.
             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0">
             <WhyChoose
-              heading="Why Choose Evietek's Website Design Services"
+              heading="Why Choose Evietek`s Website Design Services"
               description="Evietek crafts exceptional digital experiences that captivate audiences and drive conversions. By combining creativity, functionality, and cutting-edge technology, we deliver bespoke website designs that enhance your brand identity and foster user engagement."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
-                  title: "Custom Design Tailored to Your Brand's Vision"
+                  title: "Custom Design Tailored to Your Brand`s Vision"
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
@@ -94,7 +94,7 @@ const WebDesignServicePage = () => {
                   title: "Scalable Solutions for Future Growth and Expansion"
                 }
               ]}
-              bottomDescription="Evietek's website design services prioritize creativity and functionality. We craft tailored, responsive websites that enhance user experience, drive engagement, and fuel your business growth."
+              bottomDescription="Evietek`s website design services prioritize creativity and functionality. We craft tailored, responsive websites that enhance user experience, drive engagement, and fuel your business growth."
             />
           </div>
 
@@ -102,7 +102,7 @@ const WebDesignServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Feature of Website Design Services"
-              description="Delivering innovative, user-centric designs with cutting-edge functionality to enhance your brand's online presence and drive engagement."
+              description="Delivering innovative, user-centric designs with cutting-edge functionality to enhance your brand`s online presence and drive engagement."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import ServiceImageCarousel from './ServiceImageCarousel';
+import Image from 'next/image';
 
 const DynamicContentSection = ({
   heading,
@@ -87,7 +88,7 @@ const DynamicContentSection = ({
         {sectionImages.map((image, index) => (
           <div key={index} className="flex flex-col">
             <div className={`${shadow} ${rounded} ${border} overflow-hidden`}>
-              <img
+              <Image
                 src={image.src || image}
                 alt={image.alt || `Image ${index + 1}`}
                 className="w-full h-64 object-cover"

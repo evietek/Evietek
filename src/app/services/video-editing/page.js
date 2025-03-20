@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "How long does it take to complete a video edit?",
     answer:
-      "The turnaround time for video editing depends on the project's complexity and length, but we typically deliver initial edits within 1-2 weeks.",
+      "The turnaround time for video editing depends on the project`s complexity and length, but we typically deliver initial edits within 1-2 weeks.",
   },
   {
     question: "Can I provide input during the editing process?",
@@ -63,7 +63,7 @@ const VideoEditingServicePage = () => {
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
             <p className="text-gray-600 leading-relaxed">
-              In the digital age, video content is king. At Evietek, we understand that professional video editing is crucial for creating engaging and impactful content. Whether you're a small business owner wanting to promote your brand or a content creator sharing your passion, quality editing can make all the difference. For instance, a travel vlogger can turn raw footage of their adventures into a captivating story that resonates with viewers.
+              In the digital age, video content is king. At Evietek, we understand that professional video editing is crucial for creating engaging and impactful content. Whether you`re a small business owner wanting to promote your brand or a content creator sharing your passion, quality editing can make all the difference. For instance, a travel vlogger can turn raw footage of their adventures into a captivating story that resonates with viewers.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We can help bring your vision to life and take your content to the next level thanks to our experienced editing team. The creative approach and meticulous attention to detail we employ guarantee that your videos will be noticed in a crowded online landscape.
@@ -73,8 +73,8 @@ const VideoEditingServicePage = () => {
           {/* Why Choose Section */}
           <div className="mb-0">
             <WhyChoose
-              heading="Why Choose Evietek's Video Editing Services?"
-              description="Evietek's Video Editing Services are designed to enhance your brand's storytelling with high-quality visuals, seamless transitions and engaging content. Whether for marketing, social media, or professional projects, our expert editors bring your vision to life."
+              heading="Why Choose Evietek`s Video Editing Services?"
+              description="Evietek`s Video Editing Services are designed to enhance your brand`s storytelling with high-quality visuals, seamless transitions and engaging content. Whether for marketing, social media, or professional projects, our expert editors bring your vision to life."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -104,8 +104,8 @@ const VideoEditingServicePage = () => {
           {/* Features Section */}
           <div className="mb-0">
             <Feature
-              heading="Features of Evietek's Video Editing Services"
-              description="Evietek's Video Editing Services provide advanced editing techniques, real-time collaboration and seamless integration to transform your raw footage into engaging visual content."
+              heading="Features of Evietek`s Video Editing Services"
+              description="Evietek`s Video Editing Services provide advanced editing techniques, real-time collaboration and seamless integration to transform your raw footage into engaging visual content."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",

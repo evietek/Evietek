@@ -216,7 +216,7 @@ const OurBenefits = () => {
               className="text-gray-600 mb-6 sm:mb-8 text-sm md:text-base"
               variants={titleVariants}
             >
-              Our innovative digital solutions enhance your brand's visibility, drive growth, and foster deeper connections. With our expertise, we help you stay ahead in the ever-evolving digital landscape. 
+              Our innovative digital solutions enhance your brand`s visibility, drive growth, and foster deeper connections. With our expertise, we help you stay ahead in the ever-evolving digital landscape. 
             </motion.p>
 
             {/* Feature Cards */}

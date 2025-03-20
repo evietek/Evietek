@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "What technologies are commonly used in niche web development?",
     answer:
-      "Common technologies include HTML, CSS and JavaScript for front-end development and various back-end languages like PHP, Python, or Ruby, depending on the project's requirements.",
+      "Common technologies include HTML, CSS and JavaScript for front-end development and various back-end languages like PHP, Python, or Ruby, depending on the project`s requirements.",
   },
   {
     question: "Do you provide ongoing support after the website is launched?",
@@ -63,7 +63,7 @@ const WebDevelopmentServicePage = () => {
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
             <p className="text-gray-600 leading-relaxed">
-              In today's digital world, a strong online presence is crucial for any business. At Evietek, we understand that web development is more than just building a website. It's about creating an engaging platform that reflects your brand and meets your customers' needs. A well-designed website can attract visitors, convert leads and build loyalty. We are here to help you achieve that.
+              In today`s digital world, a strong online presence is crucial for any business. At Evietek, we understand that web development is more than just building a website. It`s about creating an engaging platform that reflects your brand and meets your customers`` needs. A well-designed website can attract visitors, convert leads and build loyalty. We are here to help you achieve that.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               Our team of experienced developers and designers work closely with you to ensure that your website not only looks great but also functions seamlessly. Let us help you stand out in the crowded online marketplace and make a lasting impression on your target audience.
@@ -74,7 +74,7 @@ const WebDevelopmentServicePage = () => {
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Web Development Services?"
-              description="Evietek's Web Development Services provide high-performance, secure and scalable solutions tailored for businesses. We create responsive, SEO-friendly websites that ensure seamless user experiences and drive growth."
+              description="Evietek`s Web Development Services provide high-performance, secure and scalable solutions tailored for businesses. We create responsive, SEO-friendly websites that ensure seamless user experiences and drive growth."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -105,7 +105,7 @@ const WebDevelopmentServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of Web Development Services"
-              description="Evietek's Web Development Services offer cutting-edge solutions, seamless integrations and user-centric designs to enhance your online presence and business growth."
+              description="Evietek`s Web Development Services offer cutting-edge solutions, seamless integrations and user-centric designs to enhance your online presence and business growth."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",

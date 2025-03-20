@@ -137,7 +137,7 @@ const Work = () => {
         className="text-gray-600 mb-6 text-base md:text-lg"
         variants={titleVariants}
       >
-        We offer cutting-edge digital solutions to boost your brand's visibility, drive growth, and foster meaningful connections. 
+        We offer cutting-edge digital solutions to boost your brand`s visibility, drive growth, and foster meaningful connections. 
       </motion.p>
      
       {/* Service Features List */}

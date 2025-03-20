@@ -62,7 +62,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla molestie fermentum. Mauris maximus sapien ut dui tempor pharetra. Fusce vitae tellus ut enim vehicula fringilla eget ut ligula. Nam viverra gravida sodales. Morbi placerat eleifend elit, sit amet porttitor augue vehicula vitae. Aenean at sodales dui. Aenean laculis sem in porta finibus. Morbi cursus nisl mollis, suscipit est sed, feugiat lacus.",
             image: {
               src: "/Case_Study/Project_Overview.svg",
-              alt: "Services We Provide"
+              alt: "Services We Provide",
+              width: 800,
+              height: 600
             }
           }
         ]}
@@ -85,7 +87,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla molestie fermentum. Mauris maximus sapien ut dui tempor pharetra. Fusce vitae tellus ut enim vehicula fringilla eget ut ligula. Nam viverra gravida sodales. Morbi placerat eleifend elit, sit amet porttitor augue vehicula vitae. Aenean at sodales dui. Aenean laculis sem in porta finibus. Morbi cursus nisl mollis, suscipit est sed, feugiat lacus.",
             image: {
               src: "/Case_Study/Project_Key.svg",
-              alt: "Key Project Components"
+              alt: "Key Project Components",
+              width: 800,
+              height: 600
             },
           }
         ]}
@@ -98,14 +102,18 @@ const KaynaEmbeddedInsurance = () => {
             text: "These findings help in understanding the gaps in the market & potential opportunities for improvement & innovation.",
             image: {
               src: "/Case_Study/Analysis_1.svg",
-              alt: "Analysis 1"
+              alt: "Analysis 1",
+              width: 800,
+              height: 600
             }
           },
           {
             text: "These findings help in understanding the gaps in the market & potential opportunities for improvement & innovation.",
             image: {
               src: "/Case_Study/Analysis_2.svg",
-              alt: "Analysis 2"
+              alt: "Analysis 2",
+              width: 800,
+              height: 600
             }
           }
         ]}
@@ -117,7 +125,9 @@ const KaynaEmbeddedInsurance = () => {
           {
             image: {
               src: "/Case_Study/Logo.svg",
-              alt: "Logo"
+              alt: "Logo",
+              width: 800,
+              height: 600
             }
           },
           {
@@ -125,7 +135,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla molestie fermentum. Mauris maximus sapien ut dui tempor pharetra. Fusce vitae tellus ut enim vehicula fringilla eget ut ligula. Nam viverra gravida sodales.",
             image: {
               src: "/Case_Study/Colors.svg",
-              alt: "Colors"
+              alt: "Colors",
+              width: 800,
+              height: 600
             }
           },
            {
@@ -133,7 +145,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla molestie fermentum. Mauris maximus sapien ut dui tempor pharetra. Fusce vitae tellus ut enim vehicula fringilla eget ut ligula. Nam viverra gravida sodales.",
             image: {
               src: "/Case_Study/Typography.svg",
-              alt: "Typography"
+              alt: "Typography",
+              width: 800,
+              height: 600
             }
           }
         ]}
@@ -146,7 +160,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "These findings help in understanding the gaps in the market & potential opportunities for improvement & innovation.",
             image: {
               src: "/Case_Study/Paint.svg",
-              alt: "Paint Points"
+              alt: "Paint Points",
+              width: 800,
+              height: 600
             }
           }
         ]}
@@ -160,7 +176,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla molestie fermentum. Mauris maximus sapien ut dui tempor pharetra. Fusce vitae tellus ut enim vehicula fringilla eget ut ligula. Nam viverra gravida sodales.",
             image: {
               src: "/Case_Study/Dashboard.svg",
-              alt: "Dashboard"
+              alt: "Dashboard",
+              width: 800,
+              height: 600
             }
           },
            {
@@ -168,7 +186,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla molestie fermentum. Mauris maximus sapien ut dui tempor pharetra. Fusce vitae tellus ut enim vehicula fringilla eget ut ligula. Nam viverra gravida sodales.",
             image: {
               src: "/Case_Study/Other_Pages.svg",
-              alt: "Other Pages"
+              alt: "Other Pages",
+              width: 800,
+              height: 600
              }
           }
         ]}
@@ -181,7 +201,9 @@ const KaynaEmbeddedInsurance = () => {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla molestie fermentum. Mauris maximus sapien ut dui tempor pharetra. Fusce vitae tellus ut enim vehicula fringilla eget ut ligula. Nam viverra gravida sodales. Morbi placerat eleifend elit, sit amet porttitor augue vehicula vitae. Aenean at sodales dui. Aenean laculis sem in porta finibus. Morbi cursus nisl mollis, suscipit est sed, feugiat lacus.",
             image: {
               src: "/Case_Study/Final.svg",
-              alt: "Final Deliverable"
+              alt: "Final Deliverable",
+              width: 800,
+              height: 600
             }
           }
         ]}

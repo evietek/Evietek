@@ -94,7 +94,7 @@ const AboutPageContent = () => {
         className="text-gray-600 mb-8 text-sm md:text-base"
         variants={itemVariants}
       >
-        Evietek's innovative digital solutions guarantee long-term success, boost brand awareness, and increase involvement. 
+        Evietek`s innovative digital solutions guarantee long-term success, boost brand awareness, and increase involvement. 
       </motion.p>
       
       <motion.div variants={itemVariants}>

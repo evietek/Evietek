@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const AboutBanner = ({
   imageUrl = "/About_us/4.jpg",
@@ -55,10 +56,12 @@ const AboutBanner = ({
                 clipPath: "polygon(50% -50%,100% 50%,50% 150%,0 50%)",
               }}
             >
-              <img
+              <Image
                 src={imageUrl}
                 alt={imageAlt}
                 className="w-full h-full object-cover"
+                width={800}
+                height={600}
               />
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
                             transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
@@ -121,10 +124,12 @@ const AboutBanner = ({
                 clipPath: "polygon(50% -50%,100% 50%,50% 150%,0 50%)",
               }}
             >
-              <img
+              <Image
                 src={imageUrl}
                 alt={imageAlt}
                 className="w-full h-full object-cover"
+                width={800}
+                height={600}
               />
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
                             transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />

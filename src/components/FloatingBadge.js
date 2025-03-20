@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from 'next/image';
 
 export default function FloatingBadge({ position, icon }) {
   const [isVisible, setIsVisible] = useState(true);
@@ -24,7 +25,7 @@ export default function FloatingBadge({ position, icon }) {
     >
       <div className={`relative transform transition-all duration-300 ${isHovered ? 'scale-110 animate-buzz' : ''}`}>
         {/* The badge image */}
-        <img
+        <Image
           src={icon}
           alt={position === "left" ? "Design" : "Development"}
           width={position === "right" ? 110 : 90}

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const ServiceImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,11 +89,13 @@ const ServiceImageCarousel = ({ images }) => {
                 transition={{ duration: 0.5 }}
                 className="absolute top-0 left-0 w-full h-full"
               >
-                <img
+                <Image
                   src={image.src || image}
                   alt={image.alt || `Slide ${index + 1}`}
                   className="object-cover w-full h-full rounded-lg"
                   draggable="false"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
                 />
               </motion.div>
             )
