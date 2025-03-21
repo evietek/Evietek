@@ -30,7 +30,7 @@ const AboutBanner = ({
 
   return (
     <motion.div 
-      className="relative flex items-center w-full pb-8"
+      className="relative flex items-center w-full pb-0 md:pb-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -70,7 +70,7 @@ const AboutBanner = ({
 
           {/* Content area with increased height and circular edge */}
           <motion.div
-            className="text-white py-2 md:py-4 px-3 md:px-6 flex flex-col justify-center relative !w-[280px] md:!w-[500px] lg:h-[120px] xl:h-[145px] md:h-[120px] h-[80px] left-[80px] md:left-[90px] lg:left-[60px] xl:left-[160px]"
+            className="text-white py-2 md:py-4 px-3 md:px-6 flex flex-col justify-center relative !w-[200px] md:!w-[550px] lg:!w-[500px] lg:h-[120px] xl:h-[145px] md:h-[120px] h-[80px] left-[80px] md:left-[90px] lg:left-[60px] xl:left-[160px]"
             style={{
               background: `linear-gradient(180deg, ${startColor}, ${endColor})`,
               borderTopRightRadius: "72px",

@@ -110,7 +110,7 @@ const HowItWork = () => {
             {/* Process Steps */}
             <div className="relative">
               {/* Vertical Line */}
-              <div className="absolute left-6 top-10 md:left-[32px] lg:left-[30px] lg:top-[60px] w-0.5 h-[240px] border-l-4 border-dotted border-[#CB73FE]"></div>
+              <div className="absolute left-6 top-10 md:left-[32px] lg:left-[30px] lg:top-[60px] w-0.5 h-[250px] border-l-4 border-dotted border-[#CB73FE]"></div>
               
               {/* Step 1 */}
               <motion.div 
@@ -196,16 +196,16 @@ const HowItWork = () => {
             
             {/* Floating Phone Frame */}
             <motion.div 
-              className="absolute left-45 md:left-75 lg:left-16 top-70 md:top-75 lg:top-1/2 -translate-y-1/2 w-48 md:w-64 bg-[#030438] p-2 rounded-3xl shadow-xl overflow-hidden group"
+              className="absolute right-2 md:left-75 lg:left-16 top-72 md:top-75 lg:top-1/2 -translate-y-1/2 w-30 md:w-64 bg-[#030438] p-2 rounded-3xl shadow-xl overflow-hidden group"
               variants={phoneVariants}
             >
               <div className="rounded-2xl overflow-hidden relative">
                 <Image
                   src="/About_Us/h2.jpg"
                   alt="Security expert"
-                  width={300}
-                  height={100}
-                  className="md:w-60 lg:w-full object-cover h-48 md:h-40 lg:h-60 transition-transform duration-700 group-hover:scale-110"
+                  width={200}
+                  height={200}
+                  className="md:w-60 lg:w-full object-cover  w-30 h-30 md:h-40 lg:h-60 transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
                               transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />

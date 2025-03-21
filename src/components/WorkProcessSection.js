@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export default function WorkProcessSection() {
   // Animation Variants
   const bannerVariants = {
-    hidden: { opacity: 0, x: 1000 }, // Start off-screen right
+    hidden: { opacity: 0, x:-1000 },
     visible: { 
       opacity: 1, 
       x: 0, 
@@ -27,20 +27,18 @@ export default function WorkProcessSection() {
     }
   };
 
-  // Modified to handle mobile differently
   const cardVariants = {
     hidden: { opacity: 0, y: -160 }, // Start from above
     visible: (i) => ({
       opacity: 1,
-      // No stagger effect on mobile, preserve it for larger screens
-      y: window.innerWidth < 640 ? 0 : (i % 2 === 0 ? -20 : 20),
+      y: 0,
       transition: { duration: 0.8, ease: "easeOut", delay: i * 0.2 },
     }),
   };
 
-  // Floating Animation for Cards
+  // Floating Animation for Cards - reduced amplitude
   const floatingAnimation = {
-    y: [-5, 5, -5], // Moves up and down continuously
+    y: [-3, 3, -3], // Reduced movement to prevent overflow
     transition: {
       duration: 3,
       repeat: Infinity,
@@ -52,7 +50,7 @@ export default function WorkProcessSection() {
     <>
       {/* Banner Section with Slide-in Animation */}
       <motion.section 
-        className="relative bg-[#030438] text-[#ffff] py-4 md:py-8 lg:pt-15 px-0 md:px-0 lg:px-0 pb-0"
+        className="relative bg-[#030438] text-[#ffff] py-4 md:py-8 lg:pt-15 px-0 md:px-0 lg:px-0 pb-0 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -62,7 +60,7 @@ export default function WorkProcessSection() {
       </motion.section>
 
       {/* Main Content Section */}
-      <section className="relative bg-[#030438] text-[#ffff] py-4 md:py-10 lg:pt-12 px-4 md:px-10 lg:px-16 pb-4">
+      <section className="relative bg-[#030438] text-[#ffff] py-4 md:py-10 lg:pt-12 px-4 md:px-10 lg:px-16 pb-4 overflow-hidden">
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center">
           <Heading />
@@ -78,41 +76,45 @@ export default function WorkProcessSection() {
           </motion.h2>
         </div>
 
-        {/* Work Process Cards - Modified for consistent mobile spacing */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:flex xl:flex-row justify-center items-center gap-y-8 sm:gap-y-4 gap-x-8 mt-20 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32 relative">
+        {/* Work Process Cards - Increased vertical gap for mobile and tablets */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:flex xl:flex-row justify-center items-center gap-y-5 sm:gap-y-8 md:gap-y-20 lg:gap-y-12 gap-x-8 mt-20 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32 relative">
           {[
             {
               icon: "/Work_Process/1.svg",
+              iconHover: "/Work_Process/1a.svg",
               number: "1",
               title: "Brief/Short Details",
               description: "Come to us with a project brief or short project details that you have currently to give us an idea of your project or product.",
               rotation: 2.52,
-              positionClass: " -translate-y-0  md:-translate-y-6 lg:-translate-y-8" // Added sm: prefix
+              positionClass: " -translate-y-0  md:-translate-y-6 lg:-translate-y-8" 
             },
             {
               icon: "/Work_Process/2.svg",
+              iconHover: "/Work_Process/2a.svg",
               number: "2",
               title: "Questions",
               description: "After having the details from you, we'll ask questions related to your project to understand the project length and scope.",
               highlight: true,
               rotation: -2.69,
-              positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" // Added sm: prefix
+              positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" 
             },
             {
               icon: "/Work_Process/3.svg",
+              iconHover: "/Work_Process/3a.svg",
               number: "3",
               title: "Providing Quote",
               description: "We will be providing you a quote for the project after having the answers from you and estimating the resources needed for your project.",
               rotation: -1.24,
-              positionClass: "-translate-y-0 md:-translate-y-6 lg:-translate-y-8" // Added sm: prefix
+              positionClass: "-translate-y-0 md:-translate-y-6 lg:-translate-y-8" 
             },
             {
               icon: "/Work_Process/4.svg",
+              iconHover: "/Work_Process/4a.svg",
               number: "4",
               title: "Get Started",
               description: "If the quote works for both of us, we can have a short meeting or we can directly jump into the process of getting started.",
               rotation: -0.48,
-              positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" // Added sm: prefix
+              positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" 
             }
           ].map((card, index) => (
             <motion.div
@@ -133,7 +135,7 @@ export default function WorkProcessSection() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-20">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-5 md:mt-20">
           <Link href="/book-a-meeting" className="block">
             <button className="flex items-center gap-1.5 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105">
               <Image src="/phone.svg" alt="Phone" width={20} height={20} />

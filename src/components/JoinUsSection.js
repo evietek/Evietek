@@ -157,7 +157,7 @@ export default function JoinUSSection() {
         {/* Heading */}
         <div className="max-w-4xl mx-auto relative z-10">
           <motion.h1 
-            className="text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] leading-[110%] font-bricolageGrotesque font-bold text-white"
+            className="text-[35px] sm:text-[50px] md:text-[60px] lg:text-[70px] leading-[110%] font-bricolageGrotesque font-bold text-white"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -206,7 +206,7 @@ export default function JoinUSSection() {
 
       {/* Decorative Icons with continuous rotation and pulsing opacity */}
       <motion.div
-        className="absolute bottom-25 right-10 md:bottom-40 md:right-25 xl:bottom-45 xl:right-70 w-8 h-8 sm:w-12 sm:h-12 md:w-10 md:h-10 lg:w-15 lg:h-15 xl:w-20 xl:h-20"
+        className="absolute bottom-38 right-10 md:bottom-40 md:right-25 xl:bottom-45 xl:right-70 w-8 h-8 sm:w-12 sm:h-12 md:w-10 md:h-10 lg:w-15 lg:h-15 xl:w-20 xl:h-20"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
@@ -216,7 +216,7 @@ export default function JoinUSSection() {
       </motion.div>
       
       <motion.div
-        className="absolute top-40 left-10 md:top-40 md:left-12 xl:top-50 xl:left-60 lg:top-40 lg:left-30 w-8 h-8 sm:w-12 sm:h-12 md:w-10 md:h-10 lg:w-15 lg:h-15 xl:w-20 xl:h-20"
+        className="absolute top-35 left-10 md:top-40 md:left-12 xl:top-50 xl:left-60 lg:top-40 lg:left-30 w-8 h-8 sm:w-12 sm:h-12 md:w-10 md:h-10 lg:w-15 lg:h-15 xl:w-20 xl:h-20"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}

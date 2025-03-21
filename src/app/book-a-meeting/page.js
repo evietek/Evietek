@@ -90,7 +90,7 @@ const BookaMeetingPage = () => {
         
         <div className="w-full max-w-4xl h-[750px] relative z-10">
           <InlineWidget 
-            url="https://calendly.com/siriusalpha501/30min"
+            url="https://calendly.com/evietek-info/30min"
             styles={{ height: "100%", width: "100%" }}
             pageSettings={{
               hideEventTypeDetails: true,  // Hides left section (Meeting type)

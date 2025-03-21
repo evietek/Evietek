@@ -45,16 +45,16 @@ const Approach = () => {
 
   return (
     <motion.section 
-      className="bg-[#030438] py-12 md:py-16 px-4 md:px-6 pb-26 relative"
+      className="bg-[#030438] py-12 md:py-16 px-4 md:px-6 pb-16 md:pb-24 relative"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      <div className="container mx-auto flex flex-col items-center text-left relative">
+      <div className="container mx-auto flex flex-col items-center text-left md:text-left relative">
         {/* Tagline Above Heading */}
         <motion.p 
-          className="text-[#65E5F2] uppercase tracking-wide font-semibold mb-2"
+          className="text-[#65E5F2] uppercase tracking-wide font-semibold mb-2 text-center md:text-left"
           variants={titleVariants}
         >
           Our Approach
@@ -62,7 +62,7 @@ const Approach = () => {
 
         {/* Section Title */}
         <motion.h2 
-          className="text-2xl md:text-3xl font-bold text-[white-900] pb-0 md:pb-8"
+          className="text-2xl md:text-3xl font-bold text-[white-900] pb-0 md:pb-8 text-center md:text-left"
           variants={titleVariants}
         >
           Strengthening Innovation, <span className="text-[#CB73FE]">Your Digital Success </span>
@@ -71,7 +71,7 @@ const Approach = () => {
         {/* Main Content - Flex Layout */}
         <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center relative">
           {/* Left Side - Feature Cards */}
-          <div className="flex flex-col gap-4 w-full md:w-[60%] relative z-10 text-left">
+          <div className="flex flex-col gap-4 w-full md:w-[60%] relative z-10 text-left md:ml-10 lg:xl-0">
             <KeyPointCard
               icon="/About_Us/1.svg"
               title="Our Mission"
@@ -94,21 +94,23 @@ const Approach = () => {
 
           {/* Right Side - Image */}
           <motion.div 
-            className="w-full md:w-[60%] lg:w-[40%] mt-8 md:mt-0 md:absolute md:left-[250px] lg:left-[500px] overflow-hidden rounded-3xl group"
-            variants={imageVariants}
-          >
-            <div className="relative">
-              <Image 
-                src="/About_Us/5.png"
-                alt="Expert Web Developer"
-                className="w-full transition-transform duration-700 group-hover:scale-110"
-                width={800}
-                height={600}
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
-                            transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
-            </div>
-          </motion.div>
+  className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto mt-8 md:mt-0 md:absolute md:left-[250px] lg:left-[550px] xl:left-[500px] overflow-hidden rounded-3xl group"
+  variants={imageVariants}
+>
+  <div className="relative">
+    <Image 
+      src="/About_Us/5.png"
+      alt="Expert Web Developer"
+      className="w-full transition-transform duration-700 group-hover:scale-110"
+      width={800}
+      height={600}
+    />
+    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                  transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+  </div>
+</motion.div>
+
+
         </div>
       </div>
     </motion.section>

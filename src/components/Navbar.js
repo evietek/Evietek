@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Track active page
+import { usePathname, useRouter } from "next/navigation"; // Track active page
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname(); // Get current route
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +31,21 @@ export default function Navbar() {
     document.body.style.overflow = "auto";
   };
 
+  const scrollToServices = (e) => {
+    e.preventDefault();
+    if (pathname !== '/') {
+      // Store the intention to scroll in sessionStorage
+      sessionStorage.setItem('shouldScrollToServices', 'true');
+      router.push('/');
+    } else {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    closeMenu();
+  };
+
   // Clean up the body overflow when component unmounts
   useEffect(() => {
     return () => {
@@ -39,14 +55,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`relative w-full z-50 px-4 py-3 transition-all duration-500 flex justify-between items-center ${
+      className={`relative w-full z-[100] px-4 py-3 transition-all duration-500 flex justify-between items-center ${
         isScrolled ? "bg-[#030438]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto max-w-7xl flex justify-between items-center w-full">
         {/* Clickable Logo (Redirects to Home) */}
         <Link href="/" className="flex-shrink-0">
-          <Image src="/logo.png" alt="EvieTek Logo" width={150} height={40} />
+          <Image src="/logo.svg" alt="EvieTek Logo" width={150} height={40} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -57,9 +73,9 @@ export default function Navbar() {
           <Link href="/portfolio" className={`${pathname === "/portfolio" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             Portfolio
           </Link>
-          <Link href="/services" className={`${pathname === "/services" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
+          <button onClick={scrollToServices} className="hover:text-gray-300 transition">
             Services
-          </Link>
+          </button>
           <Link href="/case-study" className={`${pathname === "/case-study" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             Case Study
           </Link>
@@ -88,9 +104,9 @@ export default function Navbar() {
           <Link href="/portfolio" onClick={closeMenu} className={`${pathname === "/portfolio" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
             Portfolio
           </Link>
-          <Link href="/services" onClick={closeMenu} className={`${pathname === "/services" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
+          <button onClick={scrollToServices} className="text-white hover:text-gray-300 transition">
             Services
-          </Link>
+          </button>
           <Link href="/case-study" onClick={closeMenu} className={`${pathname === "/case-study" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
             Case Study
           </Link>

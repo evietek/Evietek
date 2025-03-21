@@ -87,7 +87,7 @@ export default function PortfolioProjectsSection() {
 
       {/* Rocket Image */}
       <motion.div
-        className="absolute bottom-28 sm:bottom-20 md:bottom-24 lg:bottom-32 xl:bottom-48 right-0 w-16 h-16 sm:w-12 sm:h-12 md:w-24 md:h-24 lg:w-35 lg:h-35 xl:w-42 xl:h-42 2xl:w-50 2xl:h-50 z-10"
+        className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-32 xl:bottom-140 2xl:bottom-48 right-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 xl:w-35 xl:h-35 2xl:w-50 2xl:h-50 z-10"
         // Animation properties commented out but preserved for future use
         /*
         initial="hidden"
@@ -119,7 +119,7 @@ export default function PortfolioProjectsSection() {
       
       {/* Star (Continuously Rotating + Twisting on Hover) */}
       <motion.div
-        className="absolute bottom-25 sm:bottom-16 md:bottom-20 lg:bottom-24 xl:bottom-50 2xl:bottom-32 left-1 sm:left-8 md:left-8 lg:left-24 xl:left-30 2xl:left-40 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 z-10"
+        className="absolute bottom-10 sm:bottom-16 md:bottom-20 lg:bottom-24 xl:bottom-100 2xl:bottom-32 left-4 sm:left-8 md:left-16 lg:left-24 xl:left-30 2xl:left-40 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24"
         animate={rotatingStar}
         whileHover={{ rotateY: 180 }} // Twists on hover
         transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -129,14 +129,14 @@ export default function PortfolioProjectsSection() {
           alt="Star" 
           width={40} 
           height={40}
-          className="w-full h-full md:w-10 md:h-10" 
+          className="w-full h-full" 
           priority
         />
       </motion.div>
 
       {/* Camera (Drops from Top + Slower Continuous Tilting on Hover) */}
       <motion.div
-        className="absolute top-10 sm:top-16 md:top-20 lg:top-24 xl:top-30 2xl:top-32 left-0 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-22 lg:h-22 xl:w-24 xl:h-24 2xl:w-36 2xl:h-36"
+        className="absolute top-10 sm:top-16 md:top-20 lg:top-24 xl:top-100 2xl:top-32 left-0 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 2xl:w-36 2xl:h-36"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}

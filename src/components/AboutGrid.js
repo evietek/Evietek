@@ -138,7 +138,7 @@ export default function AboutGrid() {
         </motion.div>
 
         <motion.div 
-          className="absolute z-10 bottom-[-40px] left-[-15px] sm:bottom-[-60px] sm:left-[50px] md:bottom-[-70px] md:left-[-50px] lg:bottom-[-60px] lg:left-[60px]"
+          className="absolute z-10 bottom-[-40px] left-[-15px] sm:bottom-[-60px] sm:left-[50px] md:bottom-[-70px] md:left-[-50px] lg:bottom-[-60px] lg:left-[10px] xl:bottom-[-60px] xl:left-[60px]"
           initial="initial"
           whileInView="animate"
           whileHover="hover"

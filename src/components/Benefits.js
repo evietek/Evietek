@@ -145,7 +145,7 @@ const OurBenefits = () => {
             {/* Floating Custom Circular Image (Rotating) */}
             <Link href="/book-a-meeting">
               <motion.div 
-                className="absolute top-4 md:top-0 sm:top-6 lg:top-10 right-0 md:right-145 lg:-right-25 w-32 sm:w-40 md:w-50 h-32 sm:h-40 md:h-50 animate-spin-slow cursor-pointer group"
+                className="absolute top-4 md:top-0 sm:top-6 lg:top-10 right-0 md:right-145 lg:-right-20 w-32 sm:w-40 md:w-50 h-32 sm:h-40 md:h-50 animate-spin-slow cursor-pointer group"
                 variants={circleVariants}
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
@@ -165,7 +165,7 @@ const OurBenefits = () => {
 
             {/* Floating Image Box */}
             <motion.div 
-              className="absolute bottom-2 md:bottom-4 lg:bottom-8 right-2 md:right-4 lg:-right-16 w-36 sm:w-48 md:w-64 h-36 sm:h-48 md:h-64 rounded-2xl overflow-hidden border-4 sm:border-8 border-white shadow-lg group"
+              className="absolute bottom-2 md:bottom-4 lg:bottom-8 right-2 md:right-4 lg:-right-12 w-36 sm:w-48 md:w-64 h-36 sm:h-48 md:h-64 rounded-2xl overflow-hidden border-4 sm:border-8 border-white shadow-lg group"
               variants={floatingImageVariants}
             >
               <div className="relative w-full h-full">

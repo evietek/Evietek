@@ -7,62 +7,62 @@ import { usePathname } from 'next/navigation';
 const services = [
   {
     title: "Content Writing",
-    path: "/services/content-writing",
+    path: "/content-writing",
     icon: "✍️"
   },
   {
     title: "Logo Designing",
-    path: "/services/logo-designing",
+    path: "/logo-designing",
     icon: "🎯"
   },
   {
     title: "Website Development",
-    path: "/services/website-development",
+    path: "/website-development",
     icon: "💻"
   },
   {
     title: "Website Design",
-    path: "/services/website-design",
+    path: "/website-design",
     icon: "🎨"
   },
   {
     title: "SEO",
-    path: "/services/seo",
+    path: "/seo",
     icon: "🔍"
   },
   {
     title: "Social Media Marketing",
-    path: "/services/social-media-marketing",
+    path: "/social-media-marketing",
     icon: "📱"
   },
   {
     title: "Illustrations",
-    path: "/services/illustrations",
+    path: "/illustrations",
     icon: "🖼️"
   },
   {
     title: "Video Editing",
-    path: "/services/video-editing",
+    path: "/video-editing",
     icon: "🎬"
   },
   {
     title: "QA Testing Services",
-    path: "/services/qa-testing",
+    path: "/qa-testing",
     icon: "✅"
   },
   {
     title: "Web Application",
-    path: "/services/web-application",
+    path: "/web-application",
     icon: "⚡"
   },
   {
     title: "Branding",
-    path: "/services/branding",
+    path: "/branding",
     icon: "🎯"
   },
   {
     title: "2D/3D Animation",
-    path: "/services/animation",
+    path: "/animation",
     icon: "🎮"
   }
 ];

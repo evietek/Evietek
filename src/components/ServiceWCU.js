@@ -44,9 +44,9 @@ const WhyChoose = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               viewport={{ once: true }}
-              className="flex items-center gap-3 sm:gap-4 bg-[#030438] rounded-lg xl:rounded-full px-4 sm:px-6 py-3 sm:py-4"
+              className="flex items-center gap-3 sm:gap-4 bg-[#030438] rounded-lg px-4 sm:px-6 py-3 sm:py-4"
             >
-              <div className="bg-gradient-to-b from-[#D376FF] to-[#5A50FF] rounded-lg xl:rounded-full p-2">
+              <div className="bg-gradient-to-b from-[#D376FF] to-[#5A50FF] rounded-lg p-2">
                 <Image
                   src={feature.iconSrc}
                   alt={feature.title}

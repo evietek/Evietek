@@ -84,7 +84,7 @@ export default function TestimonialsSection() {
       </div>    
 
       {/* Placeholder for Testimonials */}
-      <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto mt-10 p-8 bg-[#white] shadow-lg rounded-lg min-h-[250px]">
+      <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto mt-10 p-8 bg-[#F9F9F9] shadow-lg rounded-lg min-h-[250px]">
         <Reviews /> 
       </div>
 
@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
 
       {/* Magnet (Slides from Left + Rotates on Hover) */}
       <motion.div
-        className="absolute top-10 left-3 md:top-40 lg:left-35 md:left-15 w-12 h-12 sm:w-16 sm:h-16 lg:w-30 lg:h-30 xl:w-40 xl:h-40"
+        className="absolute top-5 left-3 md:top-40 lg:left-35 xl:top-20 2xl:top-40 md:left-15 w-12 h-12 sm:w-16 sm:h-16 lg:w-30 lg:h-30 xl:w-40 xl:h-40"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}

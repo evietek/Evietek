@@ -18,7 +18,7 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[#F9F9F9]">
       <div className="container mx-auto px-4">
     
         

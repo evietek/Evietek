@@ -1,15 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}", // Ensures Tailwind scans all files
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        vastago: ["VastagoGrotesk", "sans-serif"],
+        vastago: ['var(--font-vastago)'],
         vastagoBold: ["VastagoGrotesk-Bold", "sans-serif"],
         vastagoLight: ["VastagoGrotesk-Light", "sans-serif"],
-         bricolage: ["var(--font-bricolage)", "sans-serif"],
+        sans: ['var(--font-bricolage)'],
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
@@ -59,6 +61,12 @@ module.exports = {
           '75%': { transform: 'rotate(3deg) scale(1.05)' },
           '100%': { transform: 'rotate(0deg) scale(1)' },
         },
+      },
+      utilities: {
+        '.backface-hidden': {
+          'backface-visibility': 'hidden',
+          '-webkit-backface-visibility': 'hidden'
+        }
       }
     },
   },

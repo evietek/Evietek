@@ -9,10 +9,10 @@ import Link from "next/link";
 export default function ServicesSection() {
     // Right Decorative Animation
     const decorationVariants = {
-        initial: { opacity: 0, x: 100 },
+        initial: { opacity: 0, y: 100 },
         animate: {
             opacity: 0.7,
-            x: 0,
+            y: 0,
             transition: { duration: 0.8, ease: "easeOut" }
         }
     };
@@ -44,26 +44,26 @@ export default function ServicesSection() {
             description: "Creating Multipage websites for different companies.",
             icon: "/Our_Services/Website_Logo.svg",
             decoration: "/Our_Services/Decor_1.svg",
-            link: "/services/website-design"
+            link: "/website-design"
         },
         { 
             title: "Branding Design", 
             description: "Helping our Clients to establish an amazing brand with irresistible and strong visual elements.",
             icon: "/Our_Services/Branding_Design_Logo.svg",
             decoration: "/Our_Services/Decor_2.svg",
-            link: "/services/branding"
+            link: "/branding"
         },
         { 
             title: "Social Media Marketing", 
             description: "We help you to grow your brand on social media platforms.",
             icon: "/Our_Services/Marketing_Logo.svg",
             decoration: "/Our_Services/Decor_3.svg",
-            link: "/services/social-media-marketing"
+            link: "/social-media-marketing"
         }
     ];
 
     return (
-        <section className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
+        <section id="services" className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
             {/* Section Heading */}
             <div className="flex flex-col items-center text-center">
                 <Heading />
@@ -99,7 +99,7 @@ export default function ServicesSection() {
 
             {/* Decorative Sticker (Right Corner) */}
             <motion.div
-                className="absolute top-10 right-1 z-0"
+                className="absolute top-10 right-1 md:top-2 lg:top-10 z-0"
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true, amount: 0.2 }}
@@ -110,7 +110,7 @@ export default function ServicesSection() {
                     alt="Abstract Sticker" 
                     width={100} 
                     height={100} 
-                    className="opacity-60 sm:w-[160px] sm:h-[160px] sm:opacity-70 md:w-[200px] md:h-[200px] md:opacity-70 lg:w-[200px] lg:h-[200px] lg:opacity-100"
+                    className="opacity-60 sm:w-[160px] sm:h-[160px] sm:opacity-70 md:w-[150px] md:h-[150px] md:opacity-70 lg:w-[200px] lg:h-[200px] lg:opacity-100"
                 />
             </motion.div>
 

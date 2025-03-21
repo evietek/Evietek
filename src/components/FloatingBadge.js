@@ -11,8 +11,8 @@ export default function FloatingBadge({ position, icon }) {
   const floatAnimation = position === "left" ? "animate-float-left" : "animate-float-right";
 
   const positionClasses = position === "left"
-    ? "absolute left-[6%] top-[25%] sm:left-[4%] sm:top-[10%] md:left-[8%] md:top-[18%] lg:left-[10%] lg:top-[22%]" // Adjust these values to change the position of the design badge
-    : "absolute right-[5%] top-[80%] sm:right-[8%] sm:top-[65%] md:right-[2%] md:top-[50%] lg:right-[10%] lg:top-[50%]"; // Adjust these values to change the position of the development badge
+    ? "absolute left-[6%] top-[10%] sm:left-[6%] sm:top-[10%] md:left-[8%] md:top-[12%] lg:left-[10%] lg:top-[20%] xl:left-[10%] xl:top-[24%]" // Adjust these values to change the position of the design badge
+    : "absolute right-[5%] top-[80%] sm:right-[8%] sm:top-[65%] md:right-[2%] md:top-[45%] lg:right-[10%] lg:top-[67%] xl:right-[10%] xl:top-[50%]"; // Adjust these values to change the position of the development badge
 
   return (
     <div
@@ -30,7 +30,7 @@ export default function FloatingBadge({ position, icon }) {
           alt={position === "left" ? "Design" : "Development"}
           width={position === "right" ? 110 : 90}
           height={position === "right" ? 55 : 45}
-          className="object-contain sm:w-[150px] sm:h-[75px] md:w-[190px] md:h-[90px] lg:w-[220px] lg:h-[110px]"
+          className="object-contain sm:w-[150px] sm:h-[75px] md:w-[160px] md:h-[80px] lg:w-[220px] lg:h-[110px]"
         />
 
         {/* Improved Shadow Effect for better alignment */}

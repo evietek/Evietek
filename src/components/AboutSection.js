@@ -55,7 +55,7 @@ export default function AboutSection() {
           alt="Abstract Sticker" 
           width={50} 
           height={50} 
-          className="opacity-60 sm:w-[80px] sm:h-[80px] sm:opacity-70 md:w-[100px] md:h-[100px] md:opacity-0 lg:w-[160px] lg:h-[160px] lg:opacity-100"
+          className="opacity-60 sm:w-[80px] sm:h-[80px] sm:opacity-70 md:w-[100px] md:h-[100px] md:opacity-0 lg:w-[80px] xl:h-[80px] xl:w-[160px] lg:h-[160px] lg:opacity-100"
         />
       </motion.div>
 
