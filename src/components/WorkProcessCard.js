@@ -9,12 +9,12 @@ export default function WorkProcessCard({ number, icon, iconHover, title, descri
 
   return (
     <motion.div
-      className="relative shadow-lg rounded-[22px] p-8 pt-14 w-[280px] sm:w-[300px] md:w-[280px] lg:w-[280px] 
+      className="relative cursor-pointer shadow-lg rounded-[22px] p-8 pt-14 w-[280px] sm:w-[300px] md:w-[280px] lg:w-[280px] 
       mb-12 sm:mb-0 /* Added bottom margin for mobile only */
-      transition-all duration-300 group"
+      transition-all duration-1500 group"
       initial={{ rotate: 0 }}
       animate={{ rotate: rotation }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 1.5, ease: "easeOut" }}
       whileHover={{ scale: 1.05 }}
       style={{ height: "auto" }}
       onHoverStart={() => setIsFlipped(true)}
@@ -25,7 +25,7 @@ export default function WorkProcessCard({ number, icon, iconHover, title, descri
   className="absolute -top-8 left-6 w-20 h-20"
   whileHover={{ rotateY: 360 }}
   animate={isFlipped ? { rotateY: 360 } : { rotateY: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
+  transition={{ duration: 5, ease: "easeOut" }}
 >
   <div className="relative w-full h-full">
     <div className="absolute inset-0 transition-opacity duration-300" 

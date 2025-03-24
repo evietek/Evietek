@@ -49,7 +49,7 @@ const LoadingAnimation = ({ onComplete }) => {
           onComplete();
         }, 1500); // Extended logo display time
       }
-    }, 300); // Time each service is shown
+    }, 400); // Time each service is shown
 
     return () => {
       clearTimeout(timer);

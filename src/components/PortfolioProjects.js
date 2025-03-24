@@ -77,8 +77,8 @@ const getBaseHeight = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.4,
-        delayChildren: 0.2
+        staggerChildren: 0.8,
+        delayChildren: 0.8
       }
     }
   };
@@ -125,7 +125,7 @@ const getBaseHeight = () => {
             custom={index}
           >
             <div 
-              className={`portfolio-card block w-full transition-transform duration-300 ease-in-out cursor-pointer
+              className={`portfolio-card block w-full transition-transform duration-1500 ease-in-out cursor-pointer
                 ${tappedId === project.id ? 'translate-y-[-60px] sm:translate-y-[-80px] md:translate-y-[-100px] lg:translate-y-[-120px] xl:translate-y-[-140px]' : ''}`}
               onClick={(e) => handleClick(e, project.id, project.link)}
             >

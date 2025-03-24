@@ -23,7 +23,7 @@ const projects = [
     title: "Illustration",
     category: "design",
     description: "A collection of illustrations created by our talented design team",
-    image: "/Portfolio_Main/illustration.png",
+    image: "/Portfolio_Main/illustration.jpg",
     color: "#FF6B6B",
     skills: ["Digital Painting", "Character Design", "Vector Illustration"],
     link: "https://www.behance.net/gallery/221656995/Illustrations"
@@ -43,7 +43,7 @@ const projects = [
     title: "Logo Design",
     category: "design",
     description: "A collection of logo design projects created by our talented design team",
-    image: "/Portfolio_Main/logo.png",
+    image: "/Portfolio_Main/logo.jpg",
     color: "#A78BFA",
     skills: ["Vector Illustration", "Brand Identity", "Typography"],
     link: "https://www.behance.net/gallery/191322361/Logos"
@@ -61,7 +61,7 @@ const PortfolioPage = () => {
   );
 
   return (
-    <main className="bg-[#F2F2F5]">
+    <main className="bg-[#F2F2F5] ">
 
       <Breadcrumb 
       title="Portfolio" 
@@ -113,7 +113,7 @@ const PortfolioPage = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-1">
             <AnimatePresence mode="wait">
               {filteredProjects.map(project => (
                 <motion.div
@@ -126,10 +126,12 @@ const PortfolioPage = () => {
                   onHoverStart={() => setHoveredProject(project.id)}
                   onHoverEnd={() => setHoveredProject(null)}
                   whileHover={{ scale: 1.02 }}
-                  className="bg-[#030438] text-white rounded-2xl p-6 shadow-lg"
+                  className="bg-[#030438] text-white rounded-xl p-4 shadow-md transform scale-[0.9]"
+
+
                 >
-                  <div className="relative h-48 sm:h-56 mb-4 rounded-xl overflow-hidden group">
-                    <Image
+<div className="relative aspect-square mb-4 rounded-xl overflow-hidden group">
+<Image
                       src={project.image}
                       alt={project.title}
                       fill
@@ -152,10 +154,10 @@ const PortfolioPage = () => {
                       </motion.div>
                     )}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {project.title}
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                  {project.title}
                   </h3>
-                  <p className="text-gray-200 mb-4">{project.description}</p>
+                  <p className="text-lg text-gray-200 mb-3">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map(skill => (
                       <span

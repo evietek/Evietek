@@ -44,23 +44,31 @@ export default function Footer() {
       </div>
 
       {/* Logo */}
-      <div className="px-6 flex justify-center mt-8 sm:mt-10 lg:mt-12">
+      {/* <div className="px-6 flex justify-center mt-2 ">
         <Image 
           src="/Footer/logo.svg" 
           alt="EvieTek Logo" 
-          width={900} 
-          height={180}
-          className="w-64 sm:w-72 md:w-96 lg:w-full max-w-5xl" 
+          width={400} 
+          height={90}
+          className="w-64 sm:w-72 md:w-96 lg:w-100" 
+          
         />
+        <div className="absolute lg:bottom-12 right-1 bottom-16 sm:right-6 md:right-16 md:bottom-20 lg:right-40 w-10 h-10 sm:w-12 sm:h-12 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32">
+        <Image src="/Footer/1.png" alt="Icon" fill style={{objectFit: "contain", transform: "rotate(340deg)"}} />
       </div>
+
+      <div className="absolute xl:bottom-10 lg:bottom-20 left-0 sm:left-6 md:left-20 md:bottom-24 lg:left-45 xl:left-60 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-25 xl:h-25">
+        <Image src="/Footer/2.png" alt="Icon" fill style={{objectFit: "contain", transform: "rotate(340deg)"}} />
+      </div>
+      </div> */}
       
       {/* Full-Width White Divider */}
-      <div className="w-full h-[1px] bg-gray-400 opacity-50 mt-8 sm:mt-10"></div>
+       {/* <div className="w-full h-[1px] bg-gray-400 opacity-50 mt-1 sm:mt-2"></div> */}
       
       {/* Copyright */}
       <div className="px-6">
         <p className="text-center text-gray-400 text-sm sm:text-sm md:text-base lg:text-xl mt-4 sm:mt-6">
-          © 2025 Rylic Studio. All Rights Reserved.
+          © 2025 EvieTek. All Rights Reserved.
         </p>
       </div>
 

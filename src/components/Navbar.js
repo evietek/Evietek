@@ -73,9 +73,9 @@ export default function Navbar() {
           <Link href="/portfolio" className={`${pathname === "/portfolio" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             Portfolio
           </Link>
-          <button onClick={scrollToServices} className="hover:text-gray-300 transition">
+          {/* <button onClick={scrollToServices} className="hover:text-gray-300 transition">
             Services
-          </button>
+          </button> */}
           <Link href="/case-study" className={`${pathname === "/case-study" ? "text-gray-300" : "hover:text-gray-300 transition"}`}>
             Case Study
           </Link>
@@ -104,9 +104,9 @@ export default function Navbar() {
           <Link href="/portfolio" onClick={closeMenu} className={`${pathname === "/portfolio" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
             Portfolio
           </Link>
-          <button onClick={scrollToServices} className="text-white hover:text-gray-300 transition">
+          {/* <button onClick={scrollToServices} className="text-white hover:text-gray-300 transition">
             Services
-          </button>
+          </button> */}
           <Link href="/case-study" onClick={closeMenu} className={`${pathname === "/case-study" ? "text-gray-300" : "text-white hover:text-gray-300 transition"}`}>
             Case Study
           </Link>

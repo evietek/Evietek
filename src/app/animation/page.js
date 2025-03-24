@@ -10,21 +10,21 @@ const faqs = [
   {
     question: "What types of animation projects do you handle?",
     answer:
-      "We create 2D and 3D animations for various needs, including product demos, explainer videos, marketing campaigns and storytelling projects.",
+      "We specialize in 2D and 3D animations for product demos, explainer videos, marketing campaigns, and storytelling projects.",
   },
   {
-    question: "How long does it take to complete an animation project?",
+    question: "How long does an animation project take?",
     answer:
-      "The timeline depends on the complexity of your project. On average, most animations take 2-6 weeks from concept to final delivery. ",
+      "Timelines vary based on complexity, but most projects are completed within 2-6 weeks.",
   },
   {
     question: "Can I provide input during the animation process?",
     answer:
-      "Absolutely! We involve you at every step, from scriptwriting and storyboarding to the final edits, ensuring the animation meets your expectations.",
+      "Absolutely! Your feedback is vital at every stage—from scriptwriting to final edits—to ensure the best results.",
   },
   {
     question: "What do I need to provide to get started?",
-    answer: "Share your project goals, target audience and any specific ideas or references you have in mind. We`ll guide you through the rest!"
+    answer: "Simply share your project goals, target audience, and any specific ideas or references. We`ll take care of the rest!"
   }
 ];
 
@@ -61,64 +61,67 @@ const AnimationServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 sm:mb-0 px-4 sm:px-8 md:px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+          Captivate Your Audience with Stunning 2D & 3D Animations 
+            </h2>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              In today`s digital landscape, animation is a powerful tool for storytelling and marketing. At Evietek, we specialize in creating captivating 2D and 3D animations that engage audiences and communicate messages effectively. For instance, a well-crafted explainer video can simplify complex concepts, making them accessible to viewers. Our animation services are designed to help your brand stand out and connect with your audience on a deeper level.  
-
-              Whether you need a promotional video, educational content, or interactive media, our team of skilled animators can bring your ideas to life with creativity and precision. Let us help you elevate your brand with visually stunning animations that leave a lasting impression on your target audience.  
+            Getting people's attention is harder than ever in today's fast-paced digital world. Here's where animation comes in—a revolutionary tool that turns ideas into aesthetically captivating stories. Not only do we create captivating 2D and 3D animations at Evietek, but our also leave a lasting impression. The message would be clearer and more interesting if you could explain a complicated idea in a few seconds with an interesting animated video. 
+            <br/>
+            Whether you're looking for a promotional video, educational animation, or interactive media, our expert animators turn your concepts into reality. Let us bring your vision to life with immersive visuals that make your brand unforgettable. 
             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0 sm:mb-0">
             <WhyChoose
-              heading="Why Choose 2D & 3D Animation Services"
-              description="Evietek`s Animation Services are designed to bring your brand`s vision to life with cutting-edge design, creativity and precision. From engaging 2D visuals to immersive 3D experiences, we transform ideas into captivating digital content."
+              heading="Why Choose Evietek’s 2D & 3D Animation Services?"
+              description="At Evietek, we don’t just create animations—we tell stories that resonate. Our tailored animation services ensure your message is delivered with precision, creativity, and impact. Whether you want a dynamic 2D animation or a hyper-realistic 3D experience, we’ve got you covered."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Comprehensive Animation Solutions",
-                  description: "Craft stunning 2D and 3D animations for marketing, branding and storytelling." 
+                  description: "Develop eye-catching 2D & 3D animations for branding, marketing, and storytelling." 
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
-                  title: "24/7 Support & Continuous Project Updates",
-                  description: "Stay in the loop with regular progress reports and seamless communication." 
+                  title: "24/7 Support & Real-Time Project Updates",
+                  description: "Stay informed with continuous progress updates and direct communication with our team." 
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
-                  title: "Seamless Integration with Existing Visual Strategies",
-                  description: "Ensure consistency and fluidity across all platforms and media channels."
+                  title: "Seamless Brand Integration",
+                  description: "Ensure your animations align perfectly with your existing brand visuals and strategies."
                 },
                 {
                   iconSrc: "/About_Us/4.svg",
-                  title: "Scalable Solutions Tailored to Your Business Needs",
-                  description: "From small projects to large-scale productions, we adapt to your goals."
+                  title: "Customizable & Scalable Solutions",
+                  description: "Whether it’s a small animation or a full-scale production, we tailor our services to your needs."
                 }
               ]}
-              bottomDescription="We provide end-to-end animation services that enhance your brand`s visibility, captivate your audience and drive engagement."
+              bottomDescription="We provide start-to-finish animation services designed to elevate your brand, enhance engagement, and drive results."
             />
           </div>
 
           {/* Features Section */}
           <div className="mb-0 sm:mb-0">
             <Feature
-              heading="Feature of 2D & 3D Animation Services"
-              description="Evietek`s advanced animation services blend creativity with technology to deliver stunning visual experiences that captivate audiences and boost brand engagement."
+              heading="Features of Our 2D & 3D Animation Services"
+              description="Evietek blends creativity with advanced technology to create visually stunning animations that amplify your brand’s presence and captivate your audience."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Creative Concept Development",
-                  description: "Transform your ideas into visually compelling stories."
+                  description: "Transform your ideas into engaging, story-driven animations that spark interest."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "Real-Time Animation Rendering",
-                  description: "Ensure smooth and efficient production with cutting-edge tools."
+                  description: "Leverage cutting-edge technology for smooth, high-quality animation production."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
-                  title: "User-Friendly Collaboration Interface ",
-                  description: "Seamlessly collaborate with our team to bring your vision to life."
+                  title: "Collaborative Workflow",
+                  description: "Work seamlessly with our team through a user-friendly interface to refine your vision."
                 }
               ]}
               bottomImage={{
@@ -127,12 +130,12 @@ const AnimationServicePage = () => {
                 width: 400,
                 height: 300
               }}
-              bottomDescription="We provide end-to-end animation solutions, from concept design to final production, ensuring your brand stands out in the digital space."
+              bottomDescription="We provide end-to-end animation solutions, from initial concepts to final execution, ensuring your brand stands out in the digital space. "
               additionalFeatures={[
                 "High-Quality Visuals", 
-                "Custom Animation Strategies", 
-                "Regular Progress Updates", 
-                "Flexible and Scalable Solutions" 
+                "Customized Animation Strategies ", 
+                "Regular Progress Updates ", 
+                "Scalable & Flexible Services " 
               ]}
             />
           </div>

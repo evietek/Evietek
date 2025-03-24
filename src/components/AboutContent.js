@@ -19,8 +19,8 @@ export default function AboutContent() {
     animate: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2
+        staggerChildren: 1.5,
+        delayChildren: 1.2
       }
     }
   };
@@ -34,7 +34,7 @@ export default function AboutContent() {
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 1.5,
         ease: "easeOut"
       }
     }
@@ -56,7 +56,7 @@ export default function AboutContent() {
     },
     hover: {
       scale: 1.05,
-      transition: { duration: 0.2 }
+      transition: { duration: 1 }
     }
   };
 
@@ -82,8 +82,7 @@ export default function AboutContent() {
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
         >
-          At Evietek, we specialize in crafting innovative digital solutions that drive growth, 
-          enhance visibility, and build lasting connections for brands worldwide.
+          Evietek has been providing innovative digital solutions to brands since 2020, helping them with things like increasing visibility, sparking growth, and creating global connections. 
         </motion.p>
 
         {/* CTA Button with Updated Background Color */}

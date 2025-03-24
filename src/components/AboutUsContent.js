@@ -81,11 +81,10 @@ const AboutPageContent = () => {
         className="text-3xl md:text-4xl font-bold text-[#030438] mb-2"
         variants={itemVariants}
       >
-        Your Trusted Partner In  
+        Your Reliable Partner In   
         <span className="block">
-          <span className="text-indigo-500"> Innovative </span>
-          <span className="text-blue-400">Digital </span>
-          <span className="text-cyan-400">Solutions </span>
+          <span className="text-indigo-500"> Digital </span>
+          <span className="text-blue-400"> Excellence </span>
         </span>
       </motion.h1>
       
@@ -94,14 +93,14 @@ const AboutPageContent = () => {
         className="text-gray-600 mb-8 text-sm md:text-base"
         variants={itemVariants}
       >
-        Evietek`s innovative digital solutions guarantee long-term success, boost brand awareness, and increase involvement. 
+        At Evietek, we don’t just provide solutions—we create digital experiences that <b>drive success, amplify brand awareness, and fuel growth.</b>  
       </motion.p>
       
       <motion.div variants={itemVariants}>
         <AboutBanner 
           imageUrl="/About_us/4.jpg"
           heading="24/7 Support"
-          content="Real-time assistance for all your digital transformation needs, including branding strategies, content creation and web development."
+          content="Get real-time assistance for all your digital transformation needs, from branding strategies and content creation to web development—whenever you need it."
           startColor='#8750F7'
           endColor='#D376FF'
         />
@@ -120,7 +119,7 @@ const AboutPageContent = () => {
                 <path d="M12 22V12"/>
               </svg>
             }
-            text="Smart Solutions for Digital Success"
+            text="Smart, Scalable Digital Solutions"
             index={0}
           />
           <ServiceFeatureItem 
@@ -133,7 +132,7 @@ const AboutPageContent = () => {
                 <path d="M8 9h2"/>
               </svg>
             }
-            text="Strategic Content That Drives Impact"
+            text="Strategic Content That Commands Attention"
             index={1}
           />
           <ServiceFeatureItem 
@@ -143,7 +142,7 @@ const AboutPageContent = () => {
                 <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
               </svg>
             }
-            text="Visual Creativity That Speaks Volumes"
+            text="Visual Creativity That Leaves a Lasting Impact"
             index={2}
           />
         </div>
@@ -165,7 +164,7 @@ const AboutPageContent = () => {
               variants={buttonVariants}
               whileHover="hover"
             >
-              Book A Meeting
+              Book a Meeting Today!
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="White" strokeWidth="2" className="w-3 h-3 md:w-4 md:h-4 ml-2">
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>

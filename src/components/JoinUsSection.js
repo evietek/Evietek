@@ -22,7 +22,7 @@ export default function JoinUSSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 1.5,
         ease: "easeOut",
       },
     },
@@ -43,7 +43,7 @@ export default function JoinUSSection() {
           times: [0, 0.5, 1],
           delay: 1,
         },
-        opacity: { duration: 1, ease: "easeOut" },
+        opacity: { duration: 1.5, ease: "easeOut" },
       },
     },
   };
@@ -62,7 +62,7 @@ export default function JoinUSSection() {
           times: [0, 0.5, 1],
           delay: 1,
         },
-        opacity: { duration: 1, ease: "easeOut" },
+        opacity: { duration: 1.5  , ease: "easeOut" },
       },
     },
   };
@@ -83,7 +83,7 @@ export default function JoinUSSection() {
           times: [0, 0.5, 1],
           delay: 1,
         },
-        opacity: { duration: 1, ease: "easeOut" },
+        opacity: { duration: 1.5  , ease: "easeOut" },
       },
     },
   };
@@ -104,7 +104,7 @@ export default function JoinUSSection() {
           times: [0, 0.5, 1],
           delay: 1,
         },
-        opacity: { duration: 1, ease: "easeOut" },
+        opacity: { duration: 1.5  , ease: "easeOut" },
       },
     },
   };
@@ -176,10 +176,7 @@ export default function JoinUSSection() {
             viewport={{ once: true }}
             variants={textAnimation}
           >
-            At Evietek, we`re more than just a digital marketing agency – we`re innovators in graphic design,
-            web development, and marketing strategy. Whether you`re a creative designer, a web development expert,
-            or a digital marketing specialist, we offer an exciting environment to grow and make an impact.
-            Ready to join a team that`s shaping the future of digital experiences?
+At Evietek, we’re not just another digital agency—we’re pioneers in graphic design, web development, and digital marketing. Our mission? To transform ideas into powerful digital experiences that captivate, engage, and drive results. Whether you're a creative designer, web development pro, or marketing strategist, you’ll find an inspiring space to innovate, grow, and make an impact. Looking for a team that values creativity, strategy, and cutting-edge digital solutions? Let’s shape the future of digital together! 
           </motion.p>
         </div>
 

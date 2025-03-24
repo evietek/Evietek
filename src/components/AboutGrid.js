@@ -18,7 +18,7 @@ export default function AboutGrid() {
       rotateX: (index === 0 || index === 1) ? 10 : -5,
       rotateY: (index === 0 || index === 2) ? 25 : -25,
       transition: { 
-        duration: 0.8, 
+        duration: 1.5, 
         ease: "easeInOut",
         delay: index * 0.2
       }
@@ -27,17 +27,20 @@ export default function AboutGrid() {
       scale: 1.05,
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
       transition: { 
-        duration: 0.3 
+        duration: 1
       }
     }
   };
 
-  // Sticker animation with more dynamic movement
   const stickerVariants = {
     initial: {
       opacity: 0,
       scale: 0.3,
-      rotate: -90
+      rotate: -90,
+      transition: {
+        delay: 1,
+
+      }
     },
     animate: {
       opacity: 1,
@@ -45,22 +48,24 @@ export default function AboutGrid() {
       rotate: 0,
       transition: {
         type: "spring",
-        stiffness: 300,
-        damping: 10
+        stiffness: 100,
+        damping: 20,
+        duration: 2 // adds slower rise even with spring
       }
     },
     hover: {
       scale: 1.1,
       rotate: [0, 15, -15, 0],
       transition: {
-        duration: 0.4
+        duration: 1.5
       }
     }
   };
+  
 
   return (
     // Wrapper to scale the grid ONLY on desktop screens
-    <div className="transition-transform duration-300 lg:scale-120 xl:scale-135 pr-0">
+    <div className="transition-transform duration-1500 lg:scale-120 xl:scale-135 pr-0">
 
       <div className="relative w-full max-w-5xl mx-0 my-6 sm:my-8 md:my-10">
         {/* Top Row */}
@@ -70,7 +75,7 @@ export default function AboutGrid() {
           ].map((img, index) => (
             <motion.div 
               key={img.src}
-              className="relative"
+              className="relative cursor-pointer"
               style={{ perspective: "1000px" }}
               initial="initial"
               whileInView="animate"
@@ -95,13 +100,13 @@ export default function AboutGrid() {
         </div>
 
         {/* Bottom Row */}
-        <div className="flex justify-center gap-1 sm:gap-2 md:gap-3 mt-2 sm:mt-3 md:mt-4">
+        <div className="flex  justify-center gap-1 sm:gap-2 md:gap-3 mt-2 sm:mt-3 md:mt-4">
           {[{ src: "/About/AboutImg3.png", alt: "Person Working", bgColor: "#B8E0F7" },
             { src: "/About/AboutImg4.png", alt: "People with Laptop", bgColor: "#FFC107" }
           ].map((img, index) => (
             <motion.div 
               key={img.src}
-              className="relative"
+              className="relative cursor-pointer"
               style={{ perspective: "1000px" }}
               initial="initial"
               whileInView="animate"

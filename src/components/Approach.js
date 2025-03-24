@@ -62,10 +62,10 @@ const Approach = () => {
 
         {/* Section Title */}
         <motion.h2 
-          className="text-2xl md:text-3xl font-bold text-[white-900] pb-0 md:pb-8 text-center md:text-left"
+          className="text-2xl md:text-3xl font-bold text-white pb-0 md:pb-8 text-center md:text-left"
           variants={titleVariants}
         >
-          Strengthening Innovation, <span className="text-[#CB73FE]">Your Digital Success </span>
+          Creating a Digital Revolution, <span className="text-indigo-600">for </span><span className=" text-[#CB73FE]"> Long-Term </span><span className="text-blue-500">Success </span>
         </motion.h2>
 
         {/* Main Content - Flex Layout */}
@@ -74,43 +74,41 @@ const Approach = () => {
           <div className="flex flex-col gap-4 w-full md:w-[60%] relative z-10 text-left md:ml-10 lg:xl-0">
             <KeyPointCard
               icon="/About_Us/1.svg"
-              title="Our Mission"
-              description="To empower businesses with innovative digital strategies, driving growth, visibility and meaningful connections in the digital world."
+              title="Our Goal"
+              description="Our goal is to equip companies with innovative digital solutions that foster development, improve visibility, and establish close relationships. "
               index={0}
             />
             <KeyPointCard
               icon="/About_Us/2.svg"
               title="Our Vision"
-              description="To lead the digital transformation landscape with creativity and strategy, enabling brands to thrive in a competitive market."
+              description="Redefine the digital landscape with creativity and innovation, helping brands thrive in an ever-evolving market."
               index={1}
             />
             <KeyPointCard
               icon="/About_Us/3.svg"
               title="Our Value"
-              description="Innovating digital excellence, fostering trust through transparency and collaborating with clients to achieve shared success and growth."
+              description="Trust, transparency, and long-term success are all values that we strive to cultivate through collaborative digital excellence."
               index={2}
             />
           </div>
 
           {/* Right Side - Image */}
           <motion.div 
-  className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto mt-8 md:mt-0 md:absolute md:left-[250px] lg:left-[550px] xl:left-[500px] overflow-hidden rounded-3xl group"
-  variants={imageVariants}
->
-  <div className="relative">
-    <Image 
-      src="/About_Us/5.png"
-      alt="Expert Web Developer"
-      className="w-full transition-transform duration-700 group-hover:scale-110"
-      width={800}
-      height={600}
-    />
-    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
-                  transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
-  </div>
-</motion.div>
-
-
+            className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto mt-8 md:mt-0 md:absolute md:left-[250px] lg:left-[550px] xl:left-[500px] overflow-hidden rounded-3xl group"
+            variants={imageVariants}
+          >
+            <div className="relative">
+              <Image 
+                src="/About_Us/5.png"
+                alt="Expert Web Developer"
+                className="w-full transition-transform duration-700 group-hover:scale-110"
+                width={800}
+                height={600}
+              />
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                            transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>

@@ -126,10 +126,10 @@ const Work = () => {
         className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-4"
         variants={titleVariants}
       >
-        Empowering Innovation, <br />
-        <span className="text-indigo-600"> Elevating </span> 
-        <span className="text-blue-500"> Digital</span>
-        <span className="text-cyan-500"> Presence</span>
+        Transforming Digital <br /> 
+        <span className="text-indigo-600">  Visions  </span> 
+        <span className="text-blue-500"> Into </span>
+        <span className="text-cyan-500"> Reality </span>
       </motion.h1>
       
       {/* Subheading */}
@@ -137,7 +137,7 @@ const Work = () => {
         className="text-gray-600 mb-6 text-base md:text-lg"
         variants={titleVariants}
       >
-        We offer cutting-edge digital solutions to boost your brand`s visibility, drive growth, and foster meaningful connections. 
+       We provide state-of-the-art digital solutions that will raise awareness of your brand, boost growth, and support genuine connections. 
       </motion.p>
      
       {/* Service Features List */}

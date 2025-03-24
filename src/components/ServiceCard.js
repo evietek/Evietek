@@ -10,7 +10,7 @@ export default function ServiceCard({ background, title, description, icon, deco
     hidden: { backgroundColor: "white", rotateY: 180 },
     visible: {
       rotateY: 0,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 1.5, ease: "easeOut" },
     },
   };
 
@@ -19,7 +19,7 @@ export default function ServiceCard({ background, title, description, icon, deco
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.8, delay: 0.4 }, // Delayed so it appears AFTER rotation
+      transition: { duration: 1.8, delay: 0.4 }, // Delayed so it appears AFTER rotation
     },
   };
 

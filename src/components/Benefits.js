@@ -207,8 +207,10 @@ const OurBenefits = () => {
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4"
               variants={titleVariants}
             >
-              Reliable Solutions For<br />
-              Your Business Growth
+              Transforming Businesses with <br />
+              <span className="text-indigo-600">  Innovative </span> 
+              <span className="text-blue-500"> Digital </span>
+              <span className="text-cyan-500"> Solutions </span>
             </motion.h2>
 
             {/* Description */}
@@ -216,8 +218,7 @@ const OurBenefits = () => {
               className="text-gray-600 mb-6 sm:mb-8 text-sm md:text-base"
               variants={titleVariants}
             >
-              Our innovative digital solutions enhance your brand`s visibility, drive growth, and foster deeper connections. With our expertise, we help you stay ahead in the ever-evolving digital landscape. 
-            </motion.p>
+By improving brand awareness, raising involvement, and providing quantifiable success, we enable companies to flourish. Keep ahead of the curve in the dynamic digital world with our help.             </motion.p>
 
             {/* Feature Cards */}
             <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -237,7 +238,7 @@ const OurBenefits = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white-900 text-xs sm:text-sm md:text-base">Tailored Growth Strategies</h3>
+                  <h3 className="font-bold text-white-900 text-xs sm:text-sm md:text-base">Tailored Business Growth</h3>
                 </div>
               </motion.div>
 
@@ -257,7 +258,7 @@ const OurBenefits = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white-900 text-xs sm:text-sm md:text-base">24/7 Monitoring & Support</h3>
+                  <h3 className="font-bold text-white-900 text-xs sm:text-sm md:text-base">24/7 Monitoring and Support</h3>
                 </div>
               </motion.div>
             </div>
@@ -276,7 +277,7 @@ const OurBenefits = () => {
                     <line x1="5" y1="12" x2="19" y2="12"/>
                   </svg>
                 </div>
-                <p className="text-gray-700 text-xs sm:text-sm md:text-base">Enhanced Business Continuity</p>
+                <p className="text-gray-700 text-xs sm:text-sm md:text-base">Seamless Digital Transformation</p>
               </motion.div>
               
               <motion.div 
@@ -307,6 +308,8 @@ const OurBenefits = () => {
                 </div>
                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Unmatched Customer Experience</p>
               </motion.div>
+
+              <p className="text-gray-700 text-xs sm:text-sm md:text-base"> <b>Take the next step toward success. Let's build something extraordinary together.</b> </p>
             </div>
 
             {/* CTA Button */}

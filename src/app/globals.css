@@ -113,7 +113,7 @@ body {
     animation: float-right 5s ease-in-out infinite;
   }
   .animate-buzz {
-    animation: buzz 0.3s ease-in-out 3;
+    animation: buzz 1s ease-in-out 2;
   }
   .animate-shimmer {
     animation: shimmer 1.5s linear infinite;
@@ -154,4 +154,10 @@ body {
   .animate-bounce-slow {
     animation: bounceSlow 2.5s ease-in-out infinite;
   }
+}
+
+a,
+button,
+[data-cursor="pointer"] {
+  cursor: pointer;
 }

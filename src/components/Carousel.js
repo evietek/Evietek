@@ -25,16 +25,7 @@ const Carousel = forwardRef((props, ref) => {
     { id: 4, src: "/Portfolio/img_4.png", alt: "Portfolio 4" },
   ];
 
-  // Animation variants for the initial cards
-  const cardVariants = {
-    hidden: { opacity: 0, y: -200 }, // Start higher for a stronger drop effect
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay: i * 0.3 }, // Increased delay for staircase effect
-    }),
-  };
-
+ 
   return (
     <div className="relative w-screen overflow-hidden">
       <div 
@@ -70,7 +61,6 @@ const Carousel = forwardRef((props, ref) => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  variants={cardVariants}
                 >
                   <Image 
                     src={item.src} 

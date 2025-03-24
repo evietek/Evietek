@@ -29,7 +29,7 @@ export default function PortfolioSection() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { duration: 1.5, ease: "easeOut" } 
     }
   };
 
@@ -38,7 +38,7 @@ export default function PortfolioSection() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } 
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.2 } 
     }
   };
 
@@ -47,7 +47,7 @@ export default function PortfolioSection() {
     visible: { 
       opacity: 1, 
       x: 0, 
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } 
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.4 } 
     }
   };
 

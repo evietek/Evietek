@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { duration: 1.5, ease: "easeOut" } 
     }
   };
 
@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } 
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.2 } 
     }
   };
 
@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
     visible: { 
       opacity: 1, 
       x: 0, 
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.3 } 
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.3 } 
     }
   };
 
@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
     visible: { 
       opacity: 1, 
       x: 0, 
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } 
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.4 } 
     }
   };
 
@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
         viewport={{ once: true, amount: 0.3 }}
         variants={magnetVariants}
         whileHover={{ rotate: -90 }} // Rotates on Hover
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
       >
         <Image src="/Testimonials/Magnet.svg" alt="Magnet" width={160} height={160} />
       </motion.div>

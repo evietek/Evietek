@@ -100,11 +100,14 @@ const HowItWork = () => {
             
             {/* Main Heading */}
             <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-6 md:mb-10 text-white-900"
+              className="text-3xl md:text-4xl font-bold mb-6 md:mb-10 text-white"
               variants={titleVariants}
             >
-              Streamlined Process,<br />
-              <span className="text-[#CB73FE]">Crafting</span>  <span className="text-indigo-400">Digital</span> <span className="text-blue-400">Transformation </span><span className="text-cyan-400"> Excellence.</span>
+              Seamless Process, <br />
+              <span className="text-[#CB73FE]">Driving Digital</span>{' '}
+              <span className="text-indigo-400">Innovation</span>{' '}
+              <span className="text-blue-400">With</span>{' '}
+              <span className="text-cyan-400">Excellence.</span>
             </motion.h2>
             
             {/* Process Steps */}
@@ -124,9 +127,9 @@ const HowItWork = () => {
                   </div>
                 </div>
                 <div className="ml-4 md:ml-6">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[#CB73FE]">Assessment & Strategy</h3>
-                  <p className="text-white-600 text-sm md:text-base">
-                    We begin by understanding your business goals and identifying growth opportunities through in-depth analysis and strategic planning. 
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[#CB73FE]">Discovery & Strategy</h3>
+                  <p className="text-white text-sm md:text-base">
+                  We start by understanding your business needs, identifying growth opportunities, and crafting a strategic roadmap to success. 
                   </p>
                 </div>
               </motion.div>
@@ -143,9 +146,9 @@ const HowItWork = () => {
                   </div>
                 </div>
                 <div className="ml-4 md:ml-6">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[#CB73FE]">Implementation</h3>
-                  <p className="text-white-600 text-sm md:text-base">
-                    Our expert team executes innovative digital solutions, leveraging technology to enhance visibility and drive results.
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[#CB73FE]">Execution & Implementation</h3>
+                  <p className="text-white text-sm md:text-base">
+                  Our expert team delivers tailored digital solutions, utilizing advanced technology to enhance your online presence and drive measurable results. 
                   </p>
                 </div>
               </motion.div>
@@ -162,9 +165,9 @@ const HowItWork = () => {
                   </div>
                 </div>
                 <div className="ml-4 md:ml-6">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[#CB73FE]">Ongoing Support & Optimization</h3>
-                  <p className="text-white-600 text-sm md:text-base">
-                    We continuously monitor performance, provide maintenance, and refine strategies to ensure sustained success. 
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[#CB73FE]">Continuous Optimization & Growth</h3>
+                  <p className="text-white text-sm md:text-base">
+                  We provide ongoing support, monitor performance, and refine strategies to ensure long-term success and scalability. 
                   </p>
                 </div>
               </motion.div>
@@ -205,7 +208,7 @@ const HowItWork = () => {
                   alt="Security expert"
                   width={200}
                   height={200}
-                  className="md:w-60 lg:w-full object-cover  w-30 h-30 md:h-40 lg:h-60 transition-transform duration-700 group-hover:scale-110"
+                  className="md:w-60 lg:w-full object-cover w-30 h-30 md:h-40 lg:h-60 transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
                               transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />

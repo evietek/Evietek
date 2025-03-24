@@ -14,7 +14,7 @@ export default function WorkProcessSection() {
     visible: { 
       opacity: 1, 
       x: 0, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { duration: 1.5, ease: "easeOut" } 
     }
   };
 
@@ -23,7 +23,7 @@ export default function WorkProcessSection() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { duration: 1.5, ease: "easeOut" } 
     }
   };
 
@@ -32,7 +32,7 @@ export default function WorkProcessSection() {
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay: i * 0.2 },
+      transition: { duration: 1.5, ease: "easeOut", delay: i * 0.2 },
     }),
   };
 
@@ -84,7 +84,7 @@ export default function WorkProcessSection() {
               iconHover: "/Work_Process/1a.svg",
               number: "1",
               title: "Brief/Short Details",
-              description: "Come to us with a project brief or short project details that you have currently to give us an idea of your project or product.",
+              description: "Tell us about your project—whether it’s a brief or just an idea—so we can understand your goals and bring them to life.",
               rotation: 2.52,
               positionClass: " -translate-y-0  md:-translate-y-6 lg:-translate-y-8" 
             },
@@ -93,7 +93,7 @@ export default function WorkProcessSection() {
               iconHover: "/Work_Process/2a.svg",
               number: "2",
               title: "Questions",
-              description: "After having the details from you, we'll ask questions related to your project to understand the project length and scope.",
+              description: "We’ll ask relevant questions to clarify your project’s scope, ensuring we’re aligned on expectations and can create the best plan for your needs.",
               highlight: true,
               rotation: -2.69,
               positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" 
@@ -103,7 +103,7 @@ export default function WorkProcessSection() {
               iconHover: "/Work_Process/3a.svg",
               number: "3",
               title: "Providing Quote",
-              description: "We will be providing you a quote for the project after having the answers from you and estimating the resources needed for your project.",
+              description: "Once we understand the details, we’ll provide a transparent quote—no surprises, just an honest estimate based on your project’s requirements and scope.",
               rotation: -1.24,
               positionClass: "-translate-y-0 md:-translate-y-6 lg:-translate-y-8" 
             },
@@ -112,7 +112,7 @@ export default function WorkProcessSection() {
               iconHover: "/Work_Process/4a.svg",
               number: "4",
               title: "Get Started",
-              description: "If the quote works for both of us, we can have a short meeting or we can directly jump into the process of getting started.",
+              description: "If everything looks great, we can have a quick chat or jump right in and start working on bringing your vision to reality.",
               rotation: -0.48,
               positionClass: "translate-y-0 md:translate-y-6 lg:translate-y-8" 
             }

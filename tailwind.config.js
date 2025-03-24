@@ -22,8 +22,8 @@ module.exports = {
         'shimmer-fast': 'shimmer 1.5s linear infinite',
         'rotate-glow': 'rotateGlow 4s ease-in-out infinite',
         'spin-slow': 'spinSlow 10s linear infinite',
-        'bounce-slow': 'bounceSlow 2.5s ease-in-out infinite',
-        'buzz': 'buzz 0.3s ease-in-out 3',
+        'bounce-slow': 'bounceSlow 3s ease-in-out infinite',
+        'buzz': 'buzz 1s ease-in-out 3',
       },
       keyframes: {
         float: {

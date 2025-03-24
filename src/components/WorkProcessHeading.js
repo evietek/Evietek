@@ -12,7 +12,7 @@ export default function WorkProcessHeading() {
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
       >
         <Image 
           src="/Work_Process/Work.svg"
@@ -28,7 +28,7 @@ export default function WorkProcessHeading() {
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.4 }}
       >
         <Image 
           src="/Work_Process/Process.svg"

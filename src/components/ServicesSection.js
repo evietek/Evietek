@@ -13,7 +13,7 @@ export default function ServicesSection() {
         animate: {
             opacity: 0.7,
             y: 0,
-            transition: { duration: 0.8, ease: "easeOut" }
+            transition: { duration: 1.5, ease: "easeOut" }
         }
     };
 
@@ -23,7 +23,7 @@ export default function ServicesSection() {
         animate: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.8, ease: "easeOut" }
+            transition: { duration: 1.5, ease: "easeOut" }
         }
     };
 
@@ -33,7 +33,7 @@ export default function ServicesSection() {
         visible: { 
             opacity: 1, 
             y: 0, 
-            transition: { duration: 0.8, ease: "easeOut" } 
+            transition: { duration: 1.5, ease: "easeOut" } 
         }
     };
 
@@ -41,21 +41,21 @@ export default function ServicesSection() {
     const services = [
         { 
             title: "Website Design", 
-            description: "Creating Multipage websites for different companies.",
+            description: "Captivate visitors with sleek, user-friendly designs that drive engagement and conversions effortlessly.",
             icon: "/Our_Services/Website_Logo.svg",
             decoration: "/Our_Services/Decor_1.svg",
             link: "/website-design"
         },
         { 
             title: "Branding Design", 
-            description: "Helping our Clients to establish an amazing brand with irresistible and strong visual elements.",
+            description: "Craft a powerful brand identity that resonates, builds trust, and sets you apart instantly.",
             icon: "/Our_Services/Branding_Design_Logo.svg",
             decoration: "/Our_Services/Decor_2.svg",
             link: "/branding"
         },
         { 
             title: "Social Media Marketing", 
-            description: "We help you to grow your brand on social media platforms.",
+            description: "Dominate digital platforms with strategic content that attracts, engages, and converts your audience.",
             icon: "/Our_Services/Marketing_Logo.svg",
             decoration: "/Our_Services/Decor_3.svg",
             link: "/social-media-marketing"
