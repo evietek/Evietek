@@ -309,7 +309,7 @@ By improving brand awareness, raising involvement, and providing quantifiable su
                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Unmatched Customer Experience</p>
               </motion.div>
 
-              <p className="text-gray-700 text-xs sm:text-sm md:text-base"> <b>Take the next step toward success. Let's build something extraordinary together.</b> </p>
+              <p className="text-gray-700 text-xs sm:text-sm md:text-base"> <b>Take the next step toward success. Let`s build something extraordinary together.</b> </p>
             </div>
 
             {/* CTA Button */}

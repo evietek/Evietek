@@ -176,7 +176,7 @@ export default function JoinUSSection() {
             viewport={{ once: true }}
             variants={textAnimation}
           >
-At Evietek, we’re not just another digital agency—we’re pioneers in graphic design, web development, and digital marketing. Our mission? To transform ideas into powerful digital experiences that captivate, engage, and drive results. Whether you're a creative designer, web development pro, or marketing strategist, you’ll find an inspiring space to innovate, grow, and make an impact. Looking for a team that values creativity, strategy, and cutting-edge digital solutions? Let’s shape the future of digital together! 
+At Evietek, we`re not just another digital agency—we`re pioneers in graphic design, web development, and digital marketing. Our mission? To transform ideas into powerful digital experiences that captivate, engage, and drive results. Whether you`re a creative designer, web development pro, or marketing strategist, you`ll find an inspiring space to innovate, grow, and make an impact. Looking for a team that values creativity, strategy, and cutting-edge digital solutions? Let`s shape the future of digital together! 
           </motion.p>
         </div>
 

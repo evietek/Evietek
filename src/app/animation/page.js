@@ -65,17 +65,17 @@ const AnimationServicePage = () => {
           Captivate Your Audience with Stunning 2D & 3D Animations 
             </h2>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-            Getting people's attention is harder than ever in today's fast-paced digital world. Here's where animation comes in—a revolutionary tool that turns ideas into aesthetically captivating stories. Not only do we create captivating 2D and 3D animations at Evietek, but our also leave a lasting impression. The message would be clearer and more interesting if you could explain a complicated idea in a few seconds with an interesting animated video. 
+            Getting people`s attention is harder than ever in today`s fast-paced digital world. Here`s where animation comes in—a revolutionary tool that turns ideas into aesthetically captivating stories. Not only do we create captivating 2D and 3D animations at Evietek, but our also leave a lasting impression. The message would be clearer and more interesting if you could explain a complicated idea in a few seconds with an interesting animated video. 
             <br/>
-            Whether you're looking for a promotional video, educational animation, or interactive media, our expert animators turn your concepts into reality. Let us bring your vision to life with immersive visuals that make your brand unforgettable. 
+            Whether you`re looking for a promotional video, educational animation, or interactive media, our expert animators turn your concepts into reality. Let us bring your vision to life with immersive visuals that make your brand unforgettable. 
             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0 sm:mb-0">
             <WhyChoose
-              heading="Why Choose Evietek’s 2D & 3D Animation Services?"
-              description="At Evietek, we don’t just create animations—we tell stories that resonate. Our tailored animation services ensure your message is delivered with precision, creativity, and impact. Whether you want a dynamic 2D animation or a hyper-realistic 3D experience, we’ve got you covered."
+              heading="Why Choose Evietek`s 2D & 3D Animation Services?"
+              description="At Evietek, we don`t just create animations—we tell stories that resonate. Our tailored animation services ensure your message is delivered with precision, creativity, and impact. Whether you want a dynamic 2D animation or a hyper-realistic 3D experience, we’ve got you covered."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -95,7 +95,7 @@ const AnimationServicePage = () => {
                 {
                   iconSrc: "/About_Us/4.svg",
                   title: "Customizable & Scalable Solutions",
-                  description: "Whether it’s a small animation or a full-scale production, we tailor our services to your needs."
+                  description: "Whether it`s a small animation or a full-scale production, we tailor our services to your needs."
                 }
               ]}
               bottomDescription="We provide start-to-finish animation services designed to elevate your brand, enhance engagement, and drive results."
@@ -106,7 +106,7 @@ const AnimationServicePage = () => {
           <div className="mb-0 sm:mb-0">
             <Feature
               heading="Features of Our 2D & 3D Animation Services"
-              description="Evietek blends creativity with advanced technology to create visually stunning animations that amplify your brand’s presence and captivate your audience."
+              description="Evietek blends creativity with advanced technology to create visually stunning animations that amplify your brand`s presence and captivate your audience."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
