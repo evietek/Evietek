@@ -36,7 +36,7 @@ const VideoEditingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Video Editing" 
         backgroundImage="/Services/Video/bg.jpg" 

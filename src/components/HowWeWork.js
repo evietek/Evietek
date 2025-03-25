@@ -70,7 +70,7 @@ const HowItWork = () => {
 
   return (
     <motion.section 
-      className="py-12 md:py-16 bg-[#030438]"
+      className="py-12 md:py-16 bg-[#030438] select-none cursor-default"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

@@ -6,7 +6,7 @@ export default function WorkProcessBanner() {
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#8D4BF7] to-[#C98CF8] transform -rotate-2">
       <motion.div
-        className="flex gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 whitespace-nowrap py-1 sm:py-1.5 md:py-2 text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+        className="flex gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 whitespace-nowrap py-1 sm:py-1.5 md:py-2 text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl select-none cursor-default"
         initial={{ x: "100%" }}
         animate={{ x: "-100%" }}
         transition={{ repeat: Infinity, duration: 20, ease: "linear" }}

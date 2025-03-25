@@ -35,7 +35,7 @@ const AnimationServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="2D/3D Animation" 
         backgroundImage="/Services/Animation/bg.jpg"

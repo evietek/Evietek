@@ -3,6 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "700", "900"], // adjust weights as needed
+});
 
 export default function JoinUSSection() {
   // Animation variants for floating elements
@@ -132,8 +141,10 @@ export default function JoinUSSection() {
     },
   };
 
+  const [copied, setCopied] = useState(false);
+
   return (
-    <section className="relative bg-[#030438] text-white flex flex-col items-center justify-between text-center px-6 md:px-12 md:py-10 overflow-hidden">
+    <section className={`relative bg-[#030438] text-white flex flex-col items-center justify-between text-center px-6 md:px-12 md:py-10 overflow-hidden ${playfair.className}`}>
       {/* Background Grid SVG - Covers Full Width */}
       <div className="absolute inset-0 w-full h-full">
         <svg
@@ -157,7 +168,7 @@ export default function JoinUSSection() {
         {/* Heading */}
         <div className="max-w-4xl mx-auto relative z-10">
           <motion.h1 
-            className="text-[35px] sm:text-[50px] md:text-[60px] lg:text-[70px] leading-[110%] font-bricolageGrotesque font-bold text-white"
+            className="text-[35px] sm:text-[50px] md:text-[60px] lg:text-[70px] leading-[110%] font-bricolageGrotesque font-bold text-white select-none cursor-default"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -170,7 +181,7 @@ export default function JoinUSSection() {
 
           {/* Paragraph */}
           <motion.p 
-            className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-gilroyRegular font-normal leading-[150%] text-center mt-6 max-w-3xl px-2 md:px-0"
+            className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-gilroyRegular font-normal leading-[150%] text-center mt-6 max-w-3xl px-2 md:px-0 select-none cursor-default"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -194,10 +205,32 @@ At Evietek, we`re not just another digital agency—we`re pioneers in graphic de
               Book a Meeting
             </button>
           </Link>
-          <button className="flex items-center gap-2 bg-[#ffff] hover:opacity-90 text-[#030438] px-5 py-2 md:px-6 md:py-3 rounded-2xl font-semibold text-sm md:text-base xl:text-lg shadow-lg transition-all transform hover:scale-105">
-            <Image src="/phone2.svg" alt="Phone" width={18} height={18} className="md:w-[20px] md:h-[20px]" />
-            +1 (647) 804 5528
-          </button>
+          <div className="relative">
+  <button
+    onClick={() => {
+      navigator.clipboard.writeText("+1 (647) 804 5528");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }}
+    className="flex items-center gap-2 bg-[#ffff] hover:opacity-90 text-[#030438] px-5 py-2 md:px-6 md:py-3 rounded-2xl font-semibold text-sm md:text-base xl:text-lg shadow-lg transition-all transform hover:scale-105"
+  >
+    <Image
+      src="/phone2.svg"
+      alt="Phone"
+      width={18}
+      height={18}
+      className="md:w-[20px] md:h-[20px]"
+    />
+    +1 (647) 804 5528
+  </button>
+
+  {copied && (
+    <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm text-green-500 font-medium whitespace-nowrap">
+      Copied!
+    </span>
+  )}
+</div>
+
         </motion.div>
       </div>
 

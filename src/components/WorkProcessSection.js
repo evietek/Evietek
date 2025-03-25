@@ -6,6 +6,8 @@ import WorkProcessCard from "./WorkProcessCard";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
 
 export default function WorkProcessSection() {
   // Animation Variants
@@ -46,6 +48,15 @@ export default function WorkProcessSection() {
     }
   };
 
+  const [copied, setCopied] = useState(false);
+
+const handleCopy = () => {
+  navigator.clipboard.writeText("+1 (647) 804 5528");
+  setCopied(true);
+  setTimeout(() => setCopied(false), 2000); // reset after 2 seconds
+};
+
+
   return (
     <>
       {/* Banner Section with Slide-in Animation */}
@@ -65,7 +76,7 @@ export default function WorkProcessSection() {
         <div className="flex flex-col items-center text-center">
           <Heading />
           <motion.h2
-            className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[107%] font-bricolage font-bold text-[#F6F5FF] mt-2"
+            className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[107%] font-bricolage font-bold text-[#F6F5FF] mt-2 select-none cursor-default"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -142,10 +153,24 @@ export default function WorkProcessSection() {
               Book a Meeting
             </button>
           </Link>
-          <button className="flex items-center gap-1.5 bg-[#3E2472] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105">
-            <Image src="/phone.svg" alt="Phone" width={20} height={20} />+1 (647) 804 5528
-          </button>
-        </div>
+          <div className="relative">
+  <button
+    onClick={handleCopy}
+    className="flex items-center gap-1.5 bg-[#3E2472] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105"
+  >
+    <Image src="/phone.svg" alt="Phone" width={20} height={20} />
+    +1 (647) 804 5528
+  </button>
+
+  {copied && (
+    <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm text-green-400 font-medium whitespace-nowrap">
+      Copied!
+    </span>
+  )}
+</div>
+
+</div>
+
 
         {/* Decorative Elements */}
         <div className="absolute top-40 left-0 w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20">

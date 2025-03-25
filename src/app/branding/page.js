@@ -36,7 +36,7 @@ const BrandingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Branding" 
         backgroundImage="/Services/Branding/bg.jpeg" 

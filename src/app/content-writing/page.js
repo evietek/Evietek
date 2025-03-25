@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "What about revisions?",
     answer:
-      " We’ll refine until it’s perfect. Pricing is flexible and customization is standard. At Evietek, we make sure every client`s needs are met seamlessly.",
+      " We`ll refine until it`s perfect. Pricing is flexible and customization is standard. At Evietek, we make sure every client`s needs are met seamlessly.",
   },
 ];
 
@@ -26,7 +26,7 @@ const ContentWritingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Content Writing" 
         backgroundImage="/Services/CW/bg.png"

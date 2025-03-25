@@ -48,7 +48,7 @@ const ImageGridWithRotatingSvg = () => {
   };
 
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto p-4 md:gap-4 gap-2">
+    <div className="relative flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto p-4 md:gap-4 gap-2 select-none cursor-default">
       {/* Mobile: First image, Desktop: Left image */}
       <motion.div 
         className="relative w-[80%] md:w-1/3 h-[250px] md:h-90 overflow-hidden rounded-lg group"

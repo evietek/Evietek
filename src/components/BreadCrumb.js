@@ -17,7 +17,7 @@ const Breadcrumb = ({ title, backgroundImage, backgroundPosition = 'center', tex
     >
       <div className="w-full h-full bg-black/50 absolute top-0 left-0" />
       <div className="relative z-10 px-8 md:px-36 flex flex-col justify-center h-full" style={{ color: textColor }}>
-        <h1 className="text-3xl md:text-4xl font-bold">{title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold select-none cursor-default">{title}</h1>
         <nav className="text-xs md:text-sm mt-2">
           <ol className="flex items-center space-x-2">
             <li>

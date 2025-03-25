@@ -108,7 +108,7 @@ export default function PortfolioSection() {
             
             {/* Content Heading (Slides from Bottom) */}
             <motion.h2 
-              className="mt-2 md:mt-3 text-3xl md:text-5xl font-bricolage font-bold leading-tight"
+              className="mt-2 md:mt-3 text-3xl md:text-5xl font-bricolage font-bold leading-tight select-none cursor-default"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}

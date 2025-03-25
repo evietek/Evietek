@@ -36,7 +36,7 @@ const WebApplicationServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Web Application" 
         backgroundImage="/Services/Web-App/bg.jpg" 

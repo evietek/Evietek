@@ -36,7 +36,7 @@ const SocialMediaMarketingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Social Media Marketing" 
         backgroundImage="/Services/Social/bg.jpg" 

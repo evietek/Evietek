@@ -8,24 +8,29 @@ import ServiceSidebar from "@/components/ServiceSidebar";
 
 const faqs = [
   {
-    question: "What is SEO and why is it important?",
+    question: "What is SEO and why does it matter?",
     answer:
-      "SEO, or search engine optimization, improves your website`s visibility in search engine results, helping attract more organic traffic and potential customers.",
+      "SEO (Search Engine Optimization) enhances your website`s ranking, making it easier for potential customers to find your business online.",
   },
   {
-    question: "How long does it take to see results from SEO?",
+    question: "How long does SEO take to show results?",
     answer:
-      "Typically, it can take 3 to 6 months to see significant results from SEO efforts, depending on various factors like competition and the current state of your website.",
+    "Typically, results become noticeable within 3 to 6 months, depending on competition and website condition."
   },
   {
-    question: "What services do SEO agencies provide?",
+    question: "What services do SEO agencies offer?",
     answer:
-      "SEO agencies offer services such as site audits, keyword research, content strategy development and link building to enhance your website`s online presence.",
+    "SEO agencies provide keyword research, site audits, content optimization, and link-building services to improve search visibility."
   },
   {
-    question: "Do I need to provide anything to the SEO agency?",
+    question: "What do I need to provide for SEO services? ",
     answer:
-      "Yes, you should share information about your business objectives, competitors, preferred keywords and access to analytics tools for effective campaign development.",
+    "To maximize effectiveness, share business objectives, competitor insights, preferred keywords, and access to analytics tools."
+  },
+  {
+    question: "Ready to Dominate Search Results?",
+    answer:
+    "Let Evietek’s SEO experts propel your business forward. Contact us today and take the first step toward digital success!"
   }
 ];
 
@@ -36,7 +41,7 @@ const SEOServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Search Engine Optimization" 
         backgroundImage="/Services/SEO/bg.jpg" 
@@ -62,11 +67,12 @@ const SEOServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+            Get Discovered, Get Results 
+            </h2>
+            <div className="w-20 h-1 bg-blue-600 mb-8"></div>
             <p className="text-gray-600 leading-relaxed">
-              In today`s digital marketplace, having a strong online presence is crucial. At Evietek, we understand that effective SEO (Search Engine Optimization) is key to achieving this. Good SEO improves your website`s visibility on search engines, helping potential customers find you easily. Imagine a local bakery that wants to attract more customers; without proper SEO, they might remain hidden while competitors thrive.
-            </p>
-            <p className="text-gray-600 leading-relaxed mt-4">
-              The local bakery and other businesses can enhance their online visibility and connect with their target audience by utilizing Evietek`s comprehensive SEO services. We use strategic SEO to increase website traffic and sales.
+            In today’s digital world, visibility is everything. At Evietek, we specialize in SEO (Search Engine Optimization) to ensure your business stands out. Imagine a bakery struggling to attract customers online—without effective SEO, it remains invisible while competitors flourish. With Evietek’s proven SEO strategies, businesses like yours can dominate search results, attract high-intent customers, and drive sustainable growth. 
             </p>
           </div>
 
@@ -74,49 +80,83 @@ const SEOServicePage = () => {
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Evietek`s SEO Services?"
-              description="Evietek`s SEO Services are essential for enhancing your online visibility, driving organic traffic and ensuring your business stays ahead in search rankings. By optimizing every aspect of your digital presence, we provide a robust strategy for long-term growth and success."
+              description="Evietek’s SEO solutions are designed to boost your online presence, increase organic traffic, and keep you ahead in search rankings. Our expert team leverages advanced optimization techniques to maximize your reach and improve engagement."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
-                  title: "Comprehensive Optimization for All Digital Platforms",
+                  title: "Comprehensive Optimization",
+                  description: "for all digital platforms"
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
-                  title: "24/7 Monitoring & Continuous Algorithm Updates",
+                  title: "24/7 Monitoring",
+                  description: " & Continuous Algorithm Updates"
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
-                  title: "Seamless Integration with Your Existing Digital Strategy",
+                  title: "Seamless Integration",
+                  description: "with Your Existing Digital Strategy"
                 },
                 {
                   iconSrc: "/About_Us/4.svg",
-                  title: "Scalable Solutions Tailored to Your Business Goals",
+                  title: "Scalable Solutions",
+                  description: "Tailored to Your Business Goals"
                 }
               ]}
-              bottomDescription="Our services ensure: Higher Search Rankings & Organic Growth, On-Page & Off-Page SEO Optimization, Technical SEO Audits & Fixes, and Scalable & Flexible Strategies. Let Evietek boost your online presence and drive measurable results with expert SEO solutions!"
+              bottomDescription="With our tailored strategies, expect higher rankings, enhanced user experience, and consistent lead generation."
             />
           </div>
 
           {/* Features Section */}
           <div className="mb-0">
             <Feature
-              heading="Features of Evietek`s SEO Services"
-              description="We provide cutting-edge SEO strategies with data-driven insights, real-time monitoring and seamless integration to boost your online presence and search engine rankings."
+              heading="Powerful Features of Evietek`s SEO Services"
+              description="Our data-driven approach ensures top search engine rankings and sustainable traffic growth"
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Keyword Research & Optimization",
-                  description: "Target high-performing keywords to improve visibility and attract the right audience."
+                  description: "Identify high-performing keywords to boost visibility and attract the right audience."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "Real-Time Performance Monitoring",
-                  description: "Track rankings, organic traffic and engagement with advanced analytics."
+                  description: "Track rankings, traffic, and engagement with advanced analytics for data-backed decisions."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "User-Friendly SEO Strategies",
-                  description: "Enhance user experience with optimized content, technical SEO and site structure."
+                  description: "A detailed website analysis to identify strengths and gaps, focusing on speed, content, and structure."
+                },
+                {
+                  iconSrc: "/About_Us/4.svg",
+                  title: "On-Page SEO Excellence",
+                  description: "Optimize title tags, meta descriptions, and content to enhance search engine performance."
+                },
+                {
+                  iconSrc: "/About_Us/5.svg",
+                  title: "Off-Page SEO Authority",
+                  description: "Build credibility with high-quality backlinks from trusted sources to improve domain authority."
+                },
+                {
+                  iconSrc: "/About_Us/1.svg",
+                  title: "Technical SEO Optimization",
+                  description: "Enhance site speed, mobile-friendliness, and overall technical performance for superior ranking results."
+                },
+                {
+                  iconSrc: "/About_Us/2.svg",
+                  title: "Elevate Your Business with Evietek`s SEO Solutions",
+                  description: "Investing in expert SEO services leads to long-term success. With our innovative approach, expect consistent traffic, better conversions, and sustainable growth."
+                },
+                {
+                  iconSrc: "/About_Us/3.svg",
+                  title: "Long-Term Results & Adaptability",
+                  description: "Our SEO strategies evolve with algorithm changes, ensuring continued visibility and ROI without ongoing ad spend."
+                },
+                {
+                  iconSrc: "/About_Us/4.svg",
+                  title: "Industry Expertise & Proven Success",
+                  description: "Our track record speaks for itself—we increase traffic, enhance engagement, and drive results."
                 }
               ]}
               bottomImage={{
@@ -125,7 +165,7 @@ const SEOServicePage = () => {
                 width: 400,
                 height: 300
               }}
-              bottomDescription="Our professionals remain on top of industry developments and algorithm improvements to optimize your website for optimum visibility. Our track record shows we can improve traffic and conversions."
+              bottomDescription="With Evietek, you receive:"
               additionalFeatures={[
                 "Comprehensive Website Optimization",
                 "Automated SEO Audits & Fixes",

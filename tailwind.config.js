@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        // 💡 Must be inside `extend`, not at root of `theme`
+        exact1024: { raw: "(width: 1024px)" },
+      },
       fontFamily: {
         vastago: ['var(--font-vastago)'],
         vastagoBold: ["VastagoGrotesk-Bold", "sans-serif"],

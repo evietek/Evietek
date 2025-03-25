@@ -36,7 +36,7 @@ const QATestingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="QA Testing" 
         backgroundImage="/Services/QA/bg.jpg" 

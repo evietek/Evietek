@@ -18,7 +18,7 @@ const headingVariants = {
 
 const KaynaEmbeddedInsurance = () => {
   return (
-    <main className="pt-0 px-6 md:px-16 lg:px-0 relative bg-white">
+    <main className="pt-0 px-6 md:px-16 lg:px-0 relative bg-white select-none cursor-default">
       
       {/* Breadcrumb */}
       <Breadcrumb 

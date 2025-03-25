@@ -41,7 +41,7 @@ const buttonVariants = {
 const ServiceFeatureItem = ({ icon, text, index }) => {
   return (
     <motion.div 
-      className="flex items-center gap-3 mb-4"
+      className="flex items-center gap-3 mb-4 select-none cursor-default"
       variants={itemVariants}
       custom={index}
     >
@@ -73,12 +73,12 @@ const AboutPageContent = () => {
           <path strokeWidth="2" d="M23 21v-2a4 4 0 0 0-3-3.87"/>
           <path strokeWidth="2" d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
-        <span className="text-sm font-medium tracking-wider text-[#51328F]">ABOUT US</span>
+        <span className="text-sm font-medium tracking-wider text-[#51328F] select-none cursor-default">ABOUT US</span>
       </motion.div>
       
       {/* Main heading with gradient text */}
       <motion.h1 
-        className="text-3xl md:text-4xl font-bold text-[#030438] mb-2"
+        className="text-3xl md:text-4xl font-bold text-[#030438] mb-2 select-none cursor-default"
         variants={itemVariants}
       >
         Your Reliable Partner In   
@@ -90,7 +90,7 @@ const AboutPageContent = () => {
       
       {/* Subheading text */}
       <motion.p 
-        className="text-gray-600 mb-8 text-sm md:text-base"
+        className="text-gray-600 mb-8 text-sm md:text-base select-none cursor-default"
         variants={itemVariants}
       >
         At Evietek, we don’t just provide solutions—we create digital experiences that <b>drive success, amplify brand awareness, and fuel growth.</b>  

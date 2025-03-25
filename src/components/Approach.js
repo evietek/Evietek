@@ -45,7 +45,7 @@ const Approach = () => {
 
   return (
     <motion.section 
-      className="bg-[#030438] py-12 md:py-16 px-4 md:px-6 pb-16 md:pb-24 relative"
+      className="bg-[#030438] py-12 md:py-16 px-4 md:px-6 pb-16 md:pb-24 relative select-none cursor-default"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -54,7 +54,7 @@ const Approach = () => {
       <div className="container mx-auto flex flex-col items-center text-left md:text-left relative">
         {/* Tagline Above Heading */}
         <motion.p 
-          className="text-[#65E5F2] uppercase tracking-wide font-semibold mb-2 text-center md:text-left"
+          className="text-[#65E5F2] uppercase tracking-wide font-semibold mb-2 text-center md:text-left select-none cursor-default"
           variants={titleVariants}
         >
           Our Approach
@@ -62,7 +62,7 @@ const Approach = () => {
 
         {/* Section Title */}
         <motion.h2 
-          className="text-2xl md:text-3xl font-bold text-white pb-0 md:pb-8 text-center md:text-left"
+          className="text-2xl md:text-3xl font-bold text-white pb-0 md:pb-8 text-center md:text-left select-none cursor-default"
           variants={titleVariants}
         >
           Creating a Digital Revolution, <span className="text-indigo-600">for </span><span className=" text-[#CB73FE]"> Long-Term </span><span className="text-blue-500">Success </span>

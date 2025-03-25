@@ -110,7 +110,7 @@ const OurBenefits = () => {
 
   return (
     <motion.section 
-      className="bg-white"
+      className="bg-white select-none cursor-default"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

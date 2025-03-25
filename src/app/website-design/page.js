@@ -36,7 +36,7 @@ const WebDesignServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Web Design" 
         backgroundImage="/Services/Web/bg.jpg"

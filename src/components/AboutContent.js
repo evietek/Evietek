@@ -65,7 +65,7 @@ export default function AboutContent() {
       <div className="max-w-2xl relative z-10">
         {/* Heading with Bricolage Grotesque and Updated Color */}
         <motion.h2 
-          className={`text-3xl sm:text-4xl md:text-4xl font-bold leading-tight ${bricolage.variable} text-[#341E61]`}
+          className={`text-3xl sm:text-4xl md:text-4xl font-bold leading-tight select-none cursor-default ${bricolage.variable} text-[#341E61]`}
           variants={textVariants}
           initial="initial"
           whileInView="animate"
@@ -76,7 +76,7 @@ export default function AboutContent() {
 
         {/* Body text with Gilroy-Medium and Updated Color */}
         <motion.p 
-          className="mt-4 text-base sm:text-lg md:text-lg leading-relaxed font-gilroy-medium text-[#341E61]"
+          className="mt-4 text-base sm:text-lg md:text-lg leading-relaxed font-gilroy-medium text-[#341E61] select-none cursor-default"
           variants={textVariants}
           initial="initial"
           whileInView="animate"

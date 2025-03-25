@@ -30,7 +30,7 @@ const AboutBanner = ({
 
   return (
     <motion.div 
-      className="relative flex items-center w-full pb-0 md:pb-8"
+      className="relative flex items-center w-full pb-0 md:pb-8 select-none cursor-default"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

@@ -79,7 +79,7 @@ const LoadingAnimation = ({ onComplete }) => {
                 transition={{ duration: 0.2 }}
                 className="text-center"
               >
-<h2 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white">
+<h2 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white select-none cursor-default">
 {services[currentIndex]}
                 </h2>
               </motion.div>

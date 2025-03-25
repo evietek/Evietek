@@ -16,7 +16,7 @@ export default function TrustedClients() {
     <section className="bg-white py-12 overflow-hidden w-full">
       {/* Heading (Slides in from Bottom) */}
       <motion.h2
-        className="text-center text-2xl md:text-3xl font-bold text-[#341E61] mb-6"
+        className="text-center text-2xl md:text-3xl font-bold text-[#341E61] mb-6 select-none cursor-default"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}

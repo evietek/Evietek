@@ -34,7 +34,7 @@ const CaseStudyCard = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${tagColor}`}
+            className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${tagColor} select-none cursor-default`}
           >
             {tag.toUpperCase()}
           </motion.div>
@@ -45,7 +45,7 @@ const CaseStudyCard = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.3 }}
-            className={`text-2xl md:text-3xl font-bold mb-4 ${headingColor}`}
+            className={`text-2xl md:text-3xl font-bold mb-4 ${headingColor} select-none cursor-default`}
           >
             {heading}
           </motion.h2>
@@ -56,7 +56,7 @@ const CaseStudyCard = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.4 }}
-            className={`mb-6 ${contentColor}`}
+            className={`mb-6 ${contentColor} select-none cursor-default`}
           >
             {content}
           </motion.p>

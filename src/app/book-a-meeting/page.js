@@ -63,7 +63,7 @@ const BookaMeetingPage = () => {
         
         {/* Content Heading */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1"
+          className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -74,7 +74,7 @@ const BookaMeetingPage = () => {
 
         {/* Description Paragraph */}
         <motion.p 
-          className="mt-4 text-lg text-[#41335E] max-w-2xl"
+          className="mt-4 text-lg text-[#41335E] max-w-2xl select-none cursor-default"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}

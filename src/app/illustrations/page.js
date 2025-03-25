@@ -35,7 +35,7 @@ const ContentWritingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Illustrations" 
         backgroundImage="/Services/Illustration/bg.jpeg"
@@ -63,7 +63,7 @@ const ContentWritingServicePage = () => {
           <div className="mb-4 px-12">
 
             <p className="text-gray-600 leading-relaxed">
-            In today’s visually driven world, high-quality illustrations are essential. At Evietek, we understand that professional illustration can elevate your brand and communicate your message effectively. Whether you need artwork for a children’s book or custom graphics for your website, our illustrations help you stand out. For instance, a vibrant illustration can make a dull report engaging and memorable. 
+            In today`s visually driven world, high-quality illustrations are essential. At Evietek, we understand that professional illustration can elevate your brand and communicate your message effectively. Whether you need artwork for a children`s book or custom graphics for your website, our illustrations help you stand out. For instance, a vibrant illustration can make a dull report engaging and memorable. 
 
 With imagination and accuracy, our team of skilled illustrators can materialize your vision. Reach out to us now to discover how we can elevate your visual content and make a memorable impact on your viewers.  
             </p>
@@ -73,7 +73,7 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
           <div className="mb-4">
             <WhyChoose
               heading="Why Choose Illustrations Services"
-              description="Evietek’s illustration services are designed to visually captivate, communicate brand stories and enhance user experiences. Our team of skilled illustrators transforms concepts into compelling visuals, helping brands engage audiences and build memorable identities."
+              description="Evietek`s illustration services are designed to visually captivate, communicate brand stories and enhance user experiences. Our team of skilled illustrators transforms concepts into compelling visuals, helping brands engage audiences and build memorable identities."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",

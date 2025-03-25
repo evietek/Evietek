@@ -3,6 +3,21 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Reviews from "./Reviews";
+import TestimonialCard from "./TestimonialCard"; // Import the card
+
+const testimonials = [
+  {
+    name: "Bolt",
+    title: "Perfect for Startups Needing Everything in One Place",
+    review: "I was launching a new business and needed everything-logo, website, SEO. They handled it all and made my life so much easier.",
+  },
+  {
+    name: "Mateo",
+    title: "There Was a Delay, But They Handled It Well",
+    review: "Our project took a little longer than expected, but they were upfront about it and even included some free social media designs to apologize. Great customer service.",
+  },
+
+];
 
 export default function TestimonialsSection() {
   // Animation Variants
@@ -73,7 +88,7 @@ export default function TestimonialsSection() {
         
         {/* Content Heading (Slides from Bottom) */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1"
+          className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -81,12 +96,32 @@ export default function TestimonialsSection() {
         >
           What Are Customers <br className="hidden md:block" /> Saying About Us?
         </motion.h2>
-      </div>    
+      </div> 
 
-      {/* Placeholder for Testimonials */}
-      <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto mt-10 p-8 bg-[#F9F9F9] shadow-lg rounded-lg min-h-[250px]">
-        <Reviews /> 
-      </div>
+      <div className="max-w-7xl mx-auto mt-12">
+  {/* Testimonial Cards Grid */}
+  <div className="flex justify-center">
+  <div className={`grid gap-6 ${testimonials.length < 3 ? 'grid-cols-1 sm:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
+    {testimonials.map((t, idx) => (
+      <TestimonialCard
+        key={idx}
+        name={t.name}
+        title={t.title}
+        review={t.review}
+      />
+    ))}
+  </div>
+</div>
+
+
+  {/* Trustpilot Embedded Component */}
+  <div className="flex justify-center mt-1">
+    <Reviews />
+  </div>
+</div>
+
+
+
 
       {/* Icon (Slides from Right + Floating) */}
       <motion.div

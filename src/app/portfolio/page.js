@@ -33,7 +33,7 @@ const projects = [
     title: "Branding",
     category: "design",
     description: "A collection of branding projects created by our talented design team",
-    image: "/Portfolio_Main/branding.png",
+    image: "/Portfolio_Main/branding.jpg",
     color: "#4ECDC4",
     skills: ["Brand Identity", "Marketing Strategy", "Visual Identity"],
     link: "https://www.behance.net/gallery/191328457/Branding"
@@ -76,7 +76,7 @@ const PortfolioPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold text-[#030438] mb-4"
+            className="text-4xl md:text-6xl font-bold text-[#030438] mb-4 select-none cursor-default"
           >
             Our Portfolio
           </motion.h1>
@@ -84,7 +84,7 @@ const PortfolioPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-lg text-gray-600 max-w-2xl mx-auto select-none cursor-default"
           >
             Explore our collection of successful projects and creative solutions
           </motion.p>
@@ -154,15 +154,17 @@ const PortfolioPage = () => {
                       </motion.div>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                  <h3 className="text-xl font-semibold text-white mb-2 select-none cursor-default">
                   {project.title}
                   </h3>
-                  <p className="text-lg text-gray-200 mb-3">{project.description}</p>
+                  <p className="text-lg text-gray-200 mb-3 select-none cursor-default">
+                  {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map(skill => (
                       <span
                         key={skill}
-                        className={`px-3 py-1 rounded-full text-sm font-medium ${skillColors[skill] || 'bg-white/10 text-white'}`}
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${skillColors[skill] || 'bg-white/10 text-white'} select-none cursor-default`}
                       >
                         {skill}
                       </span>

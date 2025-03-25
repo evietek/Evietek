@@ -10,17 +10,17 @@ const faqs = [
   {
     question: "How long does the process take?",
     answer:
-      "At Evietek, it usually ranges from one to three weeks, depending on the complexity of the design.",
+      "At Evietek, the timeline typically ranges from one to three weeks, depending on the complexity of the design.",
   },
   {
     question: "Who owns the logo?",
     answer:
-      "Once we finalize the design and payment is complete, you own full rights.",
+      "Once the final design is approved and payment is completed, you gain full ownership rights.",
   },
   {
     question: "What about revisions?",
     answer:
-      "We provide several rounds to ensure the final result exceeds your expectations.",
+      "We offer multiple revision rounds to ensure the final design exceeds your expectations.",
   }
 ];
 
@@ -31,7 +31,7 @@ const LogoDesignServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5]">  
+    <main className="bg-[#F2F2F5] select-none cursor-default">  
       <Breadcrumb 
         title="Logo Design" 
         backgroundImage="/Services/Logo/bg.webp" 
@@ -58,11 +58,15 @@ const LogoDesignServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+            The Power of a Well-Designed Logo 
+            </h2>
+            <div className="w-20 h-1 bg-blue-600 mb-8"></div>
             <p className="text-gray-600 leading-relaxed">
-              At Evietek, we understand the power of a well-designed logo. It`s not just a graphic; it`s the face of your brand. A professional logo establishes trust and makes your business memorable. When people see a strong logo, like the iconic golden arches or a swoosh, they instantly connect it to the brand`s identity and promise.
+            At Evietek, we know a logo is more than just a design—it`s the face of your brand. A compelling logo builds trust, enhances recognition, and makes a lasting impression. Think of the world`s most iconic logos—each one tells a story and creates an emotional connection. Your brand deserves the same impact.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              An attractive logo has the power to convey your brand`s personality and principles instantly, making a long-lasting impact on consumers. In order to establish a name for oneself and differentiate oneself from the competition, it is essential.
+            A well-crafted logo instantly conveys your brand’s personality and values, helping you stand out in a crowded market. It`s not just about aesthetics—it`s about making your business unforgettable.
             </p>
           </div>
 
@@ -70,7 +74,7 @@ const LogoDesignServicePage = () => {
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Evietek`s Logo Design Services"
-              description="A strong logo is the foundation of your brand identity. At Evietek, we craft visually compelling, meaningful and memorable logos that help your business stand out. Our design process blends creativity with strategy to deliver a logo that truly represents your brand."
+              description="A strong logo is the foundation of your brand`s identity. At Evietek, we create visually striking, meaningful, and memorable logos that set your business apart. Our expert designers blend creativity and strategy to craft logos that represent your brand`s essence."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -89,7 +93,7 @@ const LogoDesignServicePage = () => {
                   title: "Scalable Solutions for All Business Needs",
                 }
               ]}
-              bottomDescription="At Evietek, we don`t just design logos—we build identities that leave a lasting impression. Let`s craft your brand`s visual signature today!"
+              bottomDescription="At Evietek, we don`t just design logos—we build brand identities that leave a lasting impression. Let`s create a signature look for your business today!"
             />
           </div>
 
@@ -97,22 +101,22 @@ const LogoDesignServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of Evietek`s Logo Design Services"
-              description="We create logos that are not just visually appealing but also strategically designed to strengthen your brand identity. At Evietek, we blend creativity with precision to deliver logos that leave a lasting impact."
+              description="We craft logos that are not only visually appealing but also strategically designed to reinforce your brand identity. Our approach combines artistic creativity with precision to deliver logos that resonate with your audience."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Our Logo Designing Process",
-                  description: "We begin with a consultation to understand your vision, values and target audience, ensuring your logo tells your story."
+                  description: "We begin with an in-depth consultation to understand your vision, values, and target audience. Every element is meticulously planned to ensure your logo tells your brand`s unique story."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "Research and Inspiration",
-                  description: "We analyze competitors and industry trends, drawing inspiration from styles like minimalist or vintage to create a standout logo."
+                  description: "We analyze competitors, industry trends, and various design styles—from minimalist to vintage—to create a standout logo that aligns with your brand."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "Design Concepts",
-                  description: "We develop multiple concepts, refine your chosen design and deliver it in formats ready for print and digital use."
+                  description: "We develop multiple logo concepts, refine your chosen design, and deliver it in versatile formats suitable for both print and digital platforms."
                 }
               ]}
               bottomImage={{
@@ -121,7 +125,7 @@ const LogoDesignServicePage = () => {
                 width: 350,
                 height: 250
               }}
-              bottomDescription="Our talented designers collaborate with clients to understand their brand narrative and values to produce logos that represent their identity. Our design and branding skills may help your firm stand out in a congested market."
+              bottomDescription="Our expert designers work closely with you to ensure your brand`s identity is reflected in every detail. With our strategic approach, we help your business shine in a competitive landscape. "
               additionalFeatures={[
                 "Unique & Memorable Branding",
                 "Seamless Integration with Your Brand Identity",
@@ -129,7 +133,11 @@ const LogoDesignServicePage = () => {
                 "Timely Delivery & Professional Expertise"
               ]}
             />
-          </div>
+            <h2 className="text-3xl font-bold text-[#030438] mb-2 px-12">Let`s Bring Your Brand to Life!</h2>
+            <p className="text-gray-600 leading-relaxed px-12 mb-4">
+            A great logo is the first step in building a powerful brand presence. Work with Evietek to create a logo that defines your identity and captures your audience`s attention. 
+            </p>
+                      </div>
 
           {/* FAQ Section */}
           <div className="mb-0 px-12">

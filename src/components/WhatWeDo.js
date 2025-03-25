@@ -58,7 +58,7 @@ const WhatWeDo = () => {
 
   return (
     <motion.section 
-      className="bg-[#F2F2F5] py-12 md:py-5 md:pt-12 lg:py-16"
+      className="bg-[#F2F2F5] py-12 md:py-5 md:pt-12 lg:py-16 select-none cursor-default"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

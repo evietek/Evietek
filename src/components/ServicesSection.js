@@ -70,7 +70,7 @@ export default function ServicesSection() {
 
                 {/* "What We Do" Heading with Slide-in Animation */}
                 <motion.h2 
-                    className="text-[50px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1"
+                    className="text-[50px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}

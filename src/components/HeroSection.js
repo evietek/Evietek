@@ -1,6 +1,6 @@
 "use client";
 
-import FloatingBadge from "./FloatingBadge";
+import { useState } from "react";
 import ScrollIndicator from "./ScrollIndicator";
 import DecorativeElements from "./DecorativeElements";
 import Image from "next/image";
@@ -13,7 +13,13 @@ const playfair = Playfair_Display({
   weight: ["400", "700", "900"], // adjust weights as needed
 });
 
+
+
 export default function HeroSection() {
+  {/* Floating Design Badge – Left */}
+const [isHoveredDesign, setIsHoveredDesign] = useState(false);
+const [isHoveredDev, setIsHoveredDev] = useState(false);
+
   return (
     <>
       <section
@@ -44,8 +50,8 @@ export default function HeroSection() {
         {/* Main Content */}
         <div className="flex flex-col items-center justify-center flex-grow">
           <div className="max-w-4xl mx-auto relative z-10">
-            <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold leading-[0.8]">
-              We Build <br />
+          <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold leading-[0.8] select-none cursor-default">
+          We Build <br />
               <span className="text-white flex items-center justify-center gap-2">
                 <motion.div
                   initial={{ y: -250, x: 0, opacity: 0 }}
@@ -85,17 +91,121 @@ export default function HeroSection() {
               </motion.span>
             </h1>
 
+
             {/* Subheading */}
-            <p className="mt-6 md:mt-10 text-base md:text-lg max-w-2xl mx-auto opacity-90 font-light">
+            <p className="mt-6 md:mt-10 text-base md:text-lg max-w-2xl mx-auto opacity-90 font-light select-none cursor-default">              
               We at Evietek create visually stunning digital experiences that
               effortlessly engage, captivate, and convert. Grow your brand with
               innovation that speaks for itself.
             </p>
           </div>
 
-          <FloatingBadge position="left" icon="/svgs/Design.svg" />
-          <FloatingBadge position="right" icon="/svgs/Development.svg" />
-        </div>
+{/* Floating Design Badge – Left */}
+<div
+  className={`
+    absolute 
+    left-[1%] top-[5%]
+    sm:left-[6%] sm:top-[10%]
+    md:left-[8%] md:top-[12%]
+    lg:left-[5%] lg:top-[10%]
+    xl:left-[10%] xl:top-[24%]
+    w-[80px] h-[40px]
+    sm:w-[150px] sm:h-[75px]
+    md:w-[180px] md:h-[90px]
+    lg:w-[200px] lg:h-[100px]
+    xl:w-[250px] xl:h-[125px]
+    z-20
+    group
+  `}
+  onMouseEnter={() => setIsHoveredDesign(true)}
+  onMouseLeave={() => setIsHoveredDesign(false)}
+>
+  <div className="w-full h-full cursor-pointer" />
+
+  {/* Glowing blob */}
+  <div
+    className={`
+      absolute inset-0 
+      opacity-40 blur-xl 
+      -z-10 bg-purple-700 
+      rounded-full 
+      pointer-events-none 
+      transition-transform 
+      duration-1000 
+      ${isHoveredDesign ? "scale-125 translate-x-2 translate-y-2" : ""}
+    `}
+  />
+
+  {/* Image with dynamic buzz class */}
+  <Image
+    src="/svgs/Design.svg"
+    alt="Design"
+    fill
+    className={`
+      object-contain
+      animate-float-left
+      pointer-events-none
+      transition-all duration-700
+      ${isHoveredDesign ? "animate-buzz scale-110" : ""}
+    `}
+    sizes="(max-width: 768px) 100px , (max-width: 1200px) 160px, 220px"
+  />
+</div>
+
+{/* Floating Development Badge – Right */}
+<div
+  className={`
+    absolute 
+    right-[3%] bottom-[2%]
+    sm:right-[8%] sm:bottom-[35%]
+    md:right-[2%] md:bottom-[45%]
+    lg:right-[5%] lg:bottom-[5%]
+    xl:right-[5%] xl:bottom-[30%]
+    w-[80px] h-[40px]
+    sm:w-[150px] sm:h-[75px]
+    md:w-[180px] md:h-[90px]
+    lg:w-[200px] lg:h-[100px]
+    xl:w-[250px] xl:h-[125px]
+    z-20
+    group
+  `}
+  onMouseEnter={() => setIsHoveredDev(true)}
+  onMouseLeave={() => setIsHoveredDev(false)}
+>
+  <div className="w-full h-full cursor-pointer" />
+
+  {/* Glowing blob */}
+  <div
+    className={`
+      absolute inset-0 
+      opacity-40 blur-xl 
+      -z-10 bg-purple-700 
+      rounded-full 
+      pointer-events-none 
+      transition-transform 
+      duration-1000 
+      ${isHoveredDev ? "scale-125 translate-x-2 translate-y-2" : ""}
+    `}
+  />
+
+  <Image
+    src="/svgs/Development.svg"
+    alt="Development"
+    fill
+    className={`
+      object-contain
+      animate-float-right
+      pointer-events-none
+      transition-all duration-700
+      ${isHoveredDev ? "animate-buzz scale-110" : ""}
+    `}
+    sizes="(max-width: 768px) 100px , (max-width: 1200px) 160px, 220px"
+  />
+</div>
+
+</div>
+
+        
 
         <DecorativeElements />
 
