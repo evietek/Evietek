@@ -41,7 +41,7 @@ const SEOServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="Search Engine Optimization" 
         backgroundImage="/Services/SEO/bg.jpg" 
@@ -139,25 +139,11 @@ const SEOServicePage = () => {
                   description: "Build credibility with high-quality backlinks from trusted sources to improve domain authority."
                 },
                 {
-                  iconSrc: "/About_Us/1.svg",
+                  iconSrc: "/About_Us/6.svg",
                   title: "Technical SEO Optimization",
                   description: "Enhance site speed, mobile-friendliness, and overall technical performance for superior ranking results."
                 },
-                {
-                  iconSrc: "/About_Us/2.svg",
-                  title: "Elevate Your Business with Evietek`s SEO Solutions",
-                  description: "Investing in expert SEO services leads to long-term success. With our innovative approach, expect consistent traffic, better conversions, and sustainable growth."
-                },
-                {
-                  iconSrc: "/About_Us/3.svg",
-                  title: "Long-Term Results & Adaptability",
-                  description: "Our SEO strategies evolve with algorithm changes, ensuring continued visibility and ROI without ongoing ad spend."
-                },
-                {
-                  iconSrc: "/About_Us/4.svg",
-                  title: "Industry Expertise & Proven Success",
-                  description: "Our track record speaks for itself—we increase traffic, enhance engagement, and drive results."
-                }
+                
               ]}
               bottomImage={{
                 src: "/Services/SEO/image.jpg",

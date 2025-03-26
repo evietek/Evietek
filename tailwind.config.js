@@ -28,6 +28,7 @@ module.exports = {
         'spin-slow': 'spinSlow 10s linear infinite',
         'bounce-slow': 'bounceSlow 3s ease-in-out infinite',
         'buzz': 'buzz 1s ease-in-out 3',
+        'wiggle': 'wiggle 0.7s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -65,6 +66,14 @@ module.exports = {
           '75%': { transform: 'rotate(3deg) scale(1.05)' },
           '100%': { transform: 'rotate(0deg) scale(1)' },
         },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '10%': { transform: 'rotate(15deg)' },
+          '20%': { transform: 'rotate(-15deg)' },
+          '30%': { transform: 'rotate(15deg)' },
+          '40%': { transform: 'rotate(-15deg)' },
+          '50%': { transform: 'rotate(0deg)' }
+        },
       },
       utilities: {
         '.backface-hidden': {
@@ -75,4 +84,9 @@ module.exports = {
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      animation: ['hover', 'focus', 'active', 'group-hover'],
+    },
+  },
 };

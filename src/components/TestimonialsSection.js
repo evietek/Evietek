@@ -115,8 +115,35 @@ export default function TestimonialsSection() {
 
 
   {/* Trustpilot Embedded Component */}
-  <div className="flex justify-center mt-1">
-    <Reviews />
+  <div className="flex justify-center mt-2">
+  <motion.div 
+          className="text-center mt-2"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <a
+            href="https://www.trustpilot.com/review/evietek.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+          >
+            View all reviews on Trustpilot
+            <svg
+              className="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </motion.div>
   </div>
 </div>
 

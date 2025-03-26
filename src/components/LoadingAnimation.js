@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation'; // To check if we're on homepage
 import { Bricolage_Grotesque } from 'next/font/google';
 
 const bricolage = Bricolage_Grotesque({
@@ -16,49 +17,60 @@ const services = [
   "Website",
   "Branding",
   "Social Media Marketing",
-  "Content Writing",
   "Logo Designing",
-  "Video Editing",
   "Illustrations",
 ];
 
 const LoadingAnimation = ({ onComplete }) => {
+  const pathname = usePathname();
+  const [shouldPlayAnimation, setShouldPlayAnimation] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false); // initially false
   const [showLogo, setShowLogo] = useState(false);
 
   useEffect(() => {
-    // Dispatch initial loading state
-    window.dispatchEvent(new CustomEvent('loadingStateChange', { 
-      detail: { isLoading: true } 
+    const hasPlayed = sessionStorage.getItem("hasPlayedHomepageAnimation");
+
+    // ✅ Only play if we're on the homepage AND haven't played yet
+    if (pathname === "/" && !hasPlayed) {
+      setShouldPlayAnimation(true);
+      setIsVisible(true);
+      sessionStorage.setItem("hasPlayedHomepageAnimation", "true");
+    } else {
+      onComplete(); // Immediately skip animation
+    }
+  }, [pathname, onComplete]);
+
+  useEffect(() => {
+    if (!shouldPlayAnimation) return;
+
+    // Dispatch loading state when animation begins
+    window.dispatchEvent(new CustomEvent('loadingStateChange', {
+      detail: { isLoading: true }
     }));
 
     const timer = setTimeout(() => {
       if (currentIndex < services.length - 1) {
         setCurrentIndex(prev => prev + 1);
       } else {
-        // Show logo after last service
         setShowLogo(true);
-        // Wait for logo animation then trigger completion
         setTimeout(() => {
           setIsVisible(false);
-          // Update loading state before completing
-          window.dispatchEvent(new CustomEvent('loadingStateChange', { 
-            detail: { isLoading: false } 
+          window.dispatchEvent(new CustomEvent('loadingStateChange', {
+            detail: { isLoading: false }
           }));
           onComplete();
-        }, 1500); // Extended logo display time
+        }, 1500);
       }
-    }, 400); // Time each service is shown
+    }, 350);
 
     return () => {
       clearTimeout(timer);
-      // Ensure loading state is reset on unmount
-      window.dispatchEvent(new CustomEvent('loadingStateChange', { 
-        detail: { isLoading: false } 
+      window.dispatchEvent(new CustomEvent('loadingStateChange', {
+        detail: { isLoading: false }
       }));
     };
-  }, [currentIndex, onComplete]);
+  }, [shouldPlayAnimation, currentIndex, onComplete]);
 
   return (
     <AnimatePresence>
@@ -66,7 +78,7 @@ const LoadingAnimation = ({ onComplete }) => {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }} // Slower fade out
+          transition={{ duration: 1 }}
           className={bricolage.className + " fixed inset-0 z-[999999] flex items-center justify-center bg-[#030438]"}
         >
           <AnimatePresence mode="wait">
@@ -79,8 +91,8 @@ const LoadingAnimation = ({ onComplete }) => {
                 transition={{ duration: 0.2 }}
                 className="text-center"
               >
-<h2 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white select-none cursor-default">
-{services[currentIndex]}
+                <h2 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white select-none cursor-default">
+                  {services[currentIndex]}
                 </h2>
               </motion.div>
             ) : (
@@ -108,4 +120,4 @@ const LoadingAnimation = ({ onComplete }) => {
   );
 };
 
-export default LoadingAnimation; 
+export default LoadingAnimation;

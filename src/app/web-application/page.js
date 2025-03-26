@@ -10,23 +10,19 @@ const faqs = [
   {
     question: "What is web application development?",
     answer:
-      "Web application development is the process of creating software applications that run on web servers and can be accessed through web browsers.",
-  },
+"Web application development involves creating software that runs on web servers and is accessible via web browsers. "  },
   {
     question: "How long does it take to develop a web application?",
     answer:
-      "The development timeline varies based on complexity, but it typically takes several weeks to months to complete a full-featured web application.",
-  },
+"Timelines vary based on complexity, but a full-featured web application typically takes several weeks to months to develop. "  },
   {
     question: "What are the key stages in the web application development process?",
     answer:
-      "Key stages include requirement gathering, design, front-end and back-end development, testing and deployment.",
-  },
+"Key stages include requirement gathering, design, front-end and back-end development, testing and deployment. "  },
   {
     question: "What technologies are commonly used in web application development?",
     answer:
-      "Common technologies include HTML, CSS and JavaScript for front-end development and languages like Python, Ruby, or PHP for back-end development.",
-  },
+"Popular technologies include HTML, CSS, JavaScript for front-end development and Python, Ruby, or PHP for back-end development. "  },
 ];
 
 const WebApplicationServicePage = () => {
@@ -36,7 +32,7 @@ const WebApplicationServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="Web Application" 
         backgroundImage="/Services/Web-App/bg.jpg" 
@@ -62,42 +58,44 @@ const WebApplicationServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+            Transform Your Business with Custom Web Applications 
+          </h2>
+          <div className="w-20 h-1 bg-blue-600 mb-8"></div> 
             <p className="text-gray-600 leading-relaxed">
-              In today`s digital world, web applications are essential for businesses. At Evietek, we know that a well-developed web application can enhance user experience and improve operational efficiency. For example, a restaurant can use an online reservation system to streamline bookings and improve customer service. Our web application development services are designed to meet your specific needs and help your business thrive.
-            </p>
+            In today’s fast-paced digital landscape, web applications are essential for businesses looking to enhance user experience and operational efficiency. At Evietek, we specialize in developing custom, high-performance web applications that drive engagement and productivity. Imagine a restaurant using an online reservation system to streamline bookings and improve customer service, this is the power of a well-designed web application.            </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              Our team of skilled developers can realize your every idea, whether it`s a personalized e-commerce platform or an intuitive user interface. Get in touch with us right now to go over how a customized web application solution might help your company grow to the next degree.
-            </p>
+            Our expert development team builds secure, scalable and innovative solutions to help your business thrive in a competitive digital world.             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Web Application Development Services?"
-              description="Evietek`s Web Application Development Services empower businesses with custom, scalable and secure solutions tailored to their needs. Our expert developers build high-performance applications that enhance user engagement and streamline business operations."
+              description="Evietek’s web application solutions empower businesses with customized, scalable and secure applications designed to streamline operations and enhance user engagement."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Comprehensive Web App Solutions",
-                  description: "End-to-end solutions that address all aspects of your business needs."
+                  description: "Tailored applications designed to meet unique business needs."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "24/7 Support & Continuous Updates",
-                  description: "Round-the-clock assistance and regular updates to keep your application running smoothly."
+                  description: "Ensuring reliability and seamless performance at all times. "
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "Seamless Integration with Existing Systems",
-                  description: "Connect your new applications with your current business tools and processes."
+                  description: "Enhance efficiency without disrupting workflows. "
                 },
                 {
                   iconSrc: "/About_Us/4.svg",
                   title: "Scalable & Custom Solutions",
-                  description: "Flexible solutions that grow with your business needs."
+                  description: "Future-proof applications that grow with your business. "
                 }
               ]}
-              bottomDescription="We ensure secure, user-centric and high-performance applications that drive innovation and business success."
+              bottomDescription="We create secure, user-friendly and high-performance web applications that drive innovation and business success. "
             />
           </div>
 
@@ -105,22 +103,22 @@ const WebApplicationServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of Web Application Development"
-              description="Evietek`s Web Application Development services provide cutting-edge solutions with seamless integration, user-friendly interfaces and real-time performance monitoring to ensure business efficiency and growth."
+              description="Evietek delivers cutting-edge web applications that prioritize usability, efficiency and seamless integration to enhance business operations."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Custom Web Solutions",
-                  description: "Tailored applications designed to meet unique business needs and user expectations."
+                  description: "Develop tailor-made applications that align with your business goals and user needs. "
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "Real-Time Performance Monitoring",
-                  description: "Ensures optimal application speed, uptime and responsiveness with proactive tracking."
+                  description: "Track application speed, uptime and responsiveness with proactive monitoring tools."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "User-Friendly Interface",
-                  description: "Intuitive and engaging designs that enhance user experience and accessibility."
+                  description: "Craft intuitive and engaging designs that enhance accessibility and user satisfaction. "
                 }
               ]}
               bottomImage={{
@@ -129,7 +127,7 @@ const WebApplicationServicePage = () => {
                 width: 400,
                 height: 300
               }}
-              bottomDescription="This leads to higher productivity and customer satisfaction. Putting innovation and quality first, Evietek creates trustworthy solutions that help businesses succeed in today`s tough digital world."
+              bottomDescription="With a focus on innovation and quality, Evietek builds reliable and scalable solutions that help businesses succeed in a competitive digital space. Our development approach includes:"
               additionalFeatures={[
                 "Comprehensive Application Coverage",
                 "Automated Maintenance & Updates",
@@ -137,6 +135,12 @@ const WebApplicationServicePage = () => {
                 "Scalable & Flexible Architecture"
               ]}
             />
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#030438] mb-4 sm:mb-6 px-4 sm:px-8 md:px-12">
+              Elevate Your Business with Custom Web Applications 
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed  mb-2 px-4 sm:px-8 md:px-12">
+            Harness the power of custom web applications to improve efficiency and customer engagement. Let Evietek design a solution tailored to your business needs. <b>Contact us today to get started!</b> 
+            </p>
           </div>
 
           {/* FAQ Section */}

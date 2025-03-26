@@ -55,9 +55,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`relative w-full z-[100] px-4 py-3 transition-all duration-500 flex justify-between items-center ${
-        isScrolled ? "bg-[#030438]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
+    className={`fixed w-full z-[100] px-4 py-3 transition-all duration-500 flex justify-between items-center ${
+      isScrolled
+        ? "bg-[#030438]/90 backdrop-blur-md shadow-lg"
+        : pathname !== "/" 
+        ? "bg-[#030438] md:bg-transparent"
+        : "bg-transparent"
+    }`}
+    
     >
       <div className="container mx-auto max-w-7xl flex justify-between items-center w-full">
         {/* Clickable Logo (Redirects to Home) */}

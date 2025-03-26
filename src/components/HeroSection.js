@@ -23,7 +23,7 @@ const [isHoveredDev, setIsHoveredDev] = useState(false);
   return (
     <>
       <section
-        className={`relative bg-[#030438] text-white h-[50vh] md:h-[80vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-8 md:pt-8 pb-0 overflow-hidden ${playfair.className}`}
+        className={`relative bg-[#030438] text-white h-[60vh] md:h-[90vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-18 md:pt-30 pb-0 overflow-hidden ${playfair.className}`}
       >
         {/* Background Grid SVG */}
         <div className="absolute inset-0 w-full h-full">
@@ -84,8 +84,8 @@ const [isHoveredDev, setIsHoveredDev] = useState(false);
                 whileHover={{ rotate: -4, skewX: -6 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
               >
-                <span className="absolute inset-0 bg-yellow-400 w-full h-full -z-10 transform skew-x-6 rotate-4 rounded-md"></span>
-                <span className="relative inline-block px-1 pb-4 text-black font-bold">
+<span className="absolute inset-0 bg-yellow-400 w-full h-full -z-10 transform skew-x-6 rotate-4  xl:translate-y-2.5 rounded-md"></span>
+<span className="relative inline-block px-1 pb-2 text-black font-bold">
                   Lasts
                 </span>
               </motion.span>
@@ -104,11 +104,11 @@ const [isHoveredDev, setIsHoveredDev] = useState(false);
 <div
   className={`
     absolute 
-    left-[1%] top-[5%]
+    left-[1%] top-[17%]
     sm:left-[6%] sm:top-[10%]
     md:left-[8%] md:top-[12%]
-    lg:left-[5%] lg:top-[10%]
-    xl:left-[10%] xl:top-[24%]
+    lg:left-[5%] lg:top-[20%]
+    xl:left-[5%] xl:top-[24%]
     w-[80px] h-[40px]
     sm:w-[150px] sm:h-[75px]
     md:w-[180px] md:h-[90px]
@@ -159,7 +159,7 @@ const [isHoveredDev, setIsHoveredDev] = useState(false);
     right-[3%] bottom-[2%]
     sm:right-[8%] sm:bottom-[35%]
     md:right-[2%] md:bottom-[45%]
-    lg:right-[5%] lg:bottom-[5%]
+    lg:right-[1%] lg:bottom-[1%]
     xl:right-[5%] xl:bottom-[30%]
     w-[80px] h-[40px]
     sm:w-[150px] sm:h-[75px]

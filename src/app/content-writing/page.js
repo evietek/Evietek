@@ -8,14 +8,14 @@ import ServiceSidebar from "@/components/ServiceSidebar";
 
 const faqs = [
   {
-    question: "How long does it take?",
+    question: "How long does it take to complete a project?",
     answer:
-      "Our turnaround depends on the project scope but is always efficient.",
+      "Timelines vary depending on project scope, but we ensure efficiency and timely delivery.",
   },
   {
     question: "What about revisions?",
     answer:
-      " We`ll refine until it`s perfect. Pricing is flexible and customization is standard. At Evietek, we make sure every client`s needs are met seamlessly.",
+      "We refine content until it meets your expectations. Pricing is flexible and customization comes standard. At Evietek, we ensure every client’s content needs are met seamlessly.",
   },
 ];
 
@@ -26,7 +26,7 @@ const ContentWritingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="Content Writing" 
         backgroundImage="/Services/CW/bg.png"
@@ -52,11 +52,15 @@ const ContentWritingServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
-
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+              Elevate Your Brand with Impactful Content 
+            </h2>
+            <div className="w-20 h-1 bg-blue-600 mb-8"></div>
             <p className="text-gray-600 leading-relaxed">
-            At Evietek, we know that great content drives results. Whether it’s making your brand stand out in a crowded digital space or engaging your audience with information they can’t ignore, quality content is the foundation of success. Content writing services give your business the boost it needs by delivering compelling words that resonate. These services are designed to elevate your online presence by aligning your message with your audience`s expectations.  
-
-We can assist you in reaching your marketing objectives and developing a stronger relationship with your target audience by applying our skills in creating interesting and educational material. Collaborate with Evietek to produce content that does more than just attract viewers; it motivates them to take action.  
+            In the digital world, content is the driving force behind engagement and conversions. At Evietek, we craft compelling, high-quality content that not only captures attention but also drives meaningful action. Whether you want to establish thought leadership, boost SEO rankings, or connect with your audience, our expert content writing services deliver words that work. 
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-4">
+            We help you achieve marketing success by creating content that informs, persuades and resonates. Partner with Evietek to craft content that doesn’t just attract visitors, it compels them to act. 
             </p>
           </div>
 
@@ -64,26 +68,30 @@ We can assist you in reaching your marketing objectives and developing a stronge
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Content Writing Services"
-              description="Evietek’s expert content writing services enhance your brand’s voice and online presence. Helping you reach your audience with interesting and useful content is our team of professional writers` specialty. Allow us to elevate your brand through high-quality, customized content that drives results. "
+              description="Evietek’s content writing services strengthen your brand’s voice and enhance your online presence. Our team of professional writers specializes in crafting engaging and valuable content tailored to your audience’s needs.  "
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
-                  title: "Strategic Content Planning"
+                  title: "Strategic Content Planning",
+                  description: "Align content with business goals to maximize impact."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
-                  title: "24/7 Support & Delivery"
+                  title: "24/7 Support & Delivery",
+                  description: "Reliable service with quick turnaround times."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
-                  title: "Platform Integration "
+                  title: "Platform Integration ",
+                  description: "Seamlessly publish content across multiple channels."
                 },
                 {
                   iconSrc: "/About_Us/4.svg",
-                  title: "Scalable Solutions"
+                  title: "Scalable Solutions",
+                  description: "Flexible content strategies for businesses of all sizes."
                 }
               ]}
-              bottomDescription="We provide high-quality, SEO-friendly content that drives traffic and conversions while reflecting your brand’s unique identity. "
+              bottomDescription="Our SEO-friendly content not only drives traffic and conversions but also reflects your brand’s identity with clarity and consistency."
             />
           </div>
 
@@ -91,19 +99,22 @@ We can assist you in reaching your marketing objectives and developing a stronge
           <div className="mb-0">
             <Feature
               heading="Feature of Content Writing Services"
-              description="Evietek’s content writing services are crafted to engage, inform and drive conversions. Our experienced writers specialize in producing compelling, SEO-friendly content that appeals to your target audience. Allow us to assist you in increasing your brand`  s online visibility and achieving your marketing objectives."
+              description="Our expert writing services are designed to engage, educate and convert. We create content that enhances your brand’s online visibility and helps you achieve your marketing objectives."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "SEO-Optimized Content",
+                  description: "Improve search rankings with content designed to increase visibility and engagement."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "Real-Time Edits",
+                  description: "Ensure content accuracy and seamless readability for an enhanced user experience."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
-                  title: "User-Friendly Structure",
+                  title: "High-Quality Content Creation",
+                  description: "Informative content that educates and changes using new and strategic messaging to increase the impact of your brand."
                 }
               ]}
               bottomImage={{
@@ -120,7 +131,15 @@ We can assist you in reaching your marketing objectives and developing a stronge
                 "Scalable and Flexible"
               ]}
             />
+
+<h2 className="text-2xl sm:text-3xl font-bold text-[#030438] mb-4 sm:mb-6 px-4 sm:px-8 md:px-12">
+Achieve More with Evietek’s Expert Content Writing 
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed  mb-2 px-4 sm:px-8 md:px-12">
+            Great content is more than just words, it’s a powerful tool for business growth. Let Evietek help you create content that drives engagement, builds trust and increases conversions. Get started today! 
+            </p>
           </div>
+          
 
           {/* FAQ Section */}
             <div className="mb-0 px-12">

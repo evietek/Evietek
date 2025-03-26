@@ -7,6 +7,7 @@ import { useState } from "react";
 export default function WorkProcessCard({ number, icon, iconHover, title, description, rotation }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
+
   return (
     <motion.div
       className="relative cursor-pointer shadow-lg rounded-[22px] p-8 pt-14 w-[280px] sm:w-[300px] md:w-[280px] lg:w-[280px] 

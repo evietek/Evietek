@@ -26,7 +26,7 @@ const projects = [
     image: "/Portfolio_Main/illustration.jpg",
     color: "#FF6B6B",
     skills: ["Digital Painting", "Character Design", "Vector Illustration"],
-    link: "https://www.behance.net/gallery/221656995/Illustrations"
+    link: "https://www.behance.net/gallery/222275377/Illustrations"
   },
   {
     id: 2,
@@ -70,7 +70,7 @@ const PortfolioPage = () => {
 
 
       {/* Hero Section */}
-      <section className="py-16">
+      <section className="py-8 pt-24 md:py-8 md:pt-8">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}

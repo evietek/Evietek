@@ -10,23 +10,19 @@ const faqs = [
   {
     question: "What is social media marketing?",
     answer:
-      "Social media marketing involves using social platforms to promote products or services, engage with audiences, and build brand awareness.",
-  },
+"Social media marketing involves using platforms like Facebook, Instagram, LinkedIn and Twitter to promote products, engage audiences and build brand awareness."  },
   {
     question: "How can social media marketing benefit my business?",
     answer:
-      "It increases brand visibility, drives website traffic, enhances customer engagement, and can lead to higher conversion rates.",
-  },
+"It helps increase brand visibility, drive website traffic, enhance customer engagement and improve conversion rates. "  },
   {
     question: "Which social media platforms should I focus on?",
     answer:
-      "The choice of platforms depends on your target audience; popular options include Facebook, Instagram, LinkedIn, and Twitter based on your industry. ",
-  },
+"The best platforms depend on your audience. Facebook and Instagram are great for B2C, while LinkedIn and Twitter work well for B2B industries."  },
   {
     question: "How often should I post on social media?",
     answer:
-      "Posting frequency varies by platform, but generally, consistent posting—ranging from a few times a week to daily—helps maintain engagement and visibility. ",
-  },
+"Consistency is key. Posting several times a week to daily keeps engagement levels high and strengthens brand presence. "  },
 ];
 
 const SocialMediaMarketingServicePage = () => {
@@ -36,7 +32,7 @@ const SocialMediaMarketingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="Social Media Marketing" 
         backgroundImage="/Services/Social/bg.jpg" 
@@ -61,10 +57,15 @@ const SocialMediaMarketingServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+            Amplify Your Brand with Social Media Marketing 
+          </h2>
+          <div className="w-20 h-1 bg-blue-600 mb-8"></div>
             <p className="text-gray-600 leading-relaxed">
-              In today`s digital world, social media marketing is essential for any business. At Evietek, we know that effective social media strategies can significantly enhance your brand`s visibility and customer engagement. For instance, a local coffee shop can attract new customers by sharing enticing photos of their latest brews on Instagram. By leveraging social media, businesses can connect with their audience in meaningful ways. 
-
-              This can lead to increased brand loyalty and ultimately drive sales. Additionally, social media platforms offer valuable insights into consumer behavior and preferences, allowing businesses to tailor their marketing efforts accordingly.
+            In today’s fast-paced digital world, social media marketing is no longer optional, it’s essential. At Evietek, we craft strategic social media campaigns that boost brand visibility, increase engagement and drive conversions. Imagine a local coffee shop attracting new customers simply by sharing visually appealing posts on Instagram. That’s the power of social media. 
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-4">
+            By leveraging the right platforms, businesses can build strong customer relationships, enhance brand loyalty and tap into valuable consumer insights to refine marketing strategies. 
             </p>
           </div>
 
@@ -72,12 +73,12 @@ const SocialMediaMarketingServicePage = () => {
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Social Media Marketing Services"
-              description="Evietek`s Social Media Marketing solutions are designed to elevate your brand, enhance engagement, and drive growth across all platforms. Through data-driven strategies and creative content, we help you build a loyal online community and achieve measurable results."
+              description="Evietek’s data-driven social media marketing solutions are designed to elevate your brand, increase engagement and drive measurable growth. Our expertise ensures that your brand stays ahead of the competition in the ever-evolving digital landscape."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Comprehensive Strategy Development",
-                  description: "Tailored campaigns to target the right audience and maximize reach."
+                  description: "Tailored campaigns designed to reach and engage your ideal audience."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
@@ -87,15 +88,15 @@ const SocialMediaMarketingServicePage = () => {
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "Seamless Integration with Your Brand Voice",
-                  description: "Maintain consistency and authenticity across all social channels."
+                  description: "Ensure authenticity and consistency across all platforms."
                 },
                 {
                   iconSrc: "/About_Us/4.svg",
                   title: "Scalable Solutions to Meet Business Goals",
-                  description: "Flexible strategies that adapt to your brand`s growth and evolving needs."
+                  description: "Strategies that evolve as your brand expands."
                 }
               ]}
-              bottomDescription="We provide full-service social media management, content creation, and audience targeting to ensure your brand thrives in the digital landscape."
+              bottomDescription="We offer full-service social media management, including content creation, audience targeting and campaign execution to help your brand thrive in the digital space."
             />
           </div>
 
@@ -103,22 +104,22 @@ const SocialMediaMarketingServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of Social Media Marketing Services"
-              description="Evietek`s Social Media Marketing solutions offer advanced strategies, real-time analytics, and user-friendly tools to enhance your brand`s online presence and engagement."
+              description="Evietek’s advanced social media marketing solutions provide the tools and insights needed to enhance your brand presence, engagement and conversions."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Advanced Audience Targeting",
-                  description: "Reach your ideal customers with precision and data-driven insights."
+                  description: "Leverage data-driven insights to reach the right audience with precision and maximize engagement."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "Real-Time Performance Tracking",
-                  description: "Monitor engagement, conversions, and trends for continuous optimization."
+                  description: "Monitor interactions, conversions and trends to optimize marketing efforts continuously."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
-                  title: "User-Friendly Content Management Interface",
-                  description: "Effortlessly manage posts, track analytics, and engage with your audience."
+                  title: "User-Friendly Content Management",
+                  description: "Effortlessly schedule posts, track analytics and interact with your audience, all in one place."
                 }
               ]}
               bottomImage={{
@@ -135,6 +136,11 @@ const SocialMediaMarketingServicePage = () => {
                 "Scalable & Flexible Solutions"
               ]}
             />
+
+<h2 className="text-2xl sm:text-3xl font-bold text-[#030438] mb-4 sm:mb-6 px-4 sm:px-8 md:px-12">
+Take Your Social Media to the Next Level             </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed  mb-2 px-4 sm:px-8 md:px-12">
+            Engage, convert and grow with Evietek’s expert social media marketing services. Let’s create a strategy that drives real results. Get started today!             </p>
           </div>
 
           {/* FAQ Section */}

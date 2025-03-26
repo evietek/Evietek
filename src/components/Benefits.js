@@ -123,24 +123,24 @@ const OurBenefits = () => {
           className="relative w-full lg:w-1/2"
           variants={containerVariants}
         >
-          <div className="relative w-full">
+<div className="relative w-[90%] max-w-sm md:max-w-none mx-auto md:mx-0 md:w-full">
             {/* Main Image */}
             <motion.div
-              variants={imageVariants}
-              className="relative w-full overflow-hidden group"
-            >
-              <div className="relative">
-                <Image
-                  src="/About_Us/b1.jpg"
-                  alt="Cybersecurity team working"
-                  width={700}
-                  height={600}
-                  className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[620px] object-cover rounded-r-lg transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
-                              transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
-              </div>
-            </motion.div>
+  variants={imageVariants}
+  className="relative w-full overflow-hidden group"
+>
+  <div className="relative flex justify-center md:block"> {/* This line is changed */}
+    <Image
+      src="/About_Us/b1.jpg"
+      alt="Cybersecurity team working"
+      width={700}
+      height={600}
+      className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[620px] object-cover rounded-r-lg transition-transform duration-700 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transform scale-0 
+                  transition-all duration-700 origin-center rotate-45 group-hover:scale-[2]" />
+  </div>
+</motion.div>
 
             {/* Floating Custom Circular Image (Rotating) */}
             <Link href="/book-a-meeting">

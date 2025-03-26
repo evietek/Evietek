@@ -7,7 +7,7 @@ export default function DecorativeElements() {
     <>
       {/* Left Spark (Blue, Rotates & Glows) */}
       <div 
-        className="absolute left-[8%] bottom-[45%] sm:left-[5%] sm:bottom-[25%] md:left-[15%] md:bottom-[40%] lg:left-[15%] lg:bottom-[28%] animate-rotate-glow"
+        className="absolute left-[8%] bottom-[45%] sm:left-[5%] sm:bottom-[25%] md:left-[15%] md:bottom-[40%] lg:left-[10%] lg:bottom-[20%] xl:left-[15%] xl:bottom-[28%] animate-rotate-glow"
       >
         <Image 
           src="/svgs/Star2.svg" 

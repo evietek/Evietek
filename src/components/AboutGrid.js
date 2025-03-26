@@ -79,7 +79,7 @@ export default function AboutGrid() {
               style={{ perspective: "1000px" }}
               initial="initial"
               whileInView="animate"
-              whileHover="hover"
+              // whileHover="hover"
               viewport={{ once: true, amount: 0.2 }}
               custom={index}
             >
@@ -110,7 +110,7 @@ export default function AboutGrid() {
               style={{ perspective: "1000px" }}
               initial="initial"
               whileInView="animate"
-              whileHover="hover"
+              // whileHover="hover"
               viewport={{ once: true, amount: 0.2 }}
               custom={index + 2}
             >
@@ -132,7 +132,7 @@ export default function AboutGrid() {
 
         {/* Animated Stickers with Responsive Positioning */}
         <motion.div
-          className="absolute z-10 top-[33%] left-[38%] sm:top-[35%] sm:left-[40%] md:top-[33%] md:left-[35%] lg:top-[33%] lg:left-[40%]"
+          className="absolute cursor-pointer z-10 top-[33%] left-[38%] sm:top-[35%] sm:left-[40%] md:top-[33%] md:left-[35%] lg:top-[33%] lg:left-[40%]"
           initial="initial"
           whileInView="animate"
           whileHover="hover"
@@ -143,7 +143,7 @@ export default function AboutGrid() {
         </motion.div>
 
         <motion.div 
-          className="absolute z-10 bottom-[-40px] left-[-15px] sm:bottom-[-60px] sm:left-[50px] md:bottom-[-70px] md:left-[-50px] lg:bottom-[-60px] lg:left-[10px] xl:bottom-[-60px] xl:left-[60px]"
+          className="absolute cursor-pointer z-10 bottom-[-40px] left-[-15px] sm:bottom-[-60px] sm:left-[50px] md:bottom-[-70px] md:left-[-50px] lg:bottom-[-60px] lg:left-[10px] xl:bottom-[-60px] xl:left-[60px]"
           initial="initial"
           whileInView="animate"
           whileHover="hover"

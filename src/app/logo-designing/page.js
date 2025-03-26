@@ -31,7 +31,7 @@ const LogoDesignServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="Logo Design" 
         backgroundImage="/Services/Logo/bg.webp" 

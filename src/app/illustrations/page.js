@@ -10,32 +10,32 @@ const faqs = [
   {
     question: "What is the illustration process?",
     answer:
-      "The illustration process typically involves initial sketches for review within two to three weeks, followed by revisions and final artwork completion, which can take an additional four weeks after approval",
+      "The process begins with initial sketches, usually ready within two to three weeks. After revisions, final artwork is completed in an additional four weeks post-approval.",
   },
   {
     question: "How long does it take to complete an illustration?",
     answer:
-      "Most illustrations can take between half a day to two business days, while book covers may require up to two weeks to finalize.",
+      "Most illustrations take between half a day to two business days, while book covers may require up to two weeks to finalize.",
   },
   {
     question: "Can I request revisions on my illustrations?",
     answer:
-      "Yes, you can request revisions during the sketch stage, with two complimentary rounds allowed. Additional changes at the final art stage may incur extra charges",
+      "Yes! You can request two complimentary rounds of revisions during the sketch stage. Additional changes at the final stage may incur extra charges.",
   },
   {
     question: "What tools do I need to start illustrating?",
-    answer: "You can begin with basic materials like colored pencils or watercolors, but many illustrators find it beneficial to work digitally using software like Procreate or Photoshop for flexibility and efficiency."
+    answer: "Basic materials like colored pencils or watercolors are great for traditional illustration. However, many illustrators prefer digital tools such as Procreate or Photoshop for greater flexibility and efficiency."
   }
 ];
 
-const ContentWritingServicePage = () => {
+const IllustrationsServicePage = () => {
   const images = [
     { src: '/Services/Illustration/hero1.jpg', alt: 'Illustration' },
     { src: '/Services/Illustration/hero1.png', alt: 'Illustration' }
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="Illustrations" 
         backgroundImage="/Services/Illustration/bg.jpeg"
@@ -61,11 +61,16 @@ const ContentWritingServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-4 px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+            Elevate Your Brand with Stunning Illustrations 
+          </h2>
+          <div className="w-20 h-1 bg-blue-600 mb-8"></div>
 
             <p className="text-gray-600 leading-relaxed">
-            In today`s visually driven world, high-quality illustrations are essential. At Evietek, we understand that professional illustration can elevate your brand and communicate your message effectively. Whether you need artwork for a children`s book or custom graphics for your website, our illustrations help you stand out. For instance, a vibrant illustration can make a dull report engaging and memorable. 
-
-With imagination and accuracy, our team of skilled illustrators can materialize your vision. Reach out to us now to discover how we can elevate your visual content and make a memorable impact on your viewers.  
+            In today’s visually driven world, high-quality illustrations can make all the difference. At Evietek, we craft professional, eye-catching illustrations that bring ideas to life and enhance brand identity. Whether you need captivating artwork for a children’s book or custom graphics for your website, our expert illustrators ensure your visuals leave a lasting impact. 
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-4">
+            With a mix of creativity and precision, our team transforms your vision into reality. Let Evietek enhance your visual content and create illustrations that truly stand out. 
             </p>
           </div>
 
@@ -73,7 +78,7 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
           <div className="mb-4">
             <WhyChoose
               heading="Why Choose Illustrations Services"
-              description="Evietek`s illustration services are designed to visually captivate, communicate brand stories and enhance user experiences. Our team of skilled illustrators transforms concepts into compelling visuals, helping brands engage audiences and build memorable identities."
+              description="Evietek’s illustration services are designed to visually engage, tell stories and enhance user experience. Our skilled illustrators craft compelling visuals that help brands establish strong, memorable identities."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
@@ -92,7 +97,7 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
                   title: "Scalable Solutions Tailored to Your Vision"
                 }
               ]}
-              bottomDescription="We deliver compelling visuals, unique designs and consistent branding to make your business stand out. Our team excels in creating engaging illustrations that resonate with your audience and elevate your brand’s identity."
+              bottomDescription="We provide high-quality, unique and visually captivating illustrations that make your business stand out, ensuring your audience connects with your brand on a deeper level."
             />
           </div>
 
@@ -100,22 +105,22 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
           <div className="mb-4">
             <Feature
               heading="Feature of Content Illustration Services"
-              description="At Evietek, we specialize in creating captivating visuals that communicate your brand’s story with creativity and precision. Our team ensures seamless collaboration and tailored designs that leave a lasting impression."
+              description="At Evietek, we create stunning visuals that tell your brand’s story with creativity and precision. Our collaborative approach ensures tailored designs that make an impact."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Character Design",
-                  description: "We design unique characters for branding or storytelling that resonate with your audience"
+                  description: "We develop unique characters for branding, storytelling and marketing that resonate with your audience."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "Our Illustration Process",
-                  description: "We begin with a consultation to understand your vision, creating artwork that fits your goals."
+                  description: "We begin with an in-depth consultation to understand your vision and objectives, ensuring the final artwork aligns with your brand."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "High-Quality Illustrations",
-                  description: "Engaging artwork boosts audience interaction, drawing attention on social media and print materials."
+                  description: "Engaging, vibrant artwork enhances audience interaction across social media, print materials and digital platforms."
                 }
               ]}
               bottomImage={{
@@ -124,7 +129,7 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
                 width: 400,
                 height: 300
               }}
-              bottomDescription="We provide custom illustrations, consistent branding and flexible design solutions to enhance your brand’s visual identity and engage your audience effectively."
+              bottomDescription="Evietek offers custom illustrations, consistent branding and adaptable designs to reinforce your visual identity and captivate your audience effectively."
               additionalFeatures={[
                 "Unique Visual Narratives",
                 "Scalable and Adaptable Designs",
@@ -132,6 +137,14 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
                 "Continuous Support and Updates"
               ]}
             />
+
+<h2 className="text-2xl sm:text-3xl font-bold text-[#030438] mb-4 sm:mb-6 px-4 sm:px-8 md:px-12">
+              Transform Your Brand with Custom Illustrations 
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed  mb-2 px-4 sm:px-8 md:px-12">
+            Let Evietek help you create visuals that enhance your brand’s identity and engagement. Contact us today to discuss your illustration needs and bring your ideas to life! 
+            </p>
+
           </div>
 
           {/* FAQ Section */}
@@ -147,7 +160,7 @@ With imagination and accuracy, our team of skilled illustrators can materialize 
   );
 };
 
-export default ContentWritingServicePage;
+export default IllustrationsServicePage;
 
  
  

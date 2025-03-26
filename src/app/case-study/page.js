@@ -60,7 +60,7 @@ const CaseStudyPage = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <main className="bg-[#F2F2F5]">  
+      <main className="bg-[#030438] pt-10 md:pt-0">  
         <motion.div 
           key="case-study-page"
           initial="initial"

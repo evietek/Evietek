@@ -10,23 +10,19 @@ const faqs = [
   {
     question: "What types of video editing services do you offer?",
     answer:
-      "We offer a range of video editing services, including basic editing (trimming and transitions), advanced color correction, motion graphics and audio editing to enhance overall quality.",
-  },
+"We offer basic editing (trimming and transitions), advanced color correction, motion graphics and audio enhancements to improve video quality."  },
   {
     question: "How long does it take to complete a video edit?",
     answer:
-      "The turnaround time for video editing depends on the project`s complexity and length, but we typically deliver initial edits within 1-2 weeks.",
-  },
+"Turnaround times vary by project complexity, but we typically deliver initial edits within 1–2 weeks."  },
   {
     question: "Can I provide input during the editing process?",
     answer:
-      "Absolutely! We encourage client feedback throughout the editing process to ensure the final product aligns with your vision and requirements.",
-  },
+"Absolutely! We value client feedback at every stage to ensure the final video meets your vision and expectations."  },
   {
     question: "What file formats do you deliver for the final edited video?",
     answer:
-      "We deliver final edited videos in various formats based on your needs, including MP4, MOV and AVI, ensuring compatibility with your intended platforms.",
-  },
+"We provide final videos in multiple formats, including MP4, MOV and AVI, ensuring compatibility with your preferred platforms."  },
 ];
 
 const VideoEditingServicePage = () => {
@@ -36,7 +32,7 @@ const VideoEditingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="Video Editing" 
         backgroundImage="/Services/Video/bg.jpg" 
@@ -62,42 +58,44 @@ const VideoEditingServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+            Transform Your Videos into Captivating Visual Stories 
+          </h2>
+          <div className="w-20 h-1 bg-blue-600 mb-8"></div>
             <p className="text-gray-600 leading-relaxed">
-              In the digital age, video content is king. At Evietek, we understand that professional video editing is crucial for creating engaging and impactful content. Whether you`re a small business owner wanting to promote your brand or a content creator sharing your passion, quality editing can make all the difference. For instance, a travel vlogger can turn raw footage of their adventures into a captivating story that resonates with viewers.
-            </p>
+            In today’s digital landscape, video content is king. At Evietek, we specialize in professional video editing that enhances storytelling, engages audiences and elevates brand impact. Whether you’re a business promoting your services or a content creator sharing your passion, expert editing makes all the difference. Imagine a travel vlogger turning raw footage into a cinematic masterpiece, that’s the power of skilled editing.            </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              We can help bring your vision to life and take your content to the next level thanks to our experienced editing team. The creative approach and meticulous attention to detail we employ guarantee that your videos will be noticed in a crowded online landscape.
-            </p>
+            With our creative expertise and meticulous attention to detail, we ensure your videos stand out in the competitive online space.             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose Evietek`s Video Editing Services?"
-              description="Evietek`s Video Editing Services are designed to enhance your brand`s storytelling with high-quality visuals, seamless transitions and engaging content. Whether for marketing, social media, or professional projects, our expert editors bring your vision to life."
+              description="Evietek’s video editing solutions bring your vision to life with high-quality visuals, seamless transitions and engaging storytelling. Whether for marketing, social media, or professional projects, we deliver polished content that captures attention."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "High-Quality Video Production",
-                  description: "Professional editing with attention to detail and creative storytelling."
+                  description: "Create visually stunning content that enhances your brand image."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
                   title: "24/7 Support & Continuous Revisions",
-                  description: "Round-the-clock assistance and regular updates to perfect your content."
+                  description: "Get expert assistance and revisions tailored to your needs."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "Seamless Integration with Your Brand",
-                  description: "Consistent branding and messaging across all video content."
+                  description: "Maintain consistency across all video platforms."
                 },
                 {
                   iconSrc: "/About_Us/4.svg",
                   title: "Scalable Solutions Tailored to Your Needs",
-                  description: "Flexible editing packages that grow with your content needs."
+                  description: "Custom editing packages designed to match your project’s scope."
                 }
               ]}
-              bottomDescription="We deliver cinematic excellence, dynamic effects and engaging storytelling to elevate your content. Let Evietek transform your raw footage into compelling videos that captivate your audience!"
+              bottomDescription="From cinematic effects to dynamic transitions, our editing process ensures your videos leave a lasting impact. Let Evietek turn your raw footage into compelling visual stories."
             />
           </div>
 
@@ -105,22 +103,22 @@ const VideoEditingServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of Evietek`s Video Editing Services"
-              description="Evietek`s Video Editing Services provide advanced editing techniques, real-time collaboration and seamless integration to transform your raw footage into engaging visual content."
+              description="Evietek’s expert video editing combines creativity, precision and the latest technology to produce visually compelling content."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
                   title: "Types of Video Editing Services Offered",
-                  description: "We offer a range of video editing services, from basic trimming and transitions to advanced color correction for vibrant visuals."
+                  description: "We provide a wide range of video editing solutions, from basic trimming and transitions to advanced color correction for stunning, vibrant visuals."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
-                  title: "Motion Graphics",
-                  description: "We specialize in motion graphics and visual effects to enhance professionalism, using animated elements to engage viewers and improve audio quality."
+                  title: "Motion Graphics & Visual Effects",
+                  description: "Enhance your videos with motion graphics, animated elements and high-quality audio enhancements for a professional touch."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
                   title: "Impact Through Video Content",
-                  description: "Investing in professional video editing is essential for impactful content; let Evietek help you create high-quality videos that inspire your audience!"
+                  description: "Professional video editing boosts engagement, strengthens brand presence and inspires audiences. Let Evietek help you create content that stands out."
                 }
               ]}
               bottomImage={{
@@ -129,7 +127,7 @@ const VideoEditingServicePage = () => {
                 width: 400,
                 height: 300
               }}
-              bottomDescription="Let us help you create professional videos that will captivate your audience and elevate your brand."
+              bottomDescription="We offer: "
               additionalFeatures={[
                 "High-Quality Visual Enhancements",
                 "Automated Editing Optimization",
@@ -137,6 +135,11 @@ const VideoEditingServicePage = () => {
                 "Scalable and Flexible Editing Packages"
               ]}
             />
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#030438] mb-4 sm:mb-6 px-4 sm:px-8 md:px-12">
+              Elevate Your Videos with Evietek’s Expertise 
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed  mb-2 px-4 sm:px-8 md:px-12">
+            Let us bring your vision to life through expert video editing and storytelling. Contact Evietek today to create videos that captivate and inspire!             </p>
           </div>
 
           {/* FAQ Section */}
@@ -146,6 +149,9 @@ const VideoEditingServicePage = () => {
             </h2>
             <ServiceFAQ faqs={faqs} className="w-full" />
           </div>
+          <p className="text-sm sm:text-lg text-[#030438] leading-relaxed  mt-4 mb-2 px-4 sm:px-10 md:px-16">
+          <b>Ready to take your videos to the next level? Contact Evietek today!</b> 
+          </p>
         </div>
       </div>
     </main>

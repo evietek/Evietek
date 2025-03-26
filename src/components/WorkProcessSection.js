@@ -11,14 +11,6 @@ import { useState } from "react";
 
 export default function WorkProcessSection() {
   // Animation Variants
-  const bannerVariants = {
-    hidden: { opacity: 0, x:-1000 },
-    visible: { 
-      opacity: 1, 
-      x: 0, 
-      transition: { duration: 1.5, ease: "easeOut" } 
-    }
-  };
 
   const headingVariants = {
     hidden: { opacity: 0, y: 50 }, // Start below
@@ -50,6 +42,10 @@ export default function WorkProcessSection() {
 
   const [copied, setCopied] = useState(false);
 
+  const [isHovered1, setIsHovered1] = useState(false);
+const [isHovered2, setIsHovered2] = useState(false);
+
+
 const handleCopy = () => {
   navigator.clipboard.writeText("+1 (647) 804 5528");
   setCopied(true);
@@ -65,7 +61,7 @@ const handleCopy = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        variants={bannerVariants}
+
       >
         <Banner />
       </motion.section>
@@ -147,30 +143,53 @@ const handleCopy = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-5 md:mt-20">
-          <Link href="/book-a-meeting" className="block">
-            <button className="flex items-center gap-1.5 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105">
-              <Image src="/phone.svg" alt="Phone" width={20} height={20} />
-              Book a Meeting
-            </button>
-          </Link>
-          <div className="relative">
-  <button
-    onClick={handleCopy}
-    className="flex items-center gap-1.5 bg-[#3E2472] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105"
-  >
-    <Image src="/phone.svg" alt="Phone" width={20} height={20} />
-    +1 (647) 804 5528
-  </button>
+  {/* Book a Meeting Button */}
+  <Link href="/book-a-meeting" className="block">
+    <button
+      onMouseEnter={() => setIsHovered1(true)}
+      onMouseLeave={() => setIsHovered1(false)}
+      className="group flex items-center gap-1.5 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105"
+    >
+      <div className="w-7 h-7">
+        <Image
+          src="/phone.svg"
+          alt="Phone"
+          width={20}
+          height={20}
+          className={`w-full h-full ${isHovered1 ? "animate-wiggle" : ""}`}
+        />
+      </div>
+      Book a Meeting
+    </button>
+  </Link>
 
-  {copied && (
-    <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm text-green-400 font-medium whitespace-nowrap">
-      Copied!
-    </span>
-  )}
+  {/* Copy Phone Button */}
+  <div className="relative">
+    <button
+      onClick={handleCopy}
+      onMouseEnter={() => setIsHovered2(true)}
+      onMouseLeave={() => setIsHovered2(false)}
+      className="group flex items-center gap-1.5 bg-[#3E2472] hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold text-sm md:text-base lg:text-lg shadow-lg transition-all transform hover:scale-105"
+    >
+      <div className="w-7 h-7">
+        <Image
+          src="/phone.svg"
+          alt="Phone"
+          width={20}
+          height={20}
+          className={`w-full h-full ${isHovered2 ? "animate-wiggle" : ""}`}
+        />
+      </div>
+      +1 (647) 804 5528
+    </button>
+
+    {copied && (
+      <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm text-green-400 font-medium whitespace-nowrap">
+        Copied!
+      </span>
+    )}
+  </div>
 </div>
-
-</div>
-
 
         {/* Decorative Elements */}
         <div className="absolute top-40 left-0 w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20">

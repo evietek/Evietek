@@ -13,13 +13,15 @@ export default function PortfolioSection() {
   // Function to trigger next slide
   const nextSlide = () => {
     if (carouselRef.current) {
-      carouselRef.current.next();
+      // carouselRef.current.next();
+      carouselRef.current?.next();
     }
   };
 
   const prevSlide = () => {
     if (carouselRef.current) {
-      carouselRef.current.prev();
+      // carouselRef.current.prev();
+      carouselRef.current?.prev();
     }
   };
 

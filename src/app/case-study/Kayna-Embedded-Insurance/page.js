@@ -18,17 +18,27 @@ const headingVariants = {
 
 const KaynaEmbeddedInsurance = () => {
   return (
-    <main className="pt-0 px-6 md:px-16 lg:px-0 relative bg-white select-none cursor-default">
+    <>
+    <section className="pt-0 relative bg-white select-none cursor-default">
       
       {/* Breadcrumb */}
-      <Breadcrumb 
-        title="Kayna Embedded Insurance" 
-        backgroundImage="/Services/services-bg.jpg" 
-      />   
+      <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full"
+          >
+            <Breadcrumb 
+              title="Kayna Embedded Insurance" 
+              backgroundImage="/case_study/bg.avif" 
+            />
+          </motion.div> 
+          </section>
 
+      <section className="pt-15 md:pt-0 mt-0 px-6 md:px-16 lg:px-0 relative bg-white select-none cursor-default">
       {/* Case Study Logo Image */}
       <motion.div 
-        className="flex items-start text-left max-w-6xl mx-auto mt-8"
+        className="flex items-start text-left max-w-6xl mx-auto md:mt-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -211,7 +221,8 @@ const KaynaEmbeddedInsurance = () => {
     
       </div>
 
-    </main>
+    </section>
+    </>
   );
 };
 

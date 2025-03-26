@@ -10,22 +10,22 @@ const faqs = [
   {
     question: "What is QA testing?",
     answer:
-      "QA testing is a process that ensures software functions as intended by verifying its functionality against defined requirements and acceptance criteria.",
+      "QA testing ensures software meets defined requirements and functions correctly before release.",
   },
   {
     question: "How do you determine the cost of QA testing services?",
     answer:
-      "The cost of QA testing services varies based on project specifics, with pricing typically being a fraction of hiring in-house testers, depending on the complexity and scope of the project.",
+      "Pricing depends on project scope, but our services are cost-effective, often more affordable than hiring in-house testers.",
   },
   {
     question: "What types of testing do you offer?",
     answer:
-      "We offer various types of testing, including functional, non-functional, manual, automated, performance and usability testing, tailored to meet the unique needs of each project.",
+      "We offer functional, non-functional, manual, automated, performance and usability testing, customized to your project’s needs.",
   },
   {
     question: "How quickly can you start a QA testing project?",
     answer:
-      "Our team is prepared to begin projects quickly, often within 1-2 days, thanks to our proactive hiring strategy and readiness to integrate with your existing processes.",
+      "Our team can begin testing within 1–2 days, ensuring a seamless integration with your existing processes.",
   }
 ];
 
@@ -36,7 +36,7 @@ const QATestingServicePage = () => {
   ];
 
   return (
-    <main className="bg-[#F2F2F5] select-none cursor-default">  
+    <main className="bg-[#F2F2F5] select-none cursor-default pt-10 md:pt-0">  
       <Breadcrumb 
         title="QA Testing" 
         backgroundImage="/Services/QA/bg.jpg" 
@@ -62,23 +62,25 @@ const QATestingServicePage = () => {
 
           {/* Title and Description Section */}
           <div className="mb-0 px-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#030438] mb-4">
+            Attention: Ensure Your Software is Bug-Free and Reliable 
+          </h2>
+          <div className="w-20 h-1 bg-blue-600 mb-8"></div>
             <p className="text-gray-600 leading-relaxed">
-              In the fast-paced world of software development, quality assurance (QA) is vital. At Evietek, we understand that effective QA testing ensures your software is reliable and performs well. Imagine launching a new app only to find out it crashes during peak usage. This can harm your reputation and lead to loss of customers. Our QA testing services help prevent such issues, ensuring your software meets high standards before it reaches users.
-            </p>
+            In today’s fast-paced software industry, quality assurance (QA) is critical to success. At Evietek, we ensure your software is flawless, secure and high-performing before it reaches users. Imagine launching a new app only to face crashes and glitches, this can damage your reputation and result in lost customers. Our expert QA testing services eliminate these risks, ensuring a smooth, reliable user experience.             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              Our skilled QA testers examine every part of your program to find and fix bugs. You may rest certain that Evietek`s QA testing services have completely tested and prepared your software for release.
-            </p>
+            With Evietek, your software undergoes rigorous testing to detect and resolve vulnerabilities early, guaranteeing seamless performance upon release.             </p>
           </div>
 
           {/* Why Choose Section */}
           <div className="mb-0">
             <WhyChoose
               heading="Why Choose QA Testing Services?"
-              description="Evietek`s QA Testing Services ensure your software runs flawlessly by identifying and eliminating bugs before deployment. Our expert testing solutions enhance performance, security and user experience, helping you deliver a seamless digital product."
+              description="Evietek’s QA testing solutions ensure your software functions flawlessly by identifying and eliminating bugs before deployment. Our comprehensive testing enhances performance, security and user experience, delivering a seamless digital product."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
-                  title: "Comprehensive Testing for All Platforms",
+                  title: "Comprehensive Testing Across All Platforms",
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
@@ -90,10 +92,10 @@ const QATestingServicePage = () => {
                 },
                 {
                   iconSrc: "/About_Us/4.svg",
-                  title: "QA strategies that adapt to business and project needs",
+                  title: "Custom QA Strategies Aligned with Business Needs",
                 }
               ]}
-              bottomDescription="We provide end-to-end manual and automated testing to detect vulnerabilities, improve performance and ensure optimal software reliability. Partner with Evietek for a bug-free, high-performance digital experience."
+              bottomDescription="We provide end-to-end manual and automated testing to detect vulnerabilities, optimize performance and enhance software reliability. Partner with Evietek for a bug-free, high-performance digital experience."
             />
           </div>
 
@@ -101,22 +103,22 @@ const QATestingServicePage = () => {
           <div className="mb-0">
             <Feature
               heading="Features of QA Testing Services"
-              description="Evietek`s QA Testing Services ensure your software meets the highest standards by identifying issues early and optimizing performance. Our advanced testing solutions help deliver a seamless, secure and high-quality user experience."
+              description="Evietek’s QA Testing Services follow a structured approach to ensure early issue detection, enhanced performance and optimized security."
               features={[
                 {
                   iconSrc: "/About_Us/1.svg",
-                  title: "Test Plan",
-                  description: "We create a comprehensive test plan outlining methodologies and tools, focusing on areas like usability, performance and security."
+                  title: "Test Plan Development",
+                  description: "We design a comprehensive test plan, selecting the best methodologies and tools to assess usability, performance and security."
                 },
                 {
                   iconSrc: "/About_Us/2.svg",
-                  title: "Test Design",
-                  description: "Our team develops detailed test cases based on your requirements, ensuring thorough coverage and incorporating automation where beneficial."
+                  title: "Test Design & Execution",
+                  description: "Our team creates detailed test cases based on your requirements, ensuring full coverage, while incorporating automation where necessary."
                 },
                 {
                   iconSrc: "/About_Us/3.svg",
-                  title: "Execution and Reporting",
-                  description: "We execute tests and meticulously document results, providing detailed reports on defects and performance issues with reproduction steps and fix suggestions."
+                  title: "Reporting & Optimization",
+                  description: "We execute rigorous testing and provide detailed reports on defects, performance issues and recommended fixes to optimize functionality."
                 }
               ]}
               bottomImage={{
@@ -125,7 +127,7 @@ const QATestingServicePage = () => {
                 width: 500,
                 height: 300
               }}
-              bottomDescription="Evietek`s QA Testing Services test across platforms and devices using industry best practices and cutting-edge technologies. Our skilled QAs find vulnerabilities and prepare your program for launch."
+              bottomDescription="Evietek’s cross-platform testing ensures your software works seamlessly across all devices. With our industry-leading techniques, we detect vulnerabilities before launch."
               additionalFeatures={[
                 "Cross-Platform Compatibility Testing",
                 "Automated & Manual Testing",
@@ -133,6 +135,12 @@ const QATestingServicePage = () => {
                 "Scalable & Customizable Solutions"
               ]}
             />
+
+<h2 className="text-2xl sm:text-3xl font-bold text-[#030438] mb-4 sm:mb-6 px-4 sm:px-8 md:px-12">
+Action: Deliver a Flawless Digital Experience with Evietek 
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed  mb-2 px-4 sm:px-8 md:px-12">
+            Quality software builds trust and credibility. Let Evietek’s QA experts refine your product for a seamless, high-performance launch. Get in touch today!             </p>
           </div>
 
           {/* FAQ Section */}
@@ -142,6 +150,10 @@ const QATestingServicePage = () => {
             </h2>
             <ServiceFAQ faqs={faqs} className="w-full" />
           </div>
+          <p className="text-sm sm:text-lg text-[#030438] leading-relaxed  mt-4 mb-2 px-4 sm:px-10 md:px-16">
+          <b>Ensure your software meets the highest standards. Contact Evietek today! </b>
+          </p>
+
         </div>
       </div>
     </main>

@@ -9,14 +9,14 @@ const Breadcrumb = ({ title, backgroundImage, backgroundPosition = 'center', tex
 
   return (
     <div
-      className="hidden md:block relative w-full h-[100px] md:h-[150px] lg:h-[200px] xl:h-[250px] flex items-center bg-cover"
+      className="hidden md:block relative w-full h-[100px] md:h-[200px] xl:h-[250px] flex items-center bg-cover"
       style={{ 
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: backgroundPosition 
       }}
     >
       <div className="w-full h-full bg-black/50 absolute top-0 left-0" />
-      <div className="relative z-10 px-8 md:px-36 flex flex-col justify-center h-full" style={{ color: textColor }}>
+      <div className="relative z-10 px-8 md:px-36 md:pt-12 flex flex-col justify-center h-full" style={{ color: textColor }}>
         <h1 className="text-3xl md:text-4xl font-bold select-none cursor-default">{title}</h1>
         <nav className="text-xs md:text-sm mt-2">
           <ol className="flex items-center space-x-2">
