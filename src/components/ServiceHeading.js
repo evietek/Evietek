@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function AboutHeading() {
+export default function ServiceHeading() {
   return (
     <div className="relative flex justify-center items-center w-full mt-10 md:mt-0 lg:mt-0">
       {/* Our SVG - Sliding from Left */}
@@ -12,7 +12,7 @@ export default function AboutHeading() {
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        transition={{ duration: 1.3, ease: "easeOut" }}
       >
         <Image 
           src="/Our_Services/Our.svg"
@@ -27,8 +27,8 @@ export default function AboutHeading() {
         className="relative -ml-2 -mt-8 sm:-ml-5 md:-ml-3 lg:-ml-6 z-0"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.3, ease: "easeOut", delay: 0.1 }}
       >
         <Image 
           src="/Our_Services/Services.svg"

@@ -18,7 +18,7 @@ const PortfolioProjects = () => {
   const [spacingValue, setSpacingValue] = useState(50);
   const [screenWidth, setScreenWidth] = useState(0);
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true, amount: 0.2 });
+  const isInView = useInView(containerRef, { once: true, amount: 0.1 });
 
   useEffect(() => {
     const updateValues = () => {
@@ -77,8 +77,8 @@ const getBaseHeight = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.8,
-        delayChildren: 0.8
+        staggerChildren: 0.7,
+        delayChildren: 0.6
       }
     }
   };

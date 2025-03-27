@@ -29,6 +29,7 @@ module.exports = {
         'bounce-slow': 'bounceSlow 3s ease-in-out infinite',
         'buzz': 'buzz 1s ease-in-out 3',
         'wiggle': 'wiggle 0.7s ease-in-out infinite',
+        marquee: 'marquee 25s linear infinite',
       },
       keyframes: {
         float: {
@@ -73,6 +74,10 @@ module.exports = {
           '30%': { transform: 'rotate(15deg)' },
           '40%': { transform: 'rotate(-15deg)' },
           '50%': { transform: 'rotate(0deg)' }
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       utilities: {

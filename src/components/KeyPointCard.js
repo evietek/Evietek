@@ -10,7 +10,7 @@ const KeyPointCard = ({ icon, title, description, index }) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         delay: index * 0.1,
         ease: "easeOut"
       }
@@ -23,7 +23,7 @@ const KeyPointCard = ({ icon, title, description, index }) => {
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Gradient Fill Animation - Fills from Top on Hover */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#5A50FF] to-[#D376FF] 

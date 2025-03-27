@@ -225,10 +225,17 @@ At Evietek, we`re not just another digital agency—we`re pioneers in graphic de
       onMouseEnter={() => setIsHovered2(true)}
       onMouseLeave={() => setIsHovered2(false)}
       onClick={() => {
-        navigator.clipboard.writeText("+1 (647) 804 5528");
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+      
+        if (isMobile) {
+          window.location.href = "tel:+16478045528";
+        } else {
+          navigator.clipboard.writeText("+1 (647) 804 5528");
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        }
       }}
+      
       className="flex items-center gap-2 bg-[#ffff] hover:opacity-90 text-[#030438] px-5 py-2 md:px-6 md:py-3 rounded-2xl font-semibold text-sm md:text-base xl:text-lg shadow-lg transition-all transform hover:scale-105"
     >
       <Image

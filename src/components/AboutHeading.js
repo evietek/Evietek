@@ -11,8 +11,8 @@ export default function AboutHeading() {
         className="relative z-10 -mt-6 md:-mt-4  lg:-mt-6  -mr-2"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.3, ease: "easeOut" }}
       >
         <Image 
           src="/About/About.svg" 
@@ -27,8 +27,8 @@ export default function AboutHeading() {
         className="relative -ml-4 sm:-ml-5 md:-ml-5 lg:-ml-7 -mt-0 z-0" // Adjusted for tablet & mobile
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.3, ease: "easeOut", delay: 0.1 }}
       >
         <Image 
           src="/About/Us.svg" 

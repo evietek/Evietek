@@ -3,33 +3,55 @@
 import Projects from "./PortfolioProjects";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function PortfolioProjectsSection() {
+  const [hasPlayedStar, setHasPlayedStar] = useState(false);
+  const [hasPlayedCamera, setHasPlayedCamera] = useState(false);
+
+  const handleStarEnter = () => {
+    if (!hasPlayedStar) {
+      setHasPlayedStar(true);
+      setTimeout(() => {
+        setHasPlayedStar(false);
+      }, 1500); // Match the hover animation duration
+    }
+  };
+
+  const handleCameraEnter = () => {
+    if (!hasPlayedCamera) {
+      setHasPlayedCamera(true);
+      setTimeout(() => {
+        setHasPlayedCamera(false);
+      }, 3000); // Match the tilt animation duration
+    }
+  };
+
   // Animation Variants
   const headingVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1.5, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeOut" }
     }
   };
 
   const subHeadingVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1.5, ease: "easeOut", delay: 0.2 } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.2 }
     }
   };
 
   const cameraVariants = {
     hidden: { opacity: 0, y: -100 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1.5, ease: "easeOut", delay: 0.3 } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.3 }
     }
   };
 
@@ -58,10 +80,10 @@ export default function PortfolioProjectsSection() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={headingVariants}
         >
-          <Image 
+          <Image
             src="/Portfolio_2/Portfolio.svg"
             alt="Portfolio"
             width={170}
@@ -76,7 +98,7 @@ export default function PortfolioProjectsSection() {
           className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={subHeadingVariants}
         >
           Our Recent Projects
@@ -88,50 +110,36 @@ export default function PortfolioProjectsSection() {
       {/* Rocket Image */}
       <motion.div
         className="absolute bottom-28 sm:bottom-20 md:bottom-24 lg:bottom-32 xl:bottom-48 right-0 w-16 h-16 sm:w-12 sm:h-12 md:w-24 md:h-24 lg:w-35 lg:h-35 xl:w-42 xl:h-42 2xl:w-50 2xl:h-50 z-10"
-        // Animation properties commented out but preserved for future use
-        /*
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={rocketVariants}
-        whileHover={{
-          x: ["0%", "50%", "70%", "50%", "0%", "-50%", "-70%", "-50%", "0%"],
-          y: ["0%", "-70%", "0%", "70%", "0%", "-70%", "0%", "70%", "0%"],
-          rotate: [-180, -135, -90, -45, 0, 45, 90, 135, -180],
-          transition: {
-            duration: 5,
-            ease: "linear",
-            times: [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1],
-            repeat: Infinity,
-          }
-        }}
-        */
       >
-        <Image 
-          src="/Portfolio_2/Rocket.svg" 
-          alt="Rocket" 
-          width={150} 
+        <Image
+          src="/Portfolio_2/Rocket.svg"
+          alt="Rocket"
+          width={150}
           height={150}
-          className="w-full h-full" 
+          className="w-full h-full"
           priority
         />
       </motion.div>
-      
+
       {/* Star (Continuously Rotating + Twisting on Hover) */}
       <motion.div
         className="absolute bottom-25 sm:bottom-16 md:bottom-20 lg:bottom-24 xl:bottom-50 2xl:bottom-32 left-1 sm:left-8 md:left-8 lg:left-24 xl:left-30 2xl:left-40 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 z-10"
         animate={rotatingStar}
-        whileHover={{ rotateY: 180 }} // Twists on hover
-        transition={{ duration: 1.5, ease: "easeInOut" }}
+        onMouseEnter={handleStarEnter}
       >
-        <Image 
-          src="/Portfolio_2/Star.svg" 
-          alt="Star" 
-          width={40} 
-          height={40}
-          className="w-full h-full md:w-10 md:h-10" 
-          priority
-        />
+        <motion.div
+          animate={hasPlayedStar ? { rotateY: 180 } : {}}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
+          <Image
+            src="/Portfolio_2/Star.svg"
+            alt="Star"
+            width={40}
+            height={40}
+            className="w-full h-full md:w-10 md:h-10"
+            priority
+          />
+        </motion.div>
       </motion.div>
 
       {/* Camera (Drops from Top + Slower Continuous Tilting on Hover) */}
@@ -139,21 +147,25 @@ export default function PortfolioProjectsSection() {
         className="absolute top-10 sm:top-16 md:top-20 lg:top-24 xl:top-30 2xl:top-32 left-0 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-22 lg:h-22 xl:w-24 xl:h-24 2xl:w-36 2xl:h-36"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={cameraVariants}
-        whileHover={{ 
-          rotate: [-10, 20, -10, 20, -10, 20, 0], // Keeps tilting until hover is removed
-          transition: { duration: 3, repeat: Infinity, ease: "easeInOut" } 
-        }}
+        onMouseEnter={handleCameraEnter}
       >
-        <Image 
-          src="/Portfolio_2/Camera.svg" 
-          alt="Camera" 
-          width={160} 
-          height={160} 
-          className="w-full h-full cursor-pointer"
-          priority
-        />
+        <motion.div
+          animate={hasPlayedCamera ? {
+            rotate: [-10, 20, -10, 20, -10, 20, 0],
+          } : {}}
+          transition={{ duration: 3, ease: "easeInOut" }}
+        >
+          <Image
+            src="/Portfolio_2/Camera.svg"
+            alt="Camera"
+            width={160}
+            height={160}
+            className="w-full h-full cursor-pointer"
+            priority
+          />
+        </motion.div>
       </motion.div>
     </section>
   );

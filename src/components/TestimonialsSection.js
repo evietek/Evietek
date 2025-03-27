@@ -2,7 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Reviews from "./Reviews";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import { useState } from "react";
+
+import 'swiper/css';
+
 import TestimonialCard from "./TestimonialCard"; // Import the card
 
 const testimonials = [
@@ -20,40 +25,51 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const [hasPlayedMagnet, setHasPlayedMagnet] = useState(false);
+
+  const handleMagnetEnter = () => {
+    if (!hasPlayedMagnet) {
+      setHasPlayedMagnet(true);
+      setTimeout(() => {
+        setHasPlayedMagnet(false);
+      }, 1500); // Match the rotation animation duration
+    }
+  };
+
   // Animation Variants
   const headingVariants = {
     hidden: { opacity: 0, y: -50 }, // Drop from top
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1.5, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeOut" }
     }
   };
 
   const subHeadingVariants = {
     hidden: { opacity: 0, y: 50 }, // Slide from bottom
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1.5, ease: "easeOut", delay: 0.2 } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.2 }
     }
   };
 
   const magnetVariants = {
     hidden: { opacity: 0, x: -100 }, // Slide from left
-    visible: { 
-      opacity: 1, 
-      x: 0, 
-      transition: { duration: 1.5, ease: "easeOut", delay: 0.3 } 
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.3 }
     }
   };
 
   const iconVariants = {
-    hidden: { opacity: 0, x: 100 }, // Slide from right
-    visible: { 
-      opacity: 1, 
-      x: 0, 
-      transition: { duration: 1.5, ease: "easeOut", delay: 0.4 } 
+    hidden: { opacity: 0, y: 100 }, // Slide from right
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.4 }
     }
   };
 
@@ -77,7 +93,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true, amount: 0.3 }}
           variants={headingVariants}
         >
-          <Image 
+          <Image
             src="/Testimonials/Testimonials.svg"
             alt="Testimonials"
             width={140}
@@ -85,7 +101,7 @@ export default function TestimonialsSection() {
             className="w-[110px] h-[55px] sm:w-[130px] sm:h-[65px] md:w-[150px] md:h-[75px] lg:w-[170px] lg:h-[85px]"
           />
         </motion.div>
-        
+
         {/* Content Heading (Slides from Bottom) */}
         <motion.h2
           className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
@@ -96,56 +112,117 @@ export default function TestimonialsSection() {
         >
           What Are Customers <br className="hidden md:block" /> Saying About Us?
         </motion.h2>
-      </div> 
+      </div>
 
       <div className="max-w-7xl mx-auto mt-12">
-  {/* Testimonial Cards Grid */}
-  <div className="flex justify-center">
-  <div className={`grid gap-6 ${testimonials.length < 3 ? 'grid-cols-1 sm:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
-    {testimonials.map((t, idx) => (
-      <TestimonialCard
-        key={idx}
-        name={t.name}
-        title={t.title}
-        review={t.review}
-      />
-    ))}
-  </div>
-</div>
-
-
-  {/* Trustpilot Embedded Component */}
-  <div className="flex justify-center mt-2">
-  <motion.div 
-          className="text-center mt-2"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <a
-            href="https://www.trustpilot.com/review/evietek.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            View all reviews on Trustpilot
-            <svg
-              className="w-4 h-4 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        {/* Testimonial Cards Grid */}
+        <div className="max-w-7xl mx-auto mt-12">
+          {testimonials.length >= 3 ? (
+            // Show Swiper Carousel for 3 or more testimonials (all screen sizes)
+            <Swiper
+              spaceBetween={16}
+              slidesPerView={1}
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </a>
-        </motion.div>
-  </div>
-</div>
+
+              {testimonials.map((t, idx) => (
+                <SwiperSlide key={idx}>
+                  <TestimonialCard
+                    name={t.name}
+                    title={t.title}
+                    review={t.review}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            // Show carousel only on mobile if there are 1 or 2 reviews
+            <div className="sm:hidden">
+              <Swiper
+                spaceBetween={16}
+                slidesPerView={1}
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 3500,
+                  disableOnInteraction: false,
+                }}
+              >
+
+                {testimonials.map((t, idx) => (
+                  <SwiperSlide key={idx}>
+                    <TestimonialCard
+                      name={t.name}
+                      title={t.title}
+                      review={t.review}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          )}
+
+          {/* Show static grid for 1-2 reviews on tablet+ */}
+          {testimonials.length < 3 && (
+            <div className="hidden sm:flex justify-center">
+              <div className="grid gap-6 sm:grid-cols-2">
+                {testimonials.map((t, idx) => (
+                  <TestimonialCard
+                    key={idx}
+                    name={t.name}
+                    title={t.title}
+                    review={t.review}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+
+        {/* Trustpilot Embedded Component */}
+        <div className="flex justify-center mt-4 pb-4 md:pb-0">
+          <motion.div
+            className="text-center mt-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <a
+              href="https://www.trustpilot.com/review/evietek.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              View all reviews on Trustpilot
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </motion.div>
+        </div>
+      </div>
 
 
 
@@ -169,10 +246,14 @@ export default function TestimonialsSection() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={magnetVariants}
-        whileHover={{ rotate: -90 }} // Rotates on Hover
-        transition={{ duration: 1.5, ease: "easeInOut" }}
+        onMouseEnter={handleMagnetEnter}
       >
-        <Image src="/Testimonials/Magnet.svg" alt="Magnet" width={160} height={160} />
+        <motion.div
+          animate={hasPlayedMagnet ? { rotate: -90 } : {}}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
+          <Image src="/Testimonials/Magnet.svg" alt="Magnet" width={160} height={160} />
+        </motion.div>
       </motion.div>
     </section>
   );

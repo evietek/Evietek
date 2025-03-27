@@ -11,7 +11,7 @@ const WhatWeDo = () => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         ease: "easeOut"
       }
     }
@@ -23,7 +23,7 @@ const WhatWeDo = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         delay: 0.2,
         ease: "easeOut"
       }
@@ -36,8 +36,8 @@ const WhatWeDo = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.5,
-        delay: 0.4,
+        duration: 0.4,
+        delay: 0.3,
         ease: "easeOut"
       }
     }
@@ -49,8 +49,8 @@ const WhatWeDo = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        delay: 0.6,
+        duration: 0.4,
+        delay: 0.3,
         ease: "easeOut"
       }
     }
@@ -61,7 +61,7 @@ const WhatWeDo = () => {
       className="bg-[#F2F2F5] py-12 md:py-5 md:pt-12 lg:py-16 select-none cursor-default"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={containerVariants}
     >
       <div className="container mx-auto px-4">

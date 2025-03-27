@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -17,10 +17,10 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
-  // Preload content
+  // Optimized preload content with proper cleanup
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    
+
     const preloadContent = async () => {
       return new Promise(resolve => setTimeout(resolve, 100));
     };
@@ -33,40 +33,40 @@ export default function Home() {
     };
   }, []);
 
-  // Handle scrolling to services section
-  useEffect(() => {
-    const handleScroll = () => {
-      const shouldScroll = sessionStorage.getItem('shouldScrollToServices');
-      if (shouldScroll) {
-        const servicesSection = document.getElementById('services');
-        if (servicesSection) {
-          setTimeout(() => {
-            servicesSection.scrollIntoView({ behavior: 'smooth' });
-            sessionStorage.removeItem('shouldScrollToServices');
-          }, 100);
-        }
+  // Optimized scroll handler with useCallback
+  const handleScroll = useCallback(() => {
+    const shouldScroll = sessionStorage.getItem('shouldScrollToServices');
+    if (shouldScroll) {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        setTimeout(() => {
+          servicesSection.scrollIntoView({ behavior: 'smooth' });
+          sessionStorage.removeItem('shouldScrollToServices');
+        }, 100);
       }
-    };
+    }
+  }, []);
 
-    // Only attempt to scroll if content is shown and loading is complete
+  // Optimized scroll effect
+  useEffect(() => {
     if (showContent && !isLoading) {
       handleScroll();
     }
-  }, [showContent, isLoading]);
+  }, [showContent, isLoading, handleScroll]);
 
-  const handleLoadingComplete = () => {
+  const handleLoadingComplete = useCallback(() => {
     setIsLoading(false);
     setTimeout(() => {
       setShowContent(true);
       document.documentElement.classList.remove('loading');
       document.body.style.overflow = 'auto';
     }, 100);
-  };
+  }, []);
 
   return (
     <>
       {isLoading && <LoadingAnimation onComplete={handleLoadingComplete} />}
-      
+
       <AnimatePresence mode="wait">
         {showContent && (
           <motion.div
@@ -74,6 +74,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="relative z-0 select-none cursor-default"
+            layout="position" // Optimizes layout animations
           >
             <HeroSection />
             <AboutSection />

@@ -18,9 +18,9 @@ const ImageGridWithRotatingSvg = () => {
       scale: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: "easeOut",
-        delay: index * 0.2
+        delay: index * 0.1
       }
     })
   };
@@ -54,7 +54,7 @@ const ImageGridWithRotatingSvg = () => {
         className="relative w-[80%] md:w-1/3 h-[250px] md:h-90 overflow-hidden rounded-lg group"
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={imageVariants}
         custom={0}
       >
@@ -75,7 +75,7 @@ const ImageGridWithRotatingSvg = () => {
           initial="initial"
           whileInView="animate"
           whileHover="hover"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={circleVariants}
         >
           <div className="relative w-[150px] h-[150px] md:w-50 md:h-50 rounded-full flex items-center justify-center animate-spin-slow">
@@ -95,7 +95,7 @@ const ImageGridWithRotatingSvg = () => {
           className="relative w-full h-[250px] md:h-54 overflow-hidden rounded-lg group"
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={imageVariants}
           custom={1}
         >
@@ -113,7 +113,7 @@ const ImageGridWithRotatingSvg = () => {
           className="relative w-full hidden md:block h-60 overflow-hidden rounded-lg group"
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
           variants={imageVariants}
           custom={2}
         >

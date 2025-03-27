@@ -40,9 +40,19 @@
 }
 
 /* 🎭 Utility Classes */
-.font-vastago { font-family: "VastagoGrotesk", sans-serif; }
-.font-vastago-bold { font-family: "VastagoGrotesk", sans-serif; font-weight: 700; }
-.font-vastago-light { font-family: "VastagoGrotesk", sans-serif; font-weight: 300; }
+.font-vastago {
+  font-family: "VastagoGrotesk", sans-serif;
+}
+
+.font-vastago-bold {
+  font-family: "VastagoGrotesk", sans-serif;
+  font-weight: 700;
+}
+
+.font-vastago-light {
+  font-family: "VastagoGrotesk", sans-serif;
+  font-weight: 300;
+}
 
 /* ========================= */
 /* 🎭 Base Theme Setup */
@@ -75,46 +85,90 @@ body {
 /* 🌟 Floating, Buzzing, and Glowing Effects */
 /* ========================= */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes float-left {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes float-right {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 @keyframes buzz {
-  0% { transform: rotate(0deg) scale(1); }
-  25% { transform: rotate(3deg) scale(1.05); }
-  50% { transform: rotate(-3deg) scale(1.05); }
-  75% { transform: rotate(3deg) scale(1.05); }
-  100% { transform: rotate(0deg) scale(1); }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(3deg) scale(1.05);
+  }
+
+  50% {
+    transform: rotate(-3deg) scale(1.05);
+  }
+
+  75% {
+    transform: rotate(3deg) scale(1.05);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @layer utilities {
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+
   .animate-float-left {
     animation: float-left 5s ease-in-out infinite;
   }
+
   .animate-float-right {
     animation: float-right 5s ease-in-out infinite;
   }
+
   .animate-buzz {
     animation: buzz 1s ease-in-out 2;
   }
+
   .animate-shimmer {
     animation: shimmer 1.5s linear infinite;
   }
@@ -124,19 +178,34 @@ body {
 /* 🌟 Rotating & Glowing Stars */
 /* ========================= */
 @keyframes rotateGlow {
-  0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; }
-  50% { transform: rotate(10deg) scale(1.1); opacity: 0.8; }
+
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(10deg) scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 @keyframes spinSlow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @layer utilities {
   .animate-rotate-glow {
     animation: rotateGlow 4s ease-in-out infinite;
   }
+
   .animate-spin-slow {
     animation: spinSlow 10s linear infinite;
   }
@@ -146,8 +215,15 @@ body {
 /* 🔽 Smooth Bouncing Scroll Indicator */
 /* ========================= */
 @keyframes bounceSlow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 @layer utilities {
@@ -165,21 +241,38 @@ button,
 
 
 .hide-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 
 @keyframes shake {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-4deg); }
-  50% { transform: rotate(4deg); }
-  75% { transform: rotate(-2deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .animate-shake {
@@ -187,12 +280,31 @@ button,
 }
 
 @keyframes wiggle {
-  0%, 100% { transform: rotate(0deg); }
-  10% { transform: rotate(15deg); }
-  20% { transform: rotate(-15deg); }
-  30% { transform: rotate(15deg); }
-  40% { transform: rotate(-15deg); }
-  50% { transform: rotate(0deg); }
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(15deg);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
 }
 
 .animate-wiggle {
@@ -202,18 +314,31 @@ button,
 
 @layer utilities {
   .marquee {
-    @apply whitespace-nowrap overflow-hidden py-2;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
+
   .marquee-content {
-    display: inline-flex;
-    gap: 2.5rem;
-    animation: marquee 15s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    animation: marquee 25s linear infinite;
   }
+
   @keyframes marquee {
-    from {
-      transform: translateX(0%);
+    0% {
+      transform: translateX(0);
     }
-    to {
+
+    100% {
       transform: translateX(-50%);
     }
   }

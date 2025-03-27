@@ -13,7 +13,7 @@ export default function ServicesSection() {
         animate: {
             opacity: 0.7,
             y: 0,
-            transition: { duration: 1.5, ease: "easeOut" }
+            transition: { duration: 1.3, ease: "easeOut" }
         }
     };
 
@@ -23,7 +23,7 @@ export default function ServicesSection() {
         animate: {
             opacity: 1,
             y: 0,
-            transition: { duration: 1.5, ease: "easeOut" }
+            transition: { duration: 1.3, ease: "easeOut" }
         }
     };
 
@@ -33,7 +33,7 @@ export default function ServicesSection() {
         visible: { 
             opacity: 1, 
             y: 0, 
-            transition: { duration: 1.5, ease: "easeOut" } 
+            transition: { duration: 1.3, ease: "easeOut" } 
         }
     };
 
@@ -73,7 +73,7 @@ export default function ServicesSection() {
                     className="text-[50px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     variants={headingVariants}
                 >
                     What We Do
@@ -102,7 +102,7 @@ export default function ServicesSection() {
                 className="absolute top-10 right-1 md:top-2 lg:top-10 z-0"
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.1 }}
                 variants={decorationVariants}
             >
                 <Image 
@@ -119,7 +119,7 @@ export default function ServicesSection() {
                 className="relative inset-x-0 mt-[5px] sm:mt-4 md:mt-[10px] lg:mt-[60px] z-[10] flex justify-center"
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.1 }}
                 variants={decorationVariants2}
             >
                 <Image 

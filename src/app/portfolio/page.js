@@ -55,24 +55,33 @@ const categories = ["all", "web", "design", "marketing"];
 const PortfolioPage = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [tappedProject, setTappedProject] = useState(null);
 
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter(project =>
     activeCategory === "all" ? true : project.category === activeCategory
   );
+
+  const handleProjectClick = (projectId) => {
+    if (tappedProject === projectId) {
+      setTappedProject(null);
+    } else {
+      setTappedProject(projectId);
+    }
+  };
 
   return (
     <main className="bg-[#F2F2F5] ">
 
-      <Breadcrumb 
-      title="Portfolio" 
-      backgroundImage="/Portfolio_Main/bg.webp" 
-    />
+      <Breadcrumb
+        title="Portfolio"
+        backgroundImage="/Portfolio_Main/bg.webp"
+      />
 
 
       {/* Hero Section */}
       <section className="py-8 pt-24 md:py-8 md:pt-8">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -80,7 +89,7 @@ const PortfolioPage = () => {
           >
             Our Portfolio
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -101,11 +110,10 @@ const PortfolioPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full cursor-pointer transition-colors duration-200 ${
-                  activeCategory === category
-                    ? "bg-[#030438] text-white"
-                    : "bg-white text-[#030438] hover:bg-[#030438]/10"
-                }`}
+                className={`px-6 py-2 rounded-full cursor-pointer transition-colors duration-200 ${activeCategory === category
+                  ? "bg-[#030438] text-white"
+                  : "bg-white text-[#030438] hover:bg-[#030438]/10"
+                  }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </motion.button>
@@ -127,17 +135,18 @@ const PortfolioPage = () => {
                   onHoverEnd={() => setHoveredProject(null)}
                   whileHover={{ scale: 1.02 }}
                   className="bg-[#030438] text-white rounded-xl p-4 shadow-md transform scale-[0.9]"
-
-
                 >
-<div className="relative aspect-square mb-4 rounded-xl overflow-hidden group">
-<Image
+                  <div
+                    className="relative aspect-square mb-4 rounded-xl overflow-hidden group cursor-pointer"
+                    onClick={() => handleProjectClick(project.id)}
+                  >
+                    <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    {hoveredProject === project.id && (
+                    {(hoveredProject === project.id || tappedProject === project.id) && (
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -145,9 +154,15 @@ const PortfolioPage = () => {
                       >
                         <motion.a
                           href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           className="px-6 py-2 bg-white text-[#030438] rounded-full font-medium"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setTappedProject(null);
+                          }}
                         >
                           View
                         </motion.a>
@@ -155,10 +170,10 @@ const PortfolioPage = () => {
                     )}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 select-none cursor-default">
-                  {project.title}
+                    {project.title}
                   </h3>
                   <p className="text-lg text-gray-200 mb-3 select-none cursor-default">
-                  {project.description}
+                    {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map(skill => (
