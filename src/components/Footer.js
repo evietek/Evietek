@@ -76,7 +76,7 @@ export default function Footer() {
       </div>
 
       {/* Corner Icon */}
-      <div className="absolute bottom-0 left-3 sm:left-6 lg:left-10 w-7 h-7 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+      <div className="absolute bottom-2 md:bottom-0 left-3 sm:left-6 lg:left-10 w-7 h-7 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
         <Image src="/Footer/icon.svg" alt="Icon" fill style={{ objectFit: "contain" }} />
       </div>
     </footer>

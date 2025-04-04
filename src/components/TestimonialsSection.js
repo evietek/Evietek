@@ -21,7 +21,6 @@ const testimonials = [
     title: "There Was a Delay, But They Handled It Well",
     review: "Our project took a little longer than expected, but they were upfront about it and even included some free social media designs to apologize. Great customer service.",
   },
-
 ];
 
 export default function TestimonialsSection() {
@@ -116,7 +115,7 @@ export default function TestimonialsSection() {
 
       <div className="max-w-7xl mx-auto mt-12">
         {/* Testimonial Cards Grid */}
-        <div className="max-w-7xl mx-auto mt-12">
+        <div className="max-w-7xl mx-auto mt-12 px-4">
           {testimonials.length >= 3 ? (
             // Show Swiper Carousel for 3 or more testimonials (all screen sizes)
             <Swiper
@@ -135,10 +134,11 @@ export default function TestimonialsSection() {
                   slidesPerView: 3,
                 },
               }}
+              className="!flex !items-center !justify-center"
+              centeredSlides={true}
             >
-
               {testimonials.map((t, idx) => (
-                <SwiperSlide key={idx}>
+                <SwiperSlide key={idx} className="flex justify-center">
                   <TestimonialCard
                     name={t.name}
                     title={t.title}
@@ -149,7 +149,7 @@ export default function TestimonialsSection() {
             </Swiper>
           ) : (
             // Show carousel only on mobile if there are 1 or 2 reviews
-            <div className="sm:hidden">
+            <div className="sm:hidden flex justify-center">
               <Swiper
                 spaceBetween={16}
                 slidesPerView={1}
@@ -158,10 +158,11 @@ export default function TestimonialsSection() {
                   delay: 3500,
                   disableOnInteraction: false,
                 }}
+                centeredSlides={true}
+                className="!flex !items-center !justify-center"
               >
-
                 {testimonials.map((t, idx) => (
-                  <SwiperSlide key={idx}>
+                  <SwiperSlide key={idx} className="flex justify-center">
                     <TestimonialCard
                       name={t.name}
                       title={t.title}
@@ -189,7 +190,6 @@ export default function TestimonialsSection() {
             </div>
           )}
         </div>
-
 
         {/* Trustpilot Embedded Component */}
         <div className="flex justify-center mt-4 pb-4 md:pb-0">
@@ -223,9 +223,6 @@ export default function TestimonialsSection() {
           </motion.div>
         </div>
       </div>
-
-
-
 
       {/* Icon (Slides from Right + Floating) */}
       <motion.div

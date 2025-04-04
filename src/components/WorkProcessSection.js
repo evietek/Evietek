@@ -61,7 +61,7 @@ export default function WorkProcessSection() {
               iconHover: "/Work_Process/1a.svg",
               number: "1",
               title: "Brief/Short Details",
-              description: "Tell us about your project—whether it's a brief or just an idea—so we can understand your goals and bring them to life.",
+              description: "Tell us about your project whether it's a brief or just an idea so we can understand your goals and bring them to life.",
               rotation: 2.52,
               positionClass: " -translate-y-0  md:-translate-y-6 lg:-translate-y-8"
             },
@@ -80,7 +80,7 @@ export default function WorkProcessSection() {
               iconHover: "/Work_Process/3a.svg",
               number: "3",
               title: "Providing Quote",
-              description: "Once we understand the details, we'll provide a transparent quote—no surprises, just an honest estimate based on your project's requirements and scope.",
+              description: "Once we understand the details, we'll provide a transparent quote no surprises, just an honest estimate based on your project's requirements and scope.",
               rotation: -1.24,
               positionClass: "-translate-y-0 md:-translate-y-6 lg:-translate-y-8"
             },

@@ -24,7 +24,7 @@ export default function BlinkingEye() {
   }, []);
 
   return (
-    <div className="absolute top-40 right-20 md:top-20 md:right-50 lg:top-20 lg:right-100 w-20 h-20 sm:w-30 sm:h-30 lg:w-40 lg:h-40">
+    <div className="absolute top-40 right-20 md:top-20 md:right-50 lg:top-20 lg:right-100 xl:right-150 w-20 h-20 sm:w-30 sm:h-30 lg:w-40 lg:h-40">
       <Image src={eyeImages[currentIndex]} alt="Blinking Eye" width={200} height={200} />
     </div>
   );

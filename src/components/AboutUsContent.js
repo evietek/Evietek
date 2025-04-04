@@ -32,7 +32,7 @@ const buttonVariants = {
   hover: {
     scale: 1.05,
     transition: {
-    duration: 0.2
+      duration: 0.2
     }
   }
 };
@@ -40,7 +40,7 @@ const buttonVariants = {
 // Service Feature Item Component
 const ServiceFeatureItem = ({ icon, text, index }) => {
   return (
-    <motion.div 
+    <motion.div
       className="flex items-center gap-3 mb-4 select-none cursor-default"
       variants={itemVariants}
       custom={index}
@@ -56,110 +56,110 @@ const ServiceFeatureItem = ({ icon, text, index }) => {
 // Right Section Content Component
 const AboutPageContent = () => {
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-4 md:px-0 md:pr-[50px]"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       {/* Header with logo and ABOUT US text */}
-      <motion.div 
+      <motion.div
         className="flex items-center gap-2 mb-4"
         variants={itemVariants}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-[#51328F]">
-          <path strokeWidth="2" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4" strokeWidth="2"/>
-          <path strokeWidth="2" d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-          <path strokeWidth="2" d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          <path strokeWidth="2" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" strokeWidth="2" />
+          <path strokeWidth="2" d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path strokeWidth="2" d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
         <span className="text-sm font-medium tracking-wider text-[#51328F] select-none cursor-default">ABOUT US</span>
       </motion.div>
-      
+
       {/* Main heading with gradient text */}
-      <motion.h1 
+      <motion.h1
         className="text-3xl md:text-4xl font-bold text-[#030438] mb-2 select-none cursor-default"
         variants={itemVariants}
       >
-        Your Reliable Partner In   
+        Your Reliable Partner In
         <span className="block">
           <span className="text-indigo-500"> Digital </span>
           <span className="text-blue-400"> Excellence </span>
         </span>
       </motion.h1>
-      
+
       {/* Subheading text */}
-      <motion.p 
+      <motion.p
         className="text-gray-600 mb-8 text-sm md:text-base select-none cursor-default"
         variants={itemVariants}
       >
-        At Evietek, we don’t just provide solutions—we create digital experiences that <b>drive success, amplify brand awareness, and fuel growth.</b>  
+        At Evietek, we don’t just provide solutions we create digital experiences that <b>drive success, amplify brand awareness, and fuel growth.</b>
       </motion.p>
-      
+
       <motion.div variants={itemVariants}>
-        <AboutBanner 
+        <AboutBanner
           imageUrl="/About_us/4.jpg"
           heading="24/7 Support"
-          content="Get real-time assistance for all your digital transformation needs, from branding strategies and content creation to web development—whenever you need it."
+          content="Get real-time assistance for all your digital transformation needs, from branding strategies and content creation to web development whenever you need it."
           startColor='#8750F7'
           endColor='#D376FF'
         />
       </motion.div>
-      
+
       {/* Service features */}
-      <motion.div 
+      <motion.div
         className="flex flex-col md:flex-row gap-8 mt-8"
         variants={itemVariants}
       >
         <div className="md:w-1/2">
-          <ServiceFeatureItem 
+          <ServiceFeatureItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 md:w-6 md:h-6">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                <path d="M12 22V12"/>
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                <path d="M12 22V12" />
               </svg>
             }
             text="Smart, Scalable Digital Solutions"
             index={0}
           />
-          <ServiceFeatureItem 
+          <ServiceFeatureItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 md:w-6 md:h-6">
-                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <path d="M8 13h8"/>
-                <path d="M8 17h8"/>
-                <path d="M8 9h2"/>
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                <polyline points="14 2 14 8 20 8" />
+                <path d="M8 13h8" />
+                <path d="M8 17h8" />
+                <path d="M8 9h2" />
               </svg>
             }
             text="Strategic Content That Commands Attention"
             index={1}
           />
-          <ServiceFeatureItem 
+          <ServiceFeatureItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 md:w-6 md:h-6">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
               </svg>
             }
             text="Visual Creativity That Leaves a Lasting Impact"
             index={2}
           />
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className="md:w-1/2"
           variants={itemVariants}
         >
           <div className="flex items-center gap-2 mb-4">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 md:w-6 md:h-6 text-[#51328F]">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
             <span className="text-base md:text-lg font-bold text-[#51328F]">+1 (647) 804 5528</span>
           </div>
-          
+
           <Link href="/book-a-meeting">
-            <motion.button 
+            <motion.button
               className="inline-flex items-center bg-gradient-to-b from-[#5A50FF] to-[#D376FF] text-white py-2 md:py-3 px-4 md:px-6 rounded-full text-sm md:text-base"
               variants={buttonVariants}
               whileHover="hover"

@@ -9,19 +9,83 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 
 const caseStudies = [
   {
-    tag: 'Product Design',
-    heading: 'Empowering Access to Fresh Produce: Building a Mobile App for Source.ag',
-    content: 'Source.ag is an Amsterdam-based agtech startup that is revolutionizing access to fresh produce using cutting-edge AI-powered greenhouses. By enabling efficient operations for growers through pioneering technology...',
+    tag: 'SEO',
+    heading: 'Strengthening HeyFriday AI’s Online Presence with Strategic SEO & Backlink Building ',
+    content: 'We enhanced HeyFriday AI’s SEO through strategic backlink building, increasing domain authority, organic traffic, and search rankings positioning it as a leading AI writing solution.',
     image: '/case_study/kayna.png',
     imagePosition: 'right',
     bgColor: 'bg-[#51328F]',
     tagColor: 'bg-[#5E51FE] text-white-800',
-    headingColor: 'text-white-800', 
+    headingColor: 'text-white-800',
     contentColor: 'text-white-600',
-    buttonLink: '/case-study/Kayna-Embedded-Insurance',
+    buttonLink: '/case-study/HeyFriday',
     buttonColor: 'text-white-300',
   },
-  // Additional case studies can be added here
+  {
+    tag: 'UI/UX Design',
+    heading: 'Transforming Zonaris with a Cutting-Edge UI/UX & Web Design',
+    content: 'We revamped Zonaris’ UI/UX with a sleek, crypto-centric design, improving navigation, trust, and performance boosting user engagement, sign-ups, and Bitcoin staking conversions significantly.',
+    image: '/case_study/kayna.png',
+    imagePosition: 'left',
+    bgColor: 'bg-[#65E5F2]',
+    tagColor: 'bg-[#51328F] text-white-800',
+    headingColor: 'text-[#000000]',
+    contentColor: 'text-[#000000]',
+    buttonLink: '/case-study/Zonaris',
+    buttonColor: 'text-[#51328F]',
+  },
+  {
+    tag: 'Web Design',
+    heading: 'Elevating TrackPac’s Digital Presence with Advanced Web Design & Development',
+    content: 'We modernized TrackPac’s digital presence with a sleek, high performance website, enhancing user experience, scalability, and engagement while showcasing its cutting-edge IoT sensor management solutions.',
+    image: '/case_study/kayna.png',
+    imagePosition: 'right',
+    bgColor: 'bg-[#CB73FE]',
+    tagColor: 'bg-[#65E5F2] text-[#000000]',
+    headingColor: 'text-[#030438]',
+    contentColor: 'text-[#030438]',
+    buttonLink: '/case-study/Trackpac',
+    buttonColor: 'text-[#65E5F2]',
+  },
+  {
+    tag: 'Branding',
+    heading: 'Transforming Lars Tornøe’s Digital Presence with Modern Branding & Web Design',
+    content: 'Revamping Lars Tornøe’s brand with modern web design, we crafted a sleek, high converting e-commerce platform, enhancing user experience, engagement, and positioning the brand as premium.',
+    image: '/case_study/kayna.png',
+    imagePosition: 'left',
+    bgColor: 'bg-[#053027]',
+    tagColor: 'bg-[#CB73FE] text-white-800',
+    headingColor: 'text-white-800',
+    contentColor: 'text-white-600',
+    buttonLink: '/case-study/Lars-Tornoe',
+    buttonColor: 'text-[#CB73FE]',
+  },
+  {
+    tag: 'Web Development',
+    heading: 'Web Design and Development to Improve TrailFire`s Online Presence',
+    content: 'We redesigned TrailFire’s website with a high-conversion UI/UX, improved service presentation, and optimized performance, boosting engagement, conversions, and brand authority in PPC solutions.',
+    image: '/case_study/kayna.png',
+    imagePosition: 'right',
+    bgColor: 'bg-[#FCD700]',
+    tagColor: 'bg-[#053027] text-white-800',
+    headingColor: 'text-[#030438]',
+    contentColor: 'text-[#030438]',
+    buttonLink: '/case-study/Trailfire',
+    buttonColor: 'text-[#053027]',
+  },
+  {
+    tag: 'Branding',
+    heading: 'Making Epicstreams’ brand identity stronger with powerful design ',
+    content: 'We strengthened Epicstreams` brand identity through strategic design, creating a cohesive visual presence, enhancing engagement, and optimizing digital platforms resulting in increased recognition, credibility, and audience inquiries.',
+    image: '/case_study/kayna.png',
+    imagePosition: 'left',
+    bgColor: 'bg-[#5E51FE]',
+    tagColor: 'bg-[#FCD700] text-[#000000]',
+    headingColor: 'text-white-800',
+    contentColor: 'text-white-600',
+    buttonLink: '/case-study/Epicstreams',
+    buttonColor: 'text-[#FCD700]',
+  },
 ];
 
 const CaseStudyPage = () => {
@@ -41,10 +105,10 @@ const CaseStudyPage = () => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: (index) => ({
-      opacity: 1, 
+      opacity: 1,
       y: 0,
       transition: {
-        delay: index * 0.2,
+        delay: index * 0.1,
         duration: 0.6
       }
     })
@@ -60,8 +124,8 @@ const CaseStudyPage = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <main className="bg-[#030438] pt-10 md:pt-0">  
-        <motion.div 
+      <main className="bg-[#030438] pt-10 md:pt-0">
+        <motion.div
           key="case-study-page"
           initial="initial"
           animate="animate"
@@ -71,22 +135,22 @@ const CaseStudyPage = () => {
           className="min-h-screen bg-[#030438]"
         >
           {/* Breadcrumb Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="w-full"
           >
-            <Breadcrumb 
-              title="Case Study" 
-              backgroundImage="/case_study/bg.avif" 
+            <Breadcrumb
+              title="Case Study"
+              backgroundImage="/case_study/bg.avif"
             />
           </motion.div>
-     
+
           {/* Case Studies Grid */}
           <section className="pb-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div 
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 className="space-y-16 sm:space-y-24"

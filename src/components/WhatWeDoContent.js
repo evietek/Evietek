@@ -20,7 +20,7 @@ const ServiceFeatureItem = ({ icon, text, index }) => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="flex items-center gap-3 mb-2"
       variants={itemVariants}
       initial="hidden"
@@ -52,7 +52,7 @@ const FeatureCard = ({ icon, title, index }) => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="flex items-center gap-4 bg-[#030438] rounded-full px-4 py-3 w-full sm:w-auto"
       variants={cardVariants}
       initial="hidden"
@@ -60,7 +60,7 @@ const FeatureCard = ({ icon, title, index }) => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="bg-gradient-to-b from-[#D376FF] to-[#5A50FF] rounded-full p-2">
-        <Image 
+        <Image
           src={icon}
           alt={title}
           width={24}
@@ -101,7 +101,7 @@ const Work = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full pl-4 md:pl-10"
       initial="hidden"
       whileInView="visible"
@@ -109,68 +109,68 @@ const Work = () => {
       variants={containerVariants}
     >
       {/* Header with "WHAT WE DO" text */}
-      <motion.div 
+      <motion.div
         className="flex items-center gap-2 mb-4 pt-8 md:pt-0"
         variants={titleVariants}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-[#51328F]">
-          <path strokeWidth="2" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-          <polyline strokeWidth="2" points="3.29 7 12 12 20.71 7"/>
-          <line strokeWidth="2" x1="12" y1="22" x2="12" y2="12"/>
+          <path strokeWidth="2" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          <polyline strokeWidth="2" points="3.29 7 12 12 20.71 7" />
+          <line strokeWidth="2" x1="12" y1="22" x2="12" y2="12" />
         </svg>
         <span className="text-sm font-medium tracking-wider text-[#51328F] uppercase">WHAT WE DO</span>
       </motion.div>
-      
+
       {/* Main Heading */}
-      <motion.h1 
+      <motion.h1
         className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-4"
         variants={titleVariants}
       >
-        Transforming Digital <br /> 
-        <span className="text-indigo-600">  Visions  </span> 
+        Transforming Digital <br />
+        <span className="text-indigo-600">  Visions  </span>
         <span className="text-blue-500"> Into </span>
         <span className="text-cyan-500"> Reality </span>
       </motion.h1>
-      
+
       {/* Subheading */}
-      <motion.p 
+      <motion.p
         className="text-gray-600 mb-6 text-base md:text-lg"
         variants={titleVariants}
       >
-       We provide state-of-the-art digital solutions that will raise awareness of your brand, boost growth, and support genuine connections. 
+        We provide state of the art digital solutions that will raise awareness of your brand, boost growth, and support genuine connections.
       </motion.p>
-     
+
       {/* Service Features List */}
       <div className="space-y-3">
-        <ServiceFeatureItem 
+        <ServiceFeatureItem
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-[#51328F]">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
             </svg>
           }
           text="Strategic Digital Transformation and Brand Positioning"
           index={0}
         />
-        <ServiceFeatureItem 
+        <ServiceFeatureItem
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-[#51328F]">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-              <line x1="8" y1="21" x2="16" y2="21"/>
-              <line x1="12" y1="17" x2="12" y2="21"/>
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
             </svg>
           }
           text="Advanced Web and App Development Solutions"
           index={1}
         />
-        <ServiceFeatureItem 
+        <ServiceFeatureItem
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-[#51328F]">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <path d="M3.29 7L12 12l8.71-5"/>
-              <path d="M12 22V12"/>
-              <path d="M12 12L3 7"/>
-              <path d="M17 13.5V7.5"/>
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <path d="M3.29 7L12 12l8.71-5" />
+              <path d="M12 22V12" />
+              <path d="M12 12L3 7" />
+              <path d="M17 13.5V7.5" />
             </svg>
           }
           text="Data-Driven Marketing and Analytics"
@@ -180,12 +180,12 @@ const Work = () => {
 
       {/* Feature Cards */}
       <div className="flex flex-wrap gap-4 mb-8 mt-4">
-        <FeatureCard 
+        <FeatureCard
           icon="/About_Us/6.svg"
           title="Innovative Solutions"
           index={0}
         />
-        <FeatureCard 
+        <FeatureCard
           icon="/About_Us/7.svg"
           title="Seamless User Experience"
           index={1}
