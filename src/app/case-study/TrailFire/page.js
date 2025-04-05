@@ -57,8 +57,8 @@ const TrailFire = () => {
         <div className="max-w-6xl mx-auto px-6">
           <CaseStudyTitle
             title="Web Design and Development to Improve TrailFire's Online Presence"
-            imageLeft="/Case_Study/title_2.svg"
-            imageRight="/Case_Study/title_1.svg"
+            imageLeft="/Case_Study/Trailfire/title_1.png"
+            imageRight="/Case_Study/Trailfire/title_2.png"
           />
         </div>
 
@@ -69,11 +69,6 @@ const TrailFire = () => {
             contents={[
               {
                 text: "As a pay-per-click (PPC) Services Company that focuses on getting businesses more online visibility and sales, TrailFire is results-driven. TrailFire wanted a website that clearly conveyed its knowledge, credibility, and service offerings since it was dedicated to producing ROI-focused campaigns. "
-                //   src: "/Case_Study/Project_Overview.svg",
-                //   alt: "Services We Provide",
-                //   width: 800,
-                //   height: 600
-                // }
               }
             ]}
           />
@@ -140,7 +135,13 @@ const TrailFire = () => {
                   "**40%** Improvement in conversion rates, leading to more service inquiries",
                   "**Stronger Brand Perception**, positioning TrailFire as an authoritative PPC solutions provider",
                   "**Improved Mobile Experience**, reducing bounce rates and increasing lead generation"
-                ]
+                ],
+                image: {
+                  src: "/Case_Study/Trailfire/image.jpeg",
+                  alt: "Result",
+                  width: 800,
+                  height: 600
+                }
               }
             ]}
           />

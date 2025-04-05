@@ -57,8 +57,8 @@ const HeyFriday = () => {
         <div className="max-w-6xl mx-auto px-6">
           <CaseStudyTitle
             title="Strengthening HeyFriday AI’s Online Presence with Strategic SEO & Backlink Building "
-            imageLeft="/Case_Study/title_2.svg"
-            imageRight="/Case_Study/title_1.svg"
+            imageLeft="/Case_Study/HeyFriday/title_1.jpeg"
+            imageRight="/Case_Study/HeyFriday/title_2.jpeg"
           />
         </div>
 
@@ -69,11 +69,7 @@ const HeyFriday = () => {
             contents={[
               {
                 text: "HeyFriday AI is an AI-powered writing tool that assists users in quickly producing excellent content. Thanks to HeyFriday AI, businesses, content creators, and marketers can easily and intelligently write everything from blog posts and marketing copy to creative writing. Search engine optimization (SEO) tactics were necessary for the platform to increase its online visibility and search engine rankings in order to differentiate itself in the highly competitive AI writing industry."
-                //   src: "/Case_Study/Project_Overview.svg",
-                //   alt: "Services We Provide",
-                //   width: 800,
-                //   height: 600
-                // }
+
               }
             ]}
           />

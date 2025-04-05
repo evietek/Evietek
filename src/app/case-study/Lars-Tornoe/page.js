@@ -57,8 +57,8 @@ const LarsTornoe = () => {
         <div className="max-w-6xl mx-auto px-6">
           <CaseStudyTitle
             title="Transforming Lars Tornøe’s Digital Presence with Modern Branding & Web Design"
-            imageLeft="/Case_Study/title_2.svg"
-            imageRight="/Case_Study/title_1.svg"
+            imageLeft="/Case_Study/Lars-Tornoe/title_1.png"
+            imageRight="/Case_Study/Lars-Tornoe/title_2.png"
           />
         </div>
 
@@ -69,12 +69,7 @@ const LarsTornoe = () => {
             contents={[
               {
                 text: "The minimalist and modern furniture online store Lars Tornøe is dedicated to selling high-quality, beautifully designed furniture. The company required a sleek and visually appealing digital presence that would speak to design-conscious consumers, given the emphasis on simplicity, utility, and aesthetics.",
-                // image: {
-                //   src: "/Case_Study/Project_Overview.svg",
-                //   alt: "Services We Provide",
-                //   width: 800,
-                //   height: 600
-                // }
+
               }
             ]}
           />
@@ -139,7 +134,13 @@ const LarsTornoe = () => {
                   "**30%** Boost in e-commerce conversions within the first few months.",
                   "**Stronger Brand Recognition**, positioning Lars Tornøe as a premium furniture brand in the digital space.",
                   "**Improved Customer Experience**, leading to more repeat buyers and organic referrals."
-                ]
+                ],
+                image: {
+                  src: "/Case_Study/Lars-Tornoe/cover.png",
+                  alt: "Result",
+                  width: 800,
+                  height: 600
+                }
               }
             ]}
           />

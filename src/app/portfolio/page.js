@@ -23,7 +23,7 @@ const projects = [
     title: "Illustration",
     category: "design",
     description: "A collection of illustrations created by our talented design team",
-    image: "/Portfolio_Main/illustration.jpg",
+    image: "/Portfolio_Main/illustration.webp",
     color: "#FF6B6B",
     skills: ["Digital Painting", "Character Design", "Vector Illustration"],
     link: "https://www.behance.net/gallery/222275377/Illustrations"
@@ -33,7 +33,7 @@ const projects = [
     title: "Branding",
     category: "design",
     description: "A collection of branding projects created by our talented design team",
-    image: "/Portfolio_Main/branding.jpg",
+    image: "/Portfolio_Main/branding.webp",
     color: "#4ECDC4",
     skills: ["Brand Identity", "Marketing Strategy", "Visual Identity"],
     link: "https://www.behance.net/gallery/191328457/Branding"
@@ -43,7 +43,7 @@ const projects = [
     title: "Logo Design",
     category: "design",
     description: "A collection of logo design projects created by our talented design team",
-    image: "/Portfolio_Main/logo.jpg",
+    image: "/Portfolio_Main/logo.webp",
     color: "#A78BFA",
     skills: ["Vector Illustration", "Brand Identity", "Typography"],
     link: "https://www.behance.net/gallery/191322361/Logos"

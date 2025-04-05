@@ -7,10 +7,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 
 const projects = [
-  { id: 1, src: "/Portfolio_2/Trakpac.svg", alt: "Trackpac", title: "Trackpac", link: "https://trackpac.io/" },
-  // { id: 2, src: "/Portfolio_2/AllInTicket.svg", alt: "All In Ticket", title: "All In Ticket", link: "/projects/all-in-ticket" },
-  // { id: 3, src: "/Portfolio_2/Medalyc.svg", alt: "Medalyc", title: "Medalyc", link: "/projects/medalyc" },
-  { id: 4, src: "/Portfolio_2/Zonaris.svg", alt: "Zonaris", title: "Zonaris", link: "https://www.zonaris.io/" },
+  { id: 1, src: "/Portfolio_2/Zonaris.svg", alt: "Zonaris", title: "Zonaris", link: "https://www.zonaris.io/" },
+  { id: 2, src: "/Portfolio_2/TrailFire.svg", alt: "TrailFire", title: "TrailFire", link: "https://trailfire.com/" },
 ];
 
 const PortfolioProjects = () => {
@@ -41,15 +39,15 @@ const PortfolioProjects = () => {
     return () => window.removeEventListener("resize", updateValues);
   }, []);
 
-// Calculate base height based on screen width
-const getBaseHeight = () => {
-  if (screenWidth === 0) return 600; // Default for SSR
-  
-  if (screenWidth < 760) return 200; // For smaller screens
-  if (screenWidth < 1024) return 365; // For medium screens
-  if (screenWidth < 1441) return 500; // For smaller screens
-  return 600; // For larger screens
-};
+  // Calculate base height based on screen width
+  const getBaseHeight = () => {
+    if (screenWidth === 0) return 600; // Default for SSR
+
+    if (screenWidth < 760) return 200; // For smaller screens
+    if (screenWidth < 1024) return 365; // For medium screens
+    if (screenWidth < 1441) return 500; // For smaller screens
+    return 600; // For larger screens
+  };
   const handleClick = (e, projectId, link) => {
     e.preventDefault();
     if (tappedId === projectId) {
@@ -84,11 +82,11 @@ const getBaseHeight = () => {
   };
 
   const cardVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
-      y: -100 
+      y: -100
     },
-    visible: { 
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
@@ -100,11 +98,11 @@ const getBaseHeight = () => {
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="relative flex flex-col items-center justify-center mt-4 sm:mt-6 md:mt-8 lg:mt-10 mb-0 sm:mb-0 md:mb-0 lg:mb-0"
     >
-      <motion.div 
+      <motion.div
         className="relative w-[300px] sm:w-[300px] md:w-[580px] lg:w-[700px] xl:w-[800px] 2xl:w-[900px] flex flex-col items-center"
         style={{
           height: `${((projects.length - 1) * spacingValue) + getBaseHeight()}px`
@@ -118,13 +116,13 @@ const getBaseHeight = () => {
             key={project.id}
             className="absolute w-full"
             style={{
-              top: `${(projects.length - 1 - index) * spacingValue}px`, 
+              top: `${(projects.length - 1 - index) * spacingValue}px`,
               zIndex: projects.length - index,
             }}
             variants={cardVariants}
             custom={index}
           >
-            <div 
+            <div
               className={`portfolio-card block w-full transition-transform duration-1500 ease-in-out cursor-pointer
                 ${tappedId === project.id ? 'translate-y-[-60px] sm:translate-y-[-80px] md:translate-y-[-100px] lg:translate-y-[-120px] xl:translate-y-[-140px]' : ''}`}
               onClick={(e) => handleClick(e, project.id, project.link)}

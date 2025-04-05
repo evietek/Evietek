@@ -57,8 +57,8 @@ const Zonaris = () => {
         <div className="max-w-6xl mx-auto px-6">
           <CaseStudyTitle
             title="Transforming Zonaris with a Cutting-Edge UI/UX & Web Design "
-            imageLeft="/Case_Study/title_2.svg"
-            imageRight="/Case_Study/title_1.svg"
+            imageLeft="/Case_Study/Zonaris/title_1.webp"
+            imageRight="/Case_Study/Zonaris/title_2.webp"
           />
         </div>
 
@@ -69,12 +69,6 @@ const Zonaris = () => {
             contents={[
               {
                 text: "When it comes to Bitcoin staking, Zonaris is a leading crypto platform that offers users solutions that are safe, easy, and yield a lot of money. Zonaris wants to improve its digital presence with a modern, user-friendly, conversion-driven website that reflects its creative approach as the crypto industry changes. "
-                // image: {
-                //   src: "/Case_Study/Project_Overview.svg",
-                //   alt: "Services We Provide",
-                //   width: 800,
-                //   height: 600
-                // }
               }
             ]}
           />
@@ -142,7 +136,13 @@ const Zonaris = () => {
                   "**50%** improvement in site navigation efficiency, leading to smoother user journeys.",
                   "**40%** growth in Bitcoin staking transactions, demonstrating higher user confidence in the platform.",
                   "**Reduced bounce rate** from 60% to 35% due to a more intuitive and engaging design."
-                ]
+                ],
+                image: {
+                  src: "/Case_Study/Zonaris/image.webp",
+                  alt: "Results",
+                  width: 800,
+                  height: 600
+                }
               }
             ]}
           />
