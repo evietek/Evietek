@@ -9,17 +9,17 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 
 const caseStudies = [
   {
-    tag: 'Web Development',
-    heading: 'Web Design and Development to Improve TrailFire`s Online Presence',
-    content: 'We redesigned TrailFire’s website with a high-conversion UI/UX, improved service presentation, and optimized performance, boosting engagement, conversions, and brand authority in PPC solutions.',
-    image: '/case_study/Trailfire/cover.jpeg',
+    tag: 'Branding',
+    heading: 'Transforming Lars Tornøe’s Digital Presence with Modern Branding & Web Design',
+    content: 'Revamping Lars Tornøe’s brand with modern web design, we crafted a sleek, high converting e-commerce platform, enhancing user experience, engagement, and positioning the brand as premium.',
+    image: '/case_study/Lars-Tornoe/cover.png',
     imagePosition: 'right',
-    bgColor: 'bg-[#FCD700]',
-    tagColor: 'bg-[#053027] text-white-800',
-    headingColor: 'text-[#030438]',
-    contentColor: 'text-[#030438]',
-    buttonLink: '/case-study/Trailfire',
-    buttonColor: 'text-[#053027]',
+    bgColor: 'bg-[#053027]',
+    tagColor: 'bg-[#CB73FE] text-white-800',
+    headingColor: 'text-white-800',
+    contentColor: 'text-white-600',
+    buttonLink: '/case-study/Lars-Tornoe',
+    buttonColor: 'text-[#CB73FE]',
   },
   {
     tag: 'UI/UX Design',
@@ -48,18 +48,20 @@ const caseStudies = [
   //   buttonColor: 'text-[#65E5F2]',
   // },
   {
-    tag: 'Branding',
-    heading: 'Transforming Lars Tornøe’s Digital Presence with Modern Branding & Web Design',
-    content: 'Revamping Lars Tornøe’s brand with modern web design, we crafted a sleek, high converting e-commerce platform, enhancing user experience, engagement, and positioning the brand as premium.',
-    image: '/case_study/Lars-Tornoe/cover.png',
+    tag: 'Web Development',
+    heading: 'Web Design and Development to Improve TrailFire`s Online Presence',
+    content: 'We redesigned TrailFire’s website with a high-conversion UI/UX, improved service presentation, and optimized performance, boosting engagement, conversions, and brand authority in PPC solutions.',
+    image: '/case_study/Trailfire/cover.jpeg',
     imagePosition: 'right',
-    bgColor: 'bg-[#053027]',
-    tagColor: 'bg-[#CB73FE] text-white-800',
-    headingColor: 'text-white-800',
-    contentColor: 'text-white-600',
-    buttonLink: '/case-study/Lars-Tornoe',
-    buttonColor: 'text-[#CB73FE]',
+    bgColor: 'bg-[#FCD700]',
+    tagColor: 'bg-[#053027] text-white-800',
+    headingColor: 'text-[#030438]',
+    contentColor: 'text-[#030438]',
+    buttonLink: '/case-study/Trailfire',
+    buttonColor: 'text-[#053027]',
   },
+
+
   {
     tag: 'SEO',
     heading: 'Strengthening HeyFriday AI’s Online Presence with Strategic SEO & Backlink Building ',
@@ -73,7 +75,6 @@ const caseStudies = [
     buttonLink: '/case-study/HeyFriday',
     buttonColor: 'text-white-300',
   },
-
   {
     tag: 'Branding',
     heading: 'Making Epic Teams’ brand identity stronger with powerful design ',
@@ -87,6 +88,9 @@ const caseStudies = [
     buttonLink: '/case-study/Epic-Teams',
     buttonColor: 'text-[#FCD700]',
   },
+
+
+
 ];
 
 const CaseStudyPage = () => {
