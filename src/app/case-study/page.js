@@ -57,7 +57,7 @@ const caseStudies = [
     tagColor: 'bg-[#053027] text-white-800',
     headingColor: 'text-[#030438]',
     contentColor: 'text-[#030438]',
-    buttonLink: '/case-study/Trailfire',
+    buttonLink: '/case-study/TrailFire',
     buttonColor: 'text-[#053027]',
   },
 
