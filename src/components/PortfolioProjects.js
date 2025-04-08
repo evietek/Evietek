@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 
 const projects = [
@@ -48,20 +48,23 @@ const PortfolioProjects = () => {
     if (screenWidth < 1441) return 500; // For smaller screens
     return 600; // For larger screens
   };
+
   const handleClick = (e, projectId, link) => {
     e.preventDefault();
-    if (tappedId === projectId) {
-      // If already expanded, redirect to the link
-      window.open(link, "_blank");
-    } else {
-      // Otherwise, expand the project
+    if (screenWidth < 768) { // Mobile behavior
       setTappedId(projectId);
+    } else { // Desktop/tablet behavior
+      if (tappedId === projectId) {
+        window.open(link, "_blank");
+      } else {
+        setTappedId(projectId);
+      }
     }
   };
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
-      if (!e.target.closest(".portfolio-card")) {
+      if (!e.target.closest(".portfolio-card") && !e.target.closest(".popup-overlay")) {
         setTappedId(null);
       }
     };
@@ -97,6 +100,12 @@ const PortfolioProjects = () => {
     }
   };
 
+  const popupVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.8 }
+  };
+
   return (
     <div
       ref={containerRef}
@@ -124,7 +133,7 @@ const PortfolioProjects = () => {
           >
             <div
               className={`portfolio-card block w-full transition-transform duration-1500 ease-in-out cursor-pointer
-                ${tappedId === project.id ? 'translate-y-[-60px] sm:translate-y-[-80px] md:translate-y-[-100px] lg:translate-y-[-120px] xl:translate-y-[-140px]' : ''}`}
+                ${screenWidth >= 768 && tappedId === project.id ? 'translate-y-[-60px] sm:translate-y-[-80px] md:translate-y-[-100px] lg:translate-y-[-120px] xl:translate-y-[-140px]' : ''}`}
               onClick={(e) => handleClick(e, project.id, project.link)}
             >
               <div className="w-full px-2 sm:px-0">
@@ -141,6 +150,48 @@ const PortfolioProjects = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* Mobile Popup */}
+      <AnimatePresence>
+        {screenWidth < 768 && tappedId && (
+          <>
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-50 popup-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setTappedId(null)}
+            />
+            <motion.div
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[400px] bg-white rounded-lg shadow-xl z-50 p-4"
+              variants={popupVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <div className="relative w-full aspect-video mb-4">
+                <Image
+                  src={projects.find(p => p.id === tappedId)?.src || ""}
+                  alt={projects.find(p => p.id === tappedId)?.alt || ""}
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </div>
+              <div className="flex justify-between items-center">
+                <h3 className="text-xl font-bold">{projects.find(p => p.id === tappedId)?.title || ""}</h3>
+                <a
+                  href={projects.find(p => p.id === tappedId)?.link || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-[#030438] text-white rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  View Project
+                </a>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

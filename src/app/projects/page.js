@@ -52,7 +52,7 @@ const projects = [
 
 const categories = ["all", "web", "design", "marketing"];
 
-const PortfolioPage = () => {
+const ProjectsPage = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredProject, setHoveredProject] = useState(null);
   const [tappedProject, setTappedProject] = useState(null);
@@ -73,7 +73,7 @@ const PortfolioPage = () => {
     <main className="bg-[#F2F2F5] ">
 
       <Breadcrumb
-        title="Portfolio"
+        title="Projects"
         backgroundImage="/Portfolio_Main/bg.webp"
       />
 
@@ -87,7 +87,7 @@ const PortfolioPage = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl font-bold text-[#030438] mb-4 select-none cursor-default"
           >
-            Our Portfolio
+            Projects
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -195,4 +195,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage; 
+export default ProjectsPage; 
