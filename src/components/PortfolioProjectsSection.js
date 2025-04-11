@@ -55,14 +55,6 @@ export default function PortfolioProjectsSection() {
     }
   };
 
-  // const rocketVariants = {
-  //   hidden: { opacity: 0, x: 100 },
-  //   visible: { 
-  //     opacity: 1, 
-  //     x: 0, 
-  //     transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } 
-  //   }
-  // };
 
   const rotatingStar = {
     rotate: [0, 360], // Rotates continuously

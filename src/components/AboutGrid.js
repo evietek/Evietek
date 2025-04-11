@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from "react";
 
 export default function AboutGrid() {
   const gridRef = useRef(null);
-  const isInView = useInView(gridRef, { once: true, margin: "-100px" });
+  const isInView = useInView(gridRef, { once: true, margin: "0px" });
   const [hasPlayedSticker1, setHasPlayedSticker1] = useState(false);
   const [hasPlayedSticker2, setHasPlayedSticker2] = useState(false);
   const [startBottomAnimation, setStartBottomAnimation] = useState(false);
@@ -38,37 +38,11 @@ export default function AboutGrid() {
     }
   };
 
-  const imageVariants = {
-    initial: (index) => ({
-      opacity: 0,
-      scale: 0.8,
-      rotateY: 90,
-      rotateX: index % 2 === 0 ? 10 : -5,
-    }),
-    animate: (index) => ({
-      opacity: 1,
-      scale: 1,
-      rotateX: (index === 0 || index === 1) ? 10 : -5,
-      rotateY: (index === 0 || index === 2) ? 25 : -25,
-      transition: {
-        duration: 1.2,
-        ease: [0.4, 0, 0.2, 1],
-        delay: index * 0.1,
-        rotateY: {
-          duration: 1.5,
-          ease: [0.4, 0, 0.2, 1]
-        }
-      }
-    })
-  };
-
   const stickerVariants = {
     initial: {
       opacity: 0,
       scale: 0.3,
       rotate: -90,
-      transition: {
-      }
     },
     animate: {
       opacity: 1,
@@ -93,69 +67,69 @@ export default function AboutGrid() {
     }
   };
 
+  const getImageTransform = (index) => {
+    const rotateX = (index === 0 || index === 1) ? 10 : -5;
+    const rotateY = (index === 0 || index === 2) ? 25 : -25;
+    return `scale(1) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+
   return (
     <div className="transition-transform duration-1000 lg:scale-120 xl:scale-135 pr-0" ref={gridRef}>
       <div className="relative w-full max-w-5xl mx-0 my-6 sm:my-8 md:my-10">
         {/* Top Row */}
         <div className="flex justify-center gap-1 sm:gap-2 md:gap-3">
-          {[{ src: "/About/AboutImg1.png", alt: "Growth Chart", bgColor: "#B8E0F7", loading: "lazy" },
-          { src: "/About/AboutImg2.png", alt: "Person in Yellow", bgColor: "#C5E8F9", loading: "lazy" }
+          {[{ src: "/About/AboutImg1.png", alt: "Growth Chart", bgColor: "#B8E0F7" },
+          { src: "/About/AboutImg2.png", alt: "Person in Yellow", bgColor: "#C5E8F9" }
           ].map((img, index) => (
-            <motion.div
+            <div
               key={img.src}
               className="relative cursor-pointer"
               style={{ perspective: "1000px" }}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true, amount: 0.1 }}
-              custom={index}
             >
-              <motion.div
+              <div
                 className="relative h-28 w-40 sm:h-32 sm:w-44 md:h-36 md:w-48 rounded-3xl overflow-hidden shadow-lg"
                 style={{
                   backgroundColor: img.bgColor,
                   transformOrigin: index % 2 === 0 ? "bottom right" : "bottom left",
+                  transform: getImageTransform(index),
                   borderRadius: "40px",
                 }}
-                variants={imageVariants}
-                custom={index}
               >
                 <Image src={img.src} alt={img.alt} fill className="object-cover" />
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </div>
 
         {/* Bottom Row */}
         <div className="flex justify-center gap-1 sm:gap-2 md:gap-3 mt-2 sm:mt-3 md:mt-4">
-          {[{ src: "/About/AboutImg3.png", alt: "Person Working", bgColor: "#B8E0F7", loading: "lazy" },
-          { src: "/About/AboutImg4.png", alt: "People with Laptop", bgColor: "#FFC107", loading: "lazy" }
-          ].map((img, index) => (
-            <motion.div
-              key={img.src}
-              className="relative cursor-pointer"
-              style={{ perspective: "1000px" }}
-              initial="initial"
-              animate={startBottomAnimation ? "animate" : "initial"}
-              custom={index + 2}
-            >
-              <motion.div
-                className="relative h-28 w-40 sm:h-32 sm:w-44 md:h-36 md:w-48 rounded-3xl overflow-hidden shadow-lg"
-                style={{
-                  backgroundColor: img.bgColor,
-                  transformOrigin: index % 2 === 0 ? "top right" : "top left",
-                  borderRadius: "40px",
-                }}
-                variants={imageVariants}
-                custom={index + 2}
+          {[{ src: "/About/AboutImg3.png", alt: "Person Working", bgColor: "#B8E0F7" },
+          { src: "/About/AboutImg4.png", alt: "People with Laptop", bgColor: "#FFC107" }
+          ].map((img, index) => {
+            const actualIndex = index + 2; // because bottom row uses index 2 & 3
+            return (
+              <div
+                key={img.src}
+                className="relative cursor-pointer"
+                style={{ perspective: "1000px" }}
               >
-                <Image src={img.src} alt={img.alt} fill className="object-cover" />
-              </motion.div>
-            </motion.div>
-          ))}
+                <div
+                  className="relative h-28 w-40 sm:h-32 sm:w-44 md:h-36 md:w-48 rounded-3xl overflow-hidden shadow-lg"
+                  style={{
+                    backgroundColor: img.bgColor,
+                    transformOrigin: index % 2 === 0 ? "top right" : "top left",
+                    transform: getImageTransform(actualIndex),
+                    borderRadius: "40px",
+                  }}
+                >
+                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Animated Stickers with Responsive Positioning */}
+        {/* Animated Stickers */}
         <motion.div
           className="absolute cursor-pointer z-10 top-[33%] left-[38%] sm:top-[35%] sm:left-[40%] md:top-[33%] md:left-[35%] lg:top-[33%] lg:left-[40%]"
           initial="initial"

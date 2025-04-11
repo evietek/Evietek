@@ -8,7 +8,6 @@ import PortfolioSection from "@/components/PortfolioSection";
 import WorkProcessSection from "@/components/WorkProcessSection";
 import Projects from "@/components/PortfolioProjectsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import JoinUSSection from "@/components/JoinUsSection";
 import TrustedClients from "@/components/TrustedClientsSection";
 import LoadingAnimation from "@/components/LoadingAnimation";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -83,7 +82,6 @@ export default function Home() {
             <WorkProcessSection />
             <Projects />
             <TestimonialsSection />
-            <JoinUSSection />
             <TrustedClients />
           </motion.div>
         )}

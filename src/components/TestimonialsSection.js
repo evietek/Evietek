@@ -12,14 +12,22 @@ import TestimonialCard from "./TestimonialCard"; // Import the card
 
 const testimonials = [
   {
+    name: "Aria K",
+    title: "Professional and Attentive Team",
+    review: "The team was professional and took the time to understand our unique needs, delivering solutions just for us.",
+    link: "https://www.trustpilot.com/reviews/67f6b09c284f277bb7444ef6"
+  },
+  {
     name: "Bolt",
     title: "Perfect for Startups Needing Everything in One Place",
     review: "I was launching a new business and needed everything-logo, website, SEO. They handled it all and made my life so much easier.",
+    link: "https://www.trustpilot.com/reviews/67d453b0d4e26444c894ffda"
   },
   {
     name: "Mateo",
     title: "There Was a Delay, But They Handled It Well",
     review: "Our project took a little longer than expected, but they were upfront about it and even included some free social media designs to apologize. Great customer service.",
+    link: "https://www.trustpilot.com/reviews/67cc657f900c2b6374720ba7"
   },
 ];
 
@@ -131,11 +139,16 @@ export default function TestimonialsSection() {
                   slidesPerView: 2,
                 },
                 1024: {
-                  slidesPerView: 3,
+                  slidesPerView: 2,
                 },
+                1440: {
+                  slidesPerView: 3
+                }
               }}
               className="!flex !items-center !justify-center"
-              centeredSlides={true}
+              loop={true} // Ensures the slides loop continuously
+              centeredSlides={false}
+
             >
               {testimonials.map((t, idx) => (
                 <SwiperSlide key={idx} className="flex justify-center">
@@ -143,6 +156,7 @@ export default function TestimonialsSection() {
                     name={t.name}
                     title={t.title}
                     review={t.review}
+                    link={t.link}
                   />
                 </SwiperSlide>
               ))}
@@ -167,6 +181,7 @@ export default function TestimonialsSection() {
                       name={t.name}
                       title={t.title}
                       review={t.review}
+                      link={t.link}
                     />
                   </SwiperSlide>
                 ))}
@@ -184,6 +199,7 @@ export default function TestimonialsSection() {
                     name={t.name}
                     title={t.title}
                     review={t.review}
+                    link={t.link}
                   />
                 ))}
               </div>
@@ -205,11 +221,18 @@ export default function TestimonialsSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
             >
-              View all reviews on Trustpilot
+              <div className="flex items-center">
+                <Image
+                  src="/trustpilot_logo.svg"
+                  alt="Trustpilot Star"
+                  width={20}
+                  height={20}
+                />
+                <span className="ml-2 text-green-500">Trustpilot Reviews</span>              </div>
               <svg
                 className="w-4 h-4 ml-2"
                 fill="none"
-                stroke="currentColor"
+                stroke="#007f4e"
                 viewBox="0 0 24 24"
               >
                 <path

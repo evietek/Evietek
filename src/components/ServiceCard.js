@@ -18,9 +18,8 @@ export default function ServiceCard({ background, title, description, icon, deco
 
   // Animation Variants
   const cardVariants = {
-    hidden: { backgroundColor: "white", rotateY: 180 },
+    hidden: { backgroundColor: "white" },
     visible: {
-      rotateY: 0,
       transition: { duration: .8, ease: "easeOut" },
     },
   };

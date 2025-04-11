@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 
 const projects = [
@@ -13,6 +13,7 @@ const projects = [
 
 const PortfolioProjects = () => {
   const [tappedId, setTappedId] = useState(null);
+  const [hoveredId, setHoveredId] = useState(null);
   const [spacingValue, setSpacingValue] = useState(50);
   const [screenWidth, setScreenWidth] = useState(0);
   const containerRef = useRef(null);
@@ -51,20 +52,28 @@ const PortfolioProjects = () => {
 
   const handleClick = (e, projectId, link) => {
     e.preventDefault();
-    if (screenWidth < 768) { // Mobile behavior
+    if (tappedId === projectId) {
+      // If already expanded, redirect to the link
+      window.open(link, "_blank");
+    } else {
+      // Otherwise, expand the project
       setTappedId(projectId);
-    } else { // Desktop/tablet behavior
-      if (tappedId === projectId) {
-        window.open(link, "_blank");
-      } else {
-        setTappedId(projectId);
-      }
     }
+  };
+
+  const handleMouseEnter = (projectId) => {
+    if (tappedId === null) {
+      setHoveredId(projectId);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredId(null);
   };
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
-      if (!e.target.closest(".portfolio-card") && !e.target.closest(".popup-overlay")) {
+      if (!e.target.closest(".portfolio-card")) {
         setTappedId(null);
       }
     };
@@ -78,8 +87,8 @@ const PortfolioProjects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.7,
-        delayChildren: 0.6
+        staggerChildren: 0.4,
+        delayChildren: 0.3
       }
     }
   };
@@ -100,12 +109,6 @@ const PortfolioProjects = () => {
     }
   };
 
-  const popupVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 0.8 }
-  };
-
   return (
     <div
       ref={containerRef}
@@ -120,78 +123,51 @@ const PortfolioProjects = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            className="absolute w-full"
-            style={{
-              top: `${(projects.length - 1 - index) * spacingValue}px`,
-              zIndex: projects.length - index,
-            }}
-            variants={cardVariants}
-            custom={index}
-          >
-            <div
-              className={`portfolio-card block w-full transition-transform duration-1500 ease-in-out cursor-pointer
-                ${screenWidth >= 768 && tappedId === project.id ? 'translate-y-[-60px] sm:translate-y-[-80px] md:translate-y-[-100px] lg:translate-y-[-120px] xl:translate-y-[-140px]' : ''}`}
-              onClick={(e) => handleClick(e, project.id, project.link)}
-            >
-              <div className="w-full px-2 sm:px-0">
-                <Image
-                  src={project.src}
-                  alt={project.alt}
-                  width={1000}
-                  height={400}
-                  className="rounded-lg shadow-lg w-full max-h-[280px] sm:max-h-[230px] md:max-h-[400px] lg:max-h-[500px] xl:max-h-none 2xl:max-h-none"
-                  priority
-                />
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-
-      {/* Mobile Popup */}
-      <AnimatePresence>
-        {screenWidth < 768 && tappedId && (
-          <>
+        {projects.map((project, index) => {
+          // Determine if card is hovered but not tapped
+          const isHovered = hoveredId === project.id && tappedId !== project.id;
+          // Determine if card is tapped (expanded)
+          const isTapped = tappedId === project.id;
+          
+          return (
             <motion.div
-              className="fixed inset-0 bg-black/50 z-50 popup-overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setTappedId(null)}
-            />
-            <motion.div
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[400px] bg-white rounded-lg shadow-xl z-50 p-4"
-              variants={popupVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              key={project.id}
+              className="absolute w-full"
+              style={{
+                top: `${(projects.length - 1 - index) * spacingValue}px`,
+                zIndex: projects.length - index,
+              }}
+              variants={cardVariants}
+              custom={index}
             >
-              <div className="relative w-full aspect-video mb-4">
-                <Image
-                  src={projects.find(p => p.id === tappedId)?.src || ""}
-                  alt={projects.find(p => p.id === tappedId)?.alt || ""}
-                  fill
-                  className="object-contain rounded-lg"
-                />
-              </div>
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-bold">{projects.find(p => p.id === tappedId)?.title || ""}</h3>
-                <a
-                  href={projects.find(p => p.id === tappedId)?.link || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-[#030438] text-white rounded-lg hover:opacity-90 transition-opacity"
-                >
-                  View Project
-                </a>
+              <div
+                className={`portfolio-card block w-full transition-all duration-300 ease-in-out cursor-pointer`}
+                style={{
+                  transform: isTapped 
+                    ? `translateY(${tappedId === project.id ? '-60px' : '0px'})` 
+                    : isHovered 
+                      ? 'translateY(-12px)' 
+                      : 'translateY(0px)'
+                }}
+                onClick={(e) => handleClick(e, project.id, project.link)}
+                onMouseEnter={() => handleMouseEnter(project.id)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div className="w-full px-2 sm:px-0">
+                  <Image
+                    src={project.src}
+                    alt={project.alt}
+                    width={1000}
+                    height={400}
+                    className="rounded-lg shadow-lg w-full max-h-[280px] sm:max-h-[230px] md:max-h-[400px] lg:max-h-[500px] xl:max-h-none 2xl:max-h-none"
+                    priority
+                  />
+                </div>
               </div>
             </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+          );
+        })}
+      </motion.div>
     </div>
   );
 };

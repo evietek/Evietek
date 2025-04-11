@@ -63,15 +63,10 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Right Grid */}
-        <motion.div
-          className="md:w-1/2"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-        >
-          <AboutGrid />
-        </motion.div>
+        <div className="md:w-1/2">
+  <AboutGrid />
+</div>
+
       </div>
 
       {/* Decorative Sticker (Left Corner) */}
