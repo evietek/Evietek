@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 Evietek — Elevating Digital Experiences
 
-## Getting Started
+Welcome to the official GitHub of **Evietek**, a full-service digital agency delivering creative and tech-forward solutions that help businesses stand out in a crowded digital world.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 What We Do
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+At **Evietek**, we specialize in combining strategic thinking, design excellence, and robust development to create memorable brand experiences. Our services span across:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- 🎯 **Digital Strategy & Consulting**
+- 🧠 **Content Planning & Social Media Marketing**
+- 🎨 **Branding, Logo Design & Visual Identity**
+- 💻 **Website Development (Next.js, WordPress, Shopify)**
+- 🛍️ **E-commerce Store Design**
+- 📱 **UI/UX Design & Graphic Design for Web & Print**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+From startups to established brands, we deliver solutions tailored to our clients’ goals.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tools & Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We use a flexible and modern tech stack to power our client solutions:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js, React, Tailwind CSS, Framer Motion
+- **CMS & E-commerce**: WordPress, Shopify, Webflow
+- **Design Tools**: Figma, Adobe Creative Suite
+- **Marketing & Integrations**: Meta Business Suite, Mailchimp, SEO, API Integrations
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Featured Projects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Explore our full portfolio at [evietek.com](https://evietek.com). Here are a few standout projects:
+
+|--------|----------|----------|
+| Project | Tag | Description |
+|--------|------|-------------|
+| **Lars Tornøe** | Branding | Revamped Lars Tornøe’s brand with sleek, high-converting web design. Crafted a modern e-commerce platform, elevating UX and positioning the brand as premium. |
+| **Zonaris** | UI/UX Design | Redesigned Zonaris’ crypto-centric interface with cutting-edge UI/UX, improving navigation, user trust, and Bitcoin staking conversions. |
+| **TrailFire** | Web Development | Built a high-conversion website for TrailFire, enhancing PPC service presentation and boosting engagement and brand credibility. |
+| **HeyFriday AI** | SEO | Boosted HeyFriday AI’s SEO through strategic backlinking, driving organic traffic, improving rankings, and increasing authority in the AI writing space. |
+| **Epic Teams** | Branding | Strengthened Epic Teams’ visual identity with cohesive branding and design, improving engagement, recognition, and inbound interest. |
+
+> … and many more. We take pride in our ability to adapt across industries and deliver impact-driven solutions.
+
+---
+
+## 🤝 Let's Collaborate
+
+Have a project in mind? Looking for a creative partner or need support scaling your brand? We’d love to hear from you.
+
+📧 info@evietek.com  
+🌍 [evietek.com](https://evietek.com)  
+📸 [facebook](https://facebook.com/evietek) | 🐦 [Twitter](https://twitter.com/evietek) | 🔗 [LinkedIn](https://linkedin.com/company/evietek)
+
+---
+
+> *Design with purpose. Build with passion. Grow with strategy.*  
+> — **Team Evietek**
