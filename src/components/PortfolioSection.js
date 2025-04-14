@@ -26,15 +26,6 @@ export default function PortfolioSection() {
   };
 
   // Animation Variants
-  const headingVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 1.5, ease: "easeOut" } 
-    }
-  };
-
   const subheadingVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { 
@@ -93,20 +84,18 @@ export default function PortfolioSection() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full mb-8">
           
           {/* Left side: Portfolio Heading (Animated Drop from Top) */}
-          <motion.div 
-            className="flex flex-col items-start text-left"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={headingVariants}
-          >
-            <Image 
-              src="/Portfolio/Portfolio.svg"
-              alt="Portfolio"
-              width={140}
-              height={50}
-              className="w-[110px] h-[55px] sm:w-[130px] sm:h-[65px] md:w-[150px] md:h-[75px] lg:w-[170px] lg:h-[85px]"
-            />
+          <div className="flex flex-col items-start text-left">
+      <div 
+        className="flex items-center justify-center rounded-[12px] lg:mt-5 py-[5px] px-[15px] bg-[#5E51FE] rotate-[-5.5deg]"
+      >
+        <span 
+          className="font-['Bricolage_Grotesque'] font-extrabold text-white 
+                    text-xl sm:text-xl md:text-2xl lg:text-3xl text-center"
+        >
+          Portfolio
+        </span>
+      </div>
+    
             
             {/* Content Heading (Slides from Bottom) */}
             <motion.h2 
@@ -118,8 +107,7 @@ export default function PortfolioSection() {
             >
               We Are Mostly <br className="hidden md:block" /> Dribbling Around
             </motion.h2>
-          </motion.div>
-
+            </div>
           {/* Right side: Navigation Buttons (Slide from Right) */}
           <motion.div 
             className="flex items-center space-x-4 mt-4 md:mt-0"

@@ -28,15 +28,6 @@ export default function PortfolioProjectsSection() {
   };
 
   // Animation Variants
-  const headingVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" }
-    }
-  };
-
   const subHeadingVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -69,21 +60,15 @@ export default function PortfolioProjectsSection() {
     <section className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
       {/* Section Heading */}
       <div className="flex flex-col items-center text-center">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={headingVariants}
+      <div 
+        className="flex items-center justify-center rounded-[12px] py-[5px] px-[15px] bg-[#CB73FE] rotate-[-5.5deg]"
+      >
+        <span 
+          className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl text-center"
         >
-          <Image
-            src="/Portfolio_2/Portfolio.svg"
-            alt="Portfolio"
-            width={170}
-            height={85}
-            className="w-[110px] h-[55px] sm:w-[130px] sm:h-[65px] md:w-[150px] md:h-[75px] lg:w-[170px] lg:h-[85px]"
-            priority
-          />
-        </motion.div>
+          Portfolio
+        </span>
+      </div>
 
         {/* "Our Recent Projects" Heading */}
         <motion.h2

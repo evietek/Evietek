@@ -1,6 +1,5 @@
 "use client";
 
-import Heading from "./ServiceHeading";
 import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -66,7 +65,39 @@ export default function ServicesSection() {
         <section id="services" className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
             {/* Section Heading */}
             <div className="flex flex-col items-center text-center">
-                <Heading />
+            <div className="relative flex justify-center items-center w-full mt-10 md:mt-0 lg:mt-0">
+      {/* Our Text */}
+      <div className="relative z-10 -mt-16 -mr-2.5 lg:-mt-20">
+  <div className="flex items-center justify-center rounded-[12px] rotate-[-3.5deg] p-[10px] sm:px-[15px] sm:py-[10px]" // 👈 Responsive padding: 10px for mobile, 15px for sm and up
+    style={{ backgroundColor: "#CB73FE" }}
+  >
+          <span className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl text-center"
+          >
+            Our
+          </span>
+        </div>
+      </div>
+
+      {/* Services Text - With correct specs */}
+      <div className="relative -ml-0 -mt-8 z-0">
+  <div 
+    className="flex items-center justify-center rounded-[12px] p-[10px] sm:px-[15px] sm:py-[10px]"
+    style={{
+      backgroundColor: "#5E51FE",
+      top: "20px",
+      left: "113.77px",
+      transform: "rotate(5.29deg)"
+    }}
+  >
+
+          <span 
+            className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-2xl md:text-3xl lg:text-3xl"
+          >
+            Services
+          </span>
+        </div>
+      </div>
+    </div>
 
                 {/* "What We Do" Heading with Slide-in Animation */}
                 <motion.h2

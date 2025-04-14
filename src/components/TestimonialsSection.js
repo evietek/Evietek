@@ -44,14 +44,6 @@ export default function TestimonialsSection() {
   };
 
   // Animation Variants
-  const headingVariants = {
-    hidden: { opacity: 0, y: -50 }, // Drop from top
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" }
-    }
-  };
 
   const subHeadingVariants = {
     hidden: { opacity: 0, y: 50 }, // Slide from bottom
@@ -94,20 +86,16 @@ export default function TestimonialsSection() {
       {/* Section Heading */}
       <div className="flex flex-col items-center text-center">
         {/* Testimonials Heading (Drops from Top) */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={headingVariants}
+        <div 
+        className="flex items-center justify-center rounded-[12px] mb-5 py-[5px] px-[15px] bg-[#5E51FE] rotate-[-5.5deg]"
+      >
+        <span 
+          className="font-['Bricolage_Grotesque'] font-extrabold text-white 
+                    text-xl sm:text-xl md:text-2xl lg:text-3xl text-center"
         >
-          <Image
-            src="/Testimonials/Testimonials.svg"
-            alt="Testimonials"
-            width={140}
-            height={50}
-            className="w-[110px] h-[55px] sm:w-[130px] sm:h-[65px] md:w-[150px] md:h-[75px] lg:w-[170px] lg:h-[85px]"
-          />
-        </motion.div>
+          Testimonials
+        </span>
+      </div>
 
         {/* Content Heading (Slides from Bottom) */}
         <motion.h2

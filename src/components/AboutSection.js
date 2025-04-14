@@ -1,6 +1,5 @@
 "use client";
 
-import AboutHeading from "./AboutHeading";
 import AboutContent from "./AboutContent";
 import AboutGrid from "./AboutGrid";
 import Image from "next/image";
@@ -58,7 +57,59 @@ export default function AboutSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
-          <AboutHeading />
+          
+          <div className="relative flex items-center">
+      {/* About Text  */}
+      <div className="relative z-10 -mt-6 -mr-2">
+        <div 
+          className="flex items-center justify-center"
+          style={{
+            backgroundColor: "#CB73FE",
+            borderRadius: "12px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            width: "Hug (130px)",
+            height: "Hug (52px)",
+            top: "8.15px",
+            transform: "rotate(-3.5deg)"
+          }}
+        >
+          <span 
+            className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            About
+          </span>
+        </div>
+      </div>
+
+      {/* Us Text */}
+      <div className="relative ml-0 -mt-0 z-0">
+        <div 
+          className="flex items-center justify-center"
+          style={{
+            backgroundColor: "#5E51FE",
+            borderRadius: "12px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            width: "Hug (73px)",
+            height: "Hug (52px)",
+            top: "20px",
+            left: "115.40px",
+            transform: "rotate(5.20deg)"
+          }}
+        >
+          <span 
+            className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            Us
+          </span>
+        </div>
+      </div>
+    </div>
           <AboutContent />
         </motion.div>
 

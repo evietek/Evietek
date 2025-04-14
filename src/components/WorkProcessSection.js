@@ -1,7 +1,6 @@
 "use client";
 
 import Banner from "./WorkProcessBanner";
-import Heading from "./WorkProcessHeading";
 import WorkProcessCard from "./WorkProcessCard";
 import Link from "next/link";
 import Image from "next/image";
@@ -46,7 +45,55 @@ export default function WorkProcessSection() {
       <section className="relative bg-[#030438] text-[#ffff] py-4 md:py-10 lg:pt-12 px-4 md:px-10 lg:px-16 pb-4 overflow-hidden">
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center">
-          <Heading />
+        <div className="relative flex justify-center items-center w-full mt-10">
+      {/* Work Text */}
+      <div className="relative z-10 -mt-10 -mr-3">
+        <div 
+          className="flex items-center justify-center"
+          style={{
+            backgroundColor: "#5E51FE",
+            borderRadius: "12px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            width: "fit-content",
+            height: "Hug (52px)",
+            transform: "rotate(-5.54deg)"
+          }}
+        >
+          <span 
+            className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            Work
+          </span>
+        </div>
+      </div>
+
+      {/* Process Text */}
+      <div className="relative  z-0">
+        <div 
+          className="flex items-center justify-center"
+          style={{
+            backgroundColor: "#CB73FE",
+            borderRadius: "12px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            width: "fit-content",
+            height: "Hug (52px)",
+            transform: "rotate(-4.57deg)"
+          }}
+        >
+          <span 
+            className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            Process
+          </span>
+        </div>
+      </div>
+    </div>
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[107%] font-bricolage font-bold text-[#F6F5FF] mt-2 select-none cursor-default">
             How We Can <br className="hidden sm:block" />
             Work Together

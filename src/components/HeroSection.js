@@ -63,27 +63,27 @@ export default function HeroSection() {
       <section
         className={`relative bg-[#030438] text-white h-[60vh] md:h-[90vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-18 md:pt-20 pb-0 overflow-hidden ${playfair.className}`}
       >
-        {/* Background Grid SVG */}
-        <div className="absolute inset-0 w-full h-full">
-          <svg
-            className="absolute inset-0 w-full h-full opacity-50 pointer-events-none brightness-110 mix-blend-screen"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <image
-              href="/bg.svg"
-              width="100%"
-              height="100%"
-              preserveAspectRatio="none"
-            />
-          </svg>
-        </div>
+        {/* Background with CSS Grid Pattern */}
+<div className="absolute inset-0 w-full h-full bg-[#030438] overflow-hidden">
+  {/* Grid pattern with improved visibility */}
+  <div 
+    className="absolute inset-0 w-full h-full"
+    style={{
+      backgroundImage: `
+        linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px)
+      `,
+      backgroundSize: '40px 40px'
+    }}
+  />
+  
+  {/* Radial gradient overlay */}
+  <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle,rgba(120,70,190,0.3)_0%,rgba(3,4,56,0.8)_70%,rgba(3,4,56,1)_100%)]"></div>
+  
+  {/* Purple glow */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] w-[90vw] h-[50vw] max-w-[1200px] max-h-[600px] bg-[#7A3DD7] opacity-35 rounded-full blur-[120px]"></div>
 
-        {/* Layered Background */}
-        <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle, rgba(120,70,190,0.8) 25%, rgba(3,4,56,0.9) 70%, rgba(3,4,56,1) 100%)] pointer-events-none"></div>
-
-        <div className="absolute inset-0 flex items-center justify-center -translate-y-12">
-          <div className="w-[90vw] h-[50vw] max-w-[1200px] max-h-[600px] bg-[#7A3DD7] opacity-35 rounded-full blur-[120px]"></div>
-        </div>
+</div>
 
         {/* Main Content */}
         <div className="flex flex-col items-center justify-center flex-grow">

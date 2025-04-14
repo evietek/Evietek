@@ -60,14 +60,15 @@ export default function PricingSection() {
   return (
 <section className="relative bg-[#f9f9f9] py-8 px-4 md:px-8 lg:px-16">
 <div className="text-center mb-10 flex flex-col items-center">
-  <motion.img
-    src="/Pricing.svg"
-    alt="Pricing"
-    initial={{ y: -50, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
-    className="w-28 h-auto md:w-36 mb-4 select-none rotate-[355deg]"
-  />
+<div 
+        className="flex items-center justify-center rounded-[12px] py-[5px] px-[15px] bg-[#CB73FE] rotate-[-5.5deg] mb-5"
+      >
+        <span 
+          className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl text-center"
+        >
+          Pricing
+        </span>
+      </div>
   <p className="text-[30px] md:text-[40px] lg:text-[50px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default">
     Choose The Plan <br />That Fits Your Needs
   </p>

@@ -3,8 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 
 const projects = [
   { id: 1, src: "/Portfolio_2/Zonaris.svg", alt: "Zonaris", title: "Zonaris", link: "https://www.zonaris.io/" },
@@ -17,7 +15,6 @@ const PortfolioProjects = () => {
   const [spacingValue, setSpacingValue] = useState(50);
   const [screenWidth, setScreenWidth] = useState(0);
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true, amount: 0.1 });
 
   useEffect(() => {
     const updateValues = () => {
@@ -81,47 +78,16 @@ const PortfolioProjects = () => {
     return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
 
-  // Animation variants for the cards
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: -100
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100
-      }
-    }
-  };
-
   return (
     <div
       ref={containerRef}
       className="relative flex flex-col items-center justify-center mt-4 sm:mt-6 md:mt-8 lg:mt-10 mb-0 sm:mb-0 md:mb-0 lg:mb-0"
     >
-      <motion.div
+      <div
         className="relative w-[300px] sm:w-[300px] md:w-[580px] lg:w-[700px] xl:w-[800px] 2xl:w-[900px] flex flex-col items-center"
         style={{
           height: `${((projects.length - 1) * spacingValue) + getBaseHeight()}px`
         }}
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
       >
         {projects.map((project, index) => {
           // Determine if card is hovered but not tapped
@@ -130,15 +96,13 @@ const PortfolioProjects = () => {
           const isTapped = tappedId === project.id;
           
           return (
-            <motion.div
+            <div
               key={project.id}
               className="absolute w-full"
               style={{
                 top: `${(projects.length - 1 - index) * spacingValue}px`,
                 zIndex: projects.length - index,
               }}
-              variants={cardVariants}
-              custom={index}
             >
               <div
                 className={`portfolio-card block w-full transition-all duration-300 ease-in-out cursor-pointer`}
@@ -164,10 +128,10 @@ const PortfolioProjects = () => {
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
-      </motion.div>
+      </div>
     </div>
   );
 };
