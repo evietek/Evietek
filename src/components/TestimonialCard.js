@@ -13,8 +13,8 @@ export default function TestimonialCard({ name, title, review, stars = 5, link }
 
   // Shadow styling based on the screenshot (X:0, Y:0, Blur:103, Spread:0, #CCCBEE)
   const shadowStyle = isHovered 
-    ? "0 0 103px 0 rgba(204, 203, 238, 1)" 
-    : "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"; // Default shadow-md
+    ? "0 0 30px 0 rgba(204, 203, 238, 1)" 
+    : "0 1px 1px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"; // Default shadow-md
 
   return (
     <a
@@ -23,7 +23,7 @@ export default function TestimonialCard({ name, title, review, stars = 5, link }
       rel="noopener noreferrer"
     >
       <div
-        className={`bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 ${isHovered ? '-translate-y-1' : ''} h-[300px] md:h-[320px] lg:h-[280px] w-full cursor-pointer`}
+        className={`bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 ${isHovered ? '-translate-y-1' : ''} h-[300px] md:h-[320px] lg:h-[280px] w-full cursor-pointer border-1 border-[#CCCBEE]`} // Added border-4 and custom border color
         style={{ boxShadow: shadowStyle }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

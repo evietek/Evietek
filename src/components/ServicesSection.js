@@ -43,14 +43,16 @@ export default function ServicesSection() {
             description: "Captivate visitors with sleek, user-friendly designs that drive engagement and conversions effortlessly.",
             icon: "/Our_Services/Website_Logo.svg",
             decoration: "/Our_Services/Decor_1.svg",
-            link: "/website-design"
+            link: "/website-design",
         },
         {
             title: "Branding Design",
             description: "Craft a powerful brand identity that resonates, builds trust, and sets you apart instantly.",
             icon: "/Our_Services/Branding_Design_Logo.svg",
             decoration: "/Our_Services/Decor_2.svg",
-            link: "/branding"
+            link: "/branding",
+            borderColor: "border-[#5E51FE]/30"
+
         },
         {
             title: "Social Media Marketing",
@@ -122,6 +124,7 @@ export default function ServicesSection() {
                                 description={service.description}
                                 icon={service.icon}
                                 decoration={service.decoration}
+                                borderColor={service.borderColor}
                             />
                         </div>
                     </Link>
