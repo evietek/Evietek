@@ -62,7 +62,7 @@ export default function PortfolioSection() {
       
       {/* Floating Basketball */}
       <motion.div 
-        className="absolute bottom-40 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+        className="absolute bottom-10 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 z-10"
         animate={floatAnimation}
       >
         <Image src="/Portfolio/basketball.svg" alt="Basketball" width={80} height={80} />
@@ -141,7 +141,7 @@ export default function PortfolioSection() {
       </div>
 
       {/* Carousel Component */}
-      <div className="mt-8 ml-0 md:mt-12 md:ml-0 lg:ml-20">
+      <div className="mt-8 ml-0 md:mt-12 md:ml-0 lg:ml-10">
         <Carousel ref={carouselRef} />
       </div>
     </section>

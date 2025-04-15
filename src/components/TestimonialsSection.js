@@ -139,7 +139,7 @@ export default function TestimonialsSection() {
 
             >
               {testimonials.map((t, idx) => (
-                <SwiperSlide key={idx} className="flex justify-center">
+                <SwiperSlide key={idx} className="flex justify-center pt-2">
                   <TestimonialCard
                     name={t.name}
                     title={t.title}
