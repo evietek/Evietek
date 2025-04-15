@@ -111,7 +111,12 @@ const PortfolioProjects = () => {
                     ? `translateY(${tappedId === project.id ? '-60px' : '0px'})` 
                     : isHovered 
                       ? 'translateY(-12px)' 
-                      : 'translateY(0px)'
+                      : 'translateY(0px)',
+                  boxShadow: isHovered || isTapped 
+                    ? '0 0 30px rgba(204, 203, 238, 1), 0 4px 20px rgba(153, 151, 217, 0.6)' 
+                    : 'none',
+                  borderRadius: '20px',
+                  overflow: 'hidden'
                 }}
                 onClick={(e) => handleClick(e, project.id, project.link)}
                 onMouseEnter={() => handleMouseEnter(project.id)}
@@ -123,7 +128,7 @@ const PortfolioProjects = () => {
                     alt={project.alt}
                     width={1000}
                     height={400}
-                    className="rounded-lg shadow-lg w-full max-h-[280px] sm:max-h-[230px] md:max-h-[400px] lg:max-h-[500px] xl:max-h-none 2xl:max-h-none"
+                    className="w-full max-h-[280px] sm:max-h-[230px] md:max-h-[400px] lg:max-h-[500px] xl:max-h-none 2xl:max-h-none"
                     priority
                   />
                 </div>

@@ -41,7 +41,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about-section"
-      className="relative bg-[#F9F9F9] text-[#333] py-6 md:py-12 lg:pt-16 px-4 md:px-8 lg:px-12 pb-0 transform-gpu"
+      className="relative bg-[#FFFFFF] text-[#333] py-6 md:py-12 lg:pt-32 px-4 md:px-8 lg:px-12 pb-0 transform-gpu"
       style={{
         opacity: isInView ? 1 : 0,
         transform: `translateY(${isInView ? 0 : 20}px)`,
@@ -141,7 +141,7 @@ export default function AboutSection() {
 
       {/* Divider (Centered Below Everything) */}
       <motion.div
-        className="relative inset-x-0 mt-[5px] sm:mt-4 md:mt-[10px] lg:mt-[60px] z-[10] flex justify-center transform-gpu"
+        className="relative inset-x-0 mt-[5px] sm:mt-4 md:mt-[10px] lg:mt-[120px] lg:mb-[50px] z-[10] flex justify-center transform-gpu"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, margin: "-100px" }}

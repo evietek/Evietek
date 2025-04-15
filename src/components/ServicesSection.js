@@ -62,7 +62,7 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section id="services" className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
+        <section id="services" className="relative bg-[#FFFFFF] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
             {/* Section Heading */}
             <div className="flex flex-col items-center text-center">
             <div className="relative flex justify-center items-center w-full mt-10 md:mt-0 lg:mt-0">
@@ -101,7 +101,7 @@ export default function ServicesSection() {
 
                 {/* "What We Do" Heading with Slide-in Animation */}
                 <motion.h2
-                    className="text-[50px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
+                    className="text-[50px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-5 select-none cursor-default"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
@@ -147,7 +147,7 @@ export default function ServicesSection() {
 
             {/* Divider (Centered Below Everything) */}
             <motion.div
-                className="relative inset-x-0 mt-[5px] sm:mt-4 md:mt-[10px] lg:mt-[60px] z-[10] flex justify-center"
+                className="relative inset-x-0 mt-[5px] sm:mt-4 md:mt-[10px] lg:mt-[80px] lg:mb-[20px] z-[10] flex justify-center"
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true, amount: 0.1 }}

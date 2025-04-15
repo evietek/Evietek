@@ -82,7 +82,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
+    <section className="relative bg-[#FFFFFF] text-[#333] py-3 md:py-8 px-4 md:px-8 lg:px-16 lg:pt-24 pb-0">
       {/* Section Heading */}
       <div className="flex flex-col items-center text-center">
         {/* Testimonials Heading (Drops from Top) */}
@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
         </motion.h2>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-12">
+      <div className="max-w-7xl mx-auto mt-12 py-4">
         {/* Testimonial Cards Grid */}
         <div className="max-w-7xl mx-auto mt-12 px-4">
           {testimonials.length >= 3 ? (

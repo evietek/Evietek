@@ -25,7 +25,7 @@ export default function WorkProcessBanner() {
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#8D4BF7] to-[#C98CF8] transform -rotate-2">
       <div className="marquee">
-        <div className="marquee-content text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl select-none cursor-default py-1 sm:py-1.5 md:py-2">
+        <div className="marquee-content text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl select-none cursor-default py-3 sm:py-3 md:py-5">
           {marqueeContent}
           {marqueeContent}
         </div>

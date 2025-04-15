@@ -18,7 +18,7 @@ const clients = [
 
 export default function TrustedClients() {
   return (
-    <section className="bg-[#F9F9F9] py-12 overflow-hidden w-full">
+    <section className="bg-[#FFFFFF] py-12 overflow-hidden w-full">
       {/* Heading (Slides in from Bottom) */}
       <motion.h2
         className="text-center text-2xl md:text-3xl font-bold text-[#341E61] mb-6 select-none cursor-default"
@@ -38,10 +38,10 @@ export default function TrustedClients() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <motion.div
-          className="flex w-max space-x-10"
-          animate={{ x: ["0%", "-50%"] }} // Infinite scrolling effect
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+<motion.div
+  className="flex w-max space-x-10"
+  animate={{ x: ["0%", "-50%"] }}
+  transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
         >
           {/* Duplicate clients to create a seamless infinite loop */}
           {[...clients, ...clients].map((client, index) => (

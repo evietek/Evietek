@@ -1,6 +1,5 @@
 'use client';
 
-import Breadcrumb from '@/components/BreadCrumb';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { InlineWidget } from "react-calendly";
@@ -35,16 +34,9 @@ const floatingAnimation = {
 
 const BookaMeetingPage = () => {
   return (
-    <main className="pt-0 px-6 md:px-16 lg:px-0 lg:pb-10 relative bg-white">
-      
-      {/* Breadcrumb */}
-      <Breadcrumb 
-        title="Book a Meeting" 
-        backgroundImage="/Meeting/bg.jpg" 
-        backgroundPosition="center 70%"
-      />
+    <main className="px-6 pt-16 md:px-16 md:pt-20  lg:px-0 lg:pt-30 lg:pb-10 relative bg-[#FFFFFF]">
 
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center pt-10">
         {/* Heading Image */}
         <motion.div
           initial="hidden"
@@ -55,9 +47,9 @@ const BookaMeetingPage = () => {
           <Image 
             src="/Meeting/Book_A_Meeting.svg"
             alt="Book a Meeting"
-            width={140}
-            height={50}
-            className="w-[110px] h-[55px] sm:w-[130px] sm:h-[65px] md:w-[150px] md:h-[75px] lg:w-[170px] lg:h-[85px]"
+            width={180}
+            height={70}
+            className="w-[200px] h-[100px] sm:w-[130px] sm:h-[65px] md:w-[240px] md:h-[120px] lg:w-[260px] lg:h-[130px] xl:w-[300px] xl:h-[150px]"
           />
         </motion.div>
         
@@ -74,7 +66,7 @@ const BookaMeetingPage = () => {
 
         {/* Description Paragraph */}
         <motion.p 
-          className="mt-4 text-lg text-[#41335E] max-w-2xl select-none cursor-default"
+          className="mt-4 mb-6 text-lg text-[#41335E] max-w-2xl select-none cursor-default"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -85,10 +77,10 @@ const BookaMeetingPage = () => {
       </div> 
 
       {/* Calendly Embed with Background Div */}
-      <div className="flex justify-center mt-0 relative">
-        <div className="absolute top-0 w-full max-w-3xl h-full bg-white shadow-xl rounded-xl p-0 border border-gray-200"></div>
+      <div className="flex justify-center mt-0 relative mb-20">
+      <div className="absolute top-0 w-full max-w-4xl h-160 lg:h-full bg-white rounded-xl p-0 shadow-[0px_30px_50px_0px_#CCC8EE] md:shadow-[0px_60px_103px_0px_#CCC8EE]"></div>
         
-        <div className="w-full max-w-4xl h-[750px] relative z-10">
+        <div className="w-full max-w-2xl h-[750px] relative z-10">
           <InlineWidget 
             url="https://calendly.com/evietek-info/30min"
             styles={{ height: "100%", width: "100%" }}
@@ -105,17 +97,17 @@ const BookaMeetingPage = () => {
 
       {/* Floating Icon (Headset) */}
       <motion.div
-        className="absolute top-35 right-2 md:right-15 lg:right-35 lg:top-85 w-12 h-12 sm:w-16 sm:h-16 lg:w-40 lg:h-40"
+        className="absolute top-15 right-1 md:right-15 xl:right-35 xl:top-85 w-25 h-25 sm:w-45 sm:h-45 lg:w-60 lg:h-60"
         animate={floatingAnimation}
       >
-        <Image src="/Meeting/Headset.svg" alt="Headset" width={160} height={160} />
+        <Image src="/Meeting/Headset.svg" alt="Headset" width={200} height={200} />
       </motion.div>
 
       {/* Fixing "Guy" Position at Bottom */}
       <motion.div
-        className="absolute bottom-0 left-0 w-24 sm:w-32 md:w-40 lg:w-56 xl:w-64"
+        className="absolute -bottom-4 lg:-bottom-6 left-0 w-75 sm:w-80 md:w-80 lg:w-120 xl:w-120 z-10"
       >
-        <Image src="/Meeting/Guy.svg" alt="Guy" width={240} height={240} />
+        <Image src="/Meeting/Guy.svg" alt="Guy" width={500} height={500} />
       </motion.div>   
 
     </main>

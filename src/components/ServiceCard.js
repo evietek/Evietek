@@ -34,18 +34,23 @@ export default function ServiceCard({ background, title, description, icon, deco
   };
 
   return (
-    <motion.div
-      className={`relative flex flex-col items-center text-center bg-white rounded-3xl shadow-lg p-6 md:p-8 py-8 md:py-10 lg:py-12 transition-all duration-800 ease-out h-[420px] md:h-[460px] lg:h-[500px] max-w-[300px] md:max-w-[340px] lg:max-w-[360px] justify-between ${isAnimating ? 'shadow-xl -translate-y-2' : ''}`}
-      style={{ background }}
-      initial="hidden"
-      whileInView="visible"
-      onMouseEnter={handleMouseEnter}
-      viewport={{ once: true, amount: 0.1 }}
-      variants={cardVariants}
-    >
+<motion.div
+  className={`relative flex flex-col items-center text-center bg-white rounded-3xl p-6 md:p-8 py-8 md:py-10 lg:py-12 transition-all duration-300 ease-out h-[420px] md:h-[460px] lg:h-[540px] max-w-[300px] md:max-w-[340px] lg:max-w-[360px] justify-between ${
+    isAnimating ? 'shadow-[0px_10px_40px_#CCC8EE]' : 'shadow-md'
+  }`}
+  style={{ background, borderRadius: "1.5rem", overflow: "hidden" }}
+  initial="hidden"
+  whileInView="visible"
+  onHoverStart={() => setIsAnimating(true)}
+  onHoverEnd={() => setIsAnimating(false)}
+  viewport={{ once: true, amount: 0.1 }}
+  variants={cardVariants}
+>
+
+
       {/* Decorative Background SVG - Positioned Correctly */}
       <motion.div
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className="absolute inset-0 w-full h-full pointer-events-none "
         variants={contentVariants}
       >
         <Image
@@ -53,7 +58,8 @@ export default function ServiceCard({ background, title, description, icon, deco
           alt="Card Decoration"
           layout="fill"
           objectFit="cover"
-          className="opacity-100"
+          
+          className="opacity-100 "
         />
       </motion.div>
 
@@ -75,10 +81,10 @@ export default function ServiceCard({ background, title, description, icon, deco
 
       {/* Card Icon */}
       <motion.div
-        className="relative w-[150px] h-[140px] md:w-[180px] md:h-[170px] lg:w-[240px] lg:h-[220px] mt-6"
+        className="relative w-[150px] h-[140px] md:w-[220px] md:h-[170px] mt-6 mb-25"
         variants={contentVariants}
       >
-        <Image src={icon} alt={title} width={240} height={220} />
+        <Image src={icon} alt={title} width={220} height={170} />
       </motion.div>
     </motion.div>
   );

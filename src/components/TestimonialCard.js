@@ -1,16 +1,20 @@
 import { useState } from "react";
 
 export default function TestimonialCard({ name, title, review, stars = 5, link }) {
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 300); // Match the transition duration
-    }
+    setIsHovered(true);
   };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  // Shadow styling based on the screenshot (X:0, Y:0, Blur:103, Spread:0, #CCCBEE)
+  const shadowStyle = isHovered 
+    ? "0 0 103px 0 rgba(204, 203, 238, 1)" 
+    : "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"; // Default shadow-md
 
   return (
     <a
@@ -19,8 +23,10 @@ export default function TestimonialCard({ name, title, review, stars = 5, link }
       rel="noopener noreferrer"
     >
       <div
-        className={`bg-white rounded-2xl shadow-md p-6 md:p-8 text-center transition-all duration-300 ${isAnimating ? '-translate-y-1' : ''} h-[300px] md:h-[320] lg:h-[280] w-full cursor-pointer`}
+        className={`bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 ${isHovered ? '-translate-y-1' : ''} h-[300px] md:h-[320px] lg:h-[280px] w-full cursor-pointer`}
+        style={{ boxShadow: shadowStyle }}
         onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <h3 className="text-xl font-semibold text-[#341E61] mb-1 md:mb-2">{title}</h3>
 
@@ -34,6 +40,6 @@ export default function TestimonialCard({ name, title, review, stars = 5, link }
         <p className="text-gray-600 text-sm mb-2 md:mb-6 italic">{review}</p>
         <p className="font-medium text-[#341E61]">{name}</p>
       </div>
-    </a >
+    </a>
   );
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PricingCard({
   title,
@@ -28,7 +29,11 @@ export default function PricingCard({
 
   return (
     <motion.div
-      whileHover={{ scale: 1.03 }}
+      whileHover={{ 
+        scale: 1.03,
+        boxShadow: "0px 40px 60px 0px #C2C1E4" 
+      }}
+      transition={{ duration: 0.3 }}
       className={`relative flex flex-col items-center rounded-[28px] text-white overflow-hidden shadow-xl w-full max-w-sm ${gradient}`}
     >
       {/* POPULAR Ribbon */}
@@ -44,10 +49,12 @@ export default function PricingCard({
       <div className="w-full px-6 pt-4 pb-1 flex flex-col items-center">
         <div className="bg-white/20 rounded-full w-[80px] h-[80px] flex items-center justify-center mb-4">
           {typeof icon === "string" ? (
-            <img
+            <Image
               src={icon}
               alt={`${title} Icon`}
-              className="w-[48px] h-[48px] md:w-[64px] md:h-[64px] object-contain"
+              width={64}
+              height={64}
+              className="object-contain"
             />
           ) : (
             <div className="text-5xl">{icon}</div>

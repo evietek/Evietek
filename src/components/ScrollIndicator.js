@@ -12,7 +12,7 @@ export default function ScrollIndicator() {
 
   return (
     <div className="text-center flex flex-col items-center cursor-pointer" onClick={handleScroll}>
-      <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg mb-2">Scroll down</p>
+      <p className="text-white font-Gilroy text-xs sm:text-sm md:text-sm mb-2">Scroll down</p>
       <div className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 animate-bounce flex items-center justify-center">
         <Image 
           src="/svgs/arrow-down.svg"

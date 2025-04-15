@@ -5,54 +5,39 @@
 /* ========================= */
 
 @font-face {
-  font-family: "VastagoGrotesk";
-  src: url("/fonts/VastagoGrotesk-Black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "VastagoGrotesk";
-  src: url("/fonts/VastagoGrotesk-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "VastagoGrotesk";
-  src: url("/fonts/VastagoGrotesk-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "VastagoGrotesk";
-  src: url("/fonts/VastagoGrotesk-Regular.otf") format("opentype");
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
+/* BricolageGrotesque Font for Headings */
 @font-face {
-  font-family: "VastagoGrotesk";
-  src: url("/fonts/VastagoGrotesk-Light.otf") format("opentype");
-  font-weight: 300;
+  font-family: 'BricolageGrotesque';
+  src: url('/fonts/Bricolage_Grotesque/BricolageGrotesque-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
   font-style: normal;
 }
 
-/* 🎭 Utility Classes */
-.font-vastago {
-  font-family: "VastagoGrotesk", sans-serif;
+@font-face {
+  font-family: 'BricolageGrotesque';
+  src: url('/fonts/Bricolage_Grotesque/BricolageGrotesque-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
 }
 
-.font-vastago-bold {
-  font-family: "VastagoGrotesk", sans-serif;
-  font-weight: 700;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'BricolageGrotesque', sans-serif; /* Use BricolageGrotesque for headings */
 }
 
-.font-vastago-light {
-  font-family: "VastagoGrotesk", sans-serif;
-  font-weight: 300;
+h1, h2, h3 {
+  font-weight: 600; /* SemiBold weight */
 }
+
+h1, h2 {
+  font-weight: 700; /* Bold weight */
+}
+
 
 /* ========================= */
 /* 🎭 Base Theme Setup */
@@ -78,7 +63,7 @@
 body {
   color: var(--foreground);
   background: #030438;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Gilroy,Arial, Helvetica, sans-serif;
 }
 
 /* ========================= */

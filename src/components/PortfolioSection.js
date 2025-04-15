@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Carousel from "./Carousel"; // Carousel component
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 import Image from "next/image";
 import BlinkingEye from "./BlinkingEye"; // Import the blinking eye component
 
@@ -54,7 +55,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <section className="relative bg-[#F9F9F9] text-[#3E2472] py-6 md:py-12 lg:pt-0 px-2 sm:px-4 md:px-8 lg:px-12 pb-15 md:pb-20 lg:pb-20 overflow-hidden">
+    <section className="relative bg-[#FFFFFF] text-[#3E2472] py-6 md:py-12 lg:pt-0 px-2 sm:px-4 md:px-8 lg:px-12 pb-15 md:pb-20 lg:pb-20 overflow-hidden">
 
       <BlinkingEye />
 
@@ -116,22 +117,25 @@ export default function PortfolioSection() {
             viewport={{ once: true, amount: 0.3 }}
             variants={buttonsVariants}
           >
-            <button 
-              onClick={prevSlide} 
-              className="bg-[#E0D7FF] p-3 rounded-lg shadow-md hover:bg-[#CBB5FF] transition duration-300 flex items-center justify-center"
-              aria-label="Previous slide"
-              type="button"
-            >
-              <FaChevronLeft className="text-[#6A43D8] text-2xl" />
-            </button>
-            <button 
-              onClick={nextSlide} 
-              className="bg-[#6A43D8] p-3 rounded-lg shadow-md hover:bg-[#5C33D8] transition duration-300 flex items-center justify-center"
-              aria-label="Next slide"
-              type="button"
-            >
-              <FaChevronRight className="text-white text-2xl" />
-            </button>
+<button 
+  onClick={prevSlide} 
+  className="bg-[#5E51FE] p-2 py-4 rounded-lg shadow-md hover:bg-[#E0D7FF] hover:shadow-[0_10px_30px_#CCC8EE] transition duration-300 flex items-center justify-center"
+  aria-label="Previous slide"
+  type="button"
+>
+  <FaChevronLeft className="text-white text-xl" />
+</button>
+
+<button 
+  onClick={nextSlide} 
+  className="bg-[#5E51FE] p-2 py-4 rounded-lg shadow-md hover:bg-[#E0D7FF] hover:shadow-[0_10px_30px_#CCC8EE] transition duration-300 flex items-center justify-center"
+  aria-label="Next slide"
+  type="button"
+>
+  <FaChevronRight className="text-white text-xl" />
+</button>
+
+
           </motion.div>
         </div>
       </div>

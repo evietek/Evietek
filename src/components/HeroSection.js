@@ -5,13 +5,13 @@ import ScrollIndicator from "./ScrollIndicator";
 import DecorativeElements from "./DecorativeElements";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Playfair_Display } from "next/font/google";
+// import { Playfair_Display } from "next/font/google";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "700", "900"], // adjust weights as needed
-});
+// const playfair = Playfair_Display({
+//   subsets: ["latin"],
+//   variable: "--font-playfair",
+//   weight: ["400", "700", "900"], // adjust weights as needed
+// });
 
 
 
@@ -61,8 +61,8 @@ export default function HeroSection() {
   return (
     <>
       <section
-        className={`relative bg-[#030438] text-white h-[60vh] md:h-[90vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-18 md:pt-20 pb-0 overflow-hidden ${playfair.className}`}
-      >
+className={`relative bg-[#030438] text-white h-[60vh] md:h-[90vh] lg:h-[100vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-18 md:pt-20 pb-0 overflow-hidden font-BricolageGrotesque font-bold`}
+>
         {/* Background with CSS Grid Pattern */}
 <div className="absolute inset-0 w-full h-full bg-[#030438] overflow-hidden">
   {/* Grid pattern with improved visibility */}
@@ -130,8 +130,8 @@ export default function HeroSection() {
                   animate={hasPlayedLasts ? { rotate: -4, skewX: -6 } : {}}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                  <span className="absolute inset-0 bg-yellow-400 w-full h-full -z-10 transform skew-x-6 rotate-4 xl:translate-y-2.5 rounded-md"></span>
-                  <span className="relative inline-block px-1 pb-2 text-black font-bold">
+                  <span className="absolute inset-0 bg-[#5E51FE] w-full h-full -z-10 transform rounded-2xl"></span>
+                  <span className="relative inline-block px-1 py-1 font-bold">
                     Lasts
                   </span>
                 </motion.div>
@@ -140,7 +140,7 @@ export default function HeroSection() {
 
 
             {/* Subheading */}
-            <p className="mt-6 md:mt-10 text-base md:text-lg max-w-2xl mx-auto opacity-90 font-light select-none cursor-default">
+            <p className="mt-6 md:mt-10 text-base md:text-lg max-w-2xl mx-auto opacity-90 font-Gilroy font-light select-none cursor-default">
               We at Evietek create visually stunning digital experiences that
               effortlessly engage, captivate, and convert. Grow your brand with
               innovation that speaks for itself.

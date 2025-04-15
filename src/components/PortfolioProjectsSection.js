@@ -57,7 +57,7 @@ export default function PortfolioProjectsSection() {
   };
 
   return (
-    <section className="relative bg-[#F9F9F9] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
+    <section className="relative bg-[#FFFFFF] text-[#333] py-3 md:py-8 lg:pt-16 px-4 md:px-8 lg:px-12 pb-0">
       {/* Section Heading */}
       <div className="flex flex-col items-center text-center">
       <div 

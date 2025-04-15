@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import PricingCard from "./PricingCard";
 import { motion } from "framer-motion";
 
@@ -35,7 +36,6 @@ export default function PricingSection() {
             "Brand <strong>Style Guide</strong>",
             "Social <strong>Media Kit</strong>",
             "Up to <strong>3 Major Revision</strong> Rounds <strong>+</strong> </br>Unlimited Minor Tweaks Thereafter",
-
             "Lifetime <strong>Support</strong>"
           ]
         },
@@ -58,7 +58,7 @@ export default function PricingSection() {
       
 
   return (
-<section className="relative bg-[#f9f9f9] py-8 px-4 md:px-8 lg:px-16">
+<section className="relative bg-[#ffffff] py-8 px-4 md:px-8 lg:px-16">
 <div className="text-center mb-10 flex flex-col items-center">
 <div 
         className="flex items-center justify-center rounded-[12px] py-[5px] px-[15px] bg-[#CB73FE] rotate-[-5.5deg] mb-5"
@@ -98,13 +98,13 @@ export default function PricingSection() {
       </div>
       {/* Decorative Background GIFs */}
 <div className="pointer-events-none absolute top-4 md:top-20 xl:top-15 left-[10] md:left-4 xl:left-34 z-0 opacity-100">
-  <img src="/decor1.gif" alt="decorative" className="w-12 h-16 md:w-24 md:h-32 xl:w-28 xl:h-36 2xl:w-32 2xl:h-42 rotate-330" />
+  <Image src="/decor1.gif" alt="decorative" width={128} height={168} className="w-12 h-16 md:w-24 md:h-32 xl:w-28 xl:h-36 2xl:w-32 2xl:h-42 rotate-330" />
 </div>
 <div className="pointer-events-none absolute top-10 right-4 md:right-16 lg:right-24 xl:right-48 z-0 opacity-100">
-  <img src="/decor2.gif" alt="decorative" className="w-12 h-12 md:w-20 md:h-20 xl:w-28 xl:h-28" />
+  <Image src="/decor2.gif" alt="decorative" width={112} height={112} className="w-12 h-12 md:w-20 md:h-20 xl:w-28 xl:h-28" />
 </div>
 <div className="pointer-events-none absolute bottom-1 right-[40%] md:top-3/4 md:right-10 lg:right-25 xl:right-5 z-10 opacity-100 md:block hidden">
-  <img src="/decor3.gif" alt="decorative" className="w-20 h-20  md:w-26 md:h-26 lg:w-32 lg:h-32" />
+  <Image src="/decor3.gif" alt="decorative" width={128} height={128} className="w-20 h-20 md:w-26 md:h-26 lg:w-32 lg:h-32" />
 </div>
 
     </section>
