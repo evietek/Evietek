@@ -55,7 +55,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <section className="relative bg-[#FFFFFF] text-[#3E2472] py-6 md:py-12 lg:pt-0 px-2 sm:px-4 md:px-8 lg:px-12 pb-15 md:pb-20 lg:pb-20 overflow-hidden">
+    <section className="relative bg-[#FFFFFF] text-[#3E2472] py-6 md:py-10 lg:pt-10 px-2 sm:px-4 md:px-8 lg:px-12 pb-15 md:pb-20 lg:pb-20 overflow-hidden">
 
       <BlinkingEye />
 

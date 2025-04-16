@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
         </motion.h2>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-12 py-4">
+      <div className="max-w-7xl mx-auto mt-0 lg:mt-12 py-4">
         {/* Testimonial Cards Grid */}
         <div className="max-w-7xl mx-auto mt-12 px-4">
           {testimonials.length >= 3 ? (

@@ -61,7 +61,7 @@ export default function HeroSection() {
   return (
     <>
       <section
-className={`relative bg-[#030438] text-white h-[60vh] md:h-[90vh] lg:h-[100vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-18 md:pt-20 pb-0 overflow-hidden font-BricolageGrotesque font-bold`}
+className={`relative bg-[#030438] text-white h-[80vh] md:h-[90vh] lg:h-[100vh] flex flex-col items-center justify-between text-center px-6 md:px-12 pt-18 md:pt-20 pb-0 overflow-hidden font-BricolageGrotesque font-bold`}
 >
         {/* Background with CSS Grid Pattern */}
 <div className="absolute inset-0 w-full h-full bg-[#030438] overflow-hidden">

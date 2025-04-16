@@ -150,7 +150,7 @@ export default function ServicesSection() {
 
             {/* Divider (Centered Below Everything) */}
             <motion.div
-                className="relative inset-x-0 mt-[5px] sm:mt-4 md:mt-[10px] lg:mt-[80px] lg:mb-[20px] z-[10] flex justify-center"
+                className="relative inset-x-0 mt-[40px] md:mt-[60px] lg:mt-[80px] pb-[20px] md:pb-[0px] lg:pb[20px] z-[10] flex justify-center"
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true, amount: 0.1 }}

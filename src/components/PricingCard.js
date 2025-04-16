@@ -34,7 +34,7 @@ export default function PricingCard({
         boxShadow: "0px 40px 60px 0px #C2C1E4" 
       }}
       transition={{ duration: 0.3 }}
-      className={`relative flex flex-col items-center rounded-[28px] text-white overflow-hidden shadow-xl w-full max-w-sm ${gradient}`}
+      className={`relative flex flex-col items-center rounded-[28px] text-white overflow-hidden shadow-xl w-full  md:w-85 lg:w-full max-w-sm ${gradient}`}
     >
       {/* POPULAR Ribbon */}
       {isPopular && (
