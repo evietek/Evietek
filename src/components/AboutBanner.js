@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const AboutBanner = ({
-  imageUrl = "/About_us/4.jpg",
+  imageUrl = "/About_Us/4.jpg",
   imageAlt = "24/7 assistance",
   heading = "24/7 assistance",
   content = "Real-time assistance for all your digital transformation needs, including branding strategies, content creation and web development.",

@@ -65,7 +65,7 @@ export default function PortfolioSection() {
         className="absolute bottom-10 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 z-10"
         animate={floatAnimation}
       >
-        <Image src="/Portfolio/basketball.svg" alt="Basketball" width={80} height={80} />
+        <Image src="/Portfolio/Basketball.svg" alt="Basketball" width={80} height={80} />
       </motion.div>
 
       <div className="absolute inset-x-0 bottom-12 md:bottom-15 lg:bottom-[-30] flex justify-end">

@@ -12,7 +12,7 @@ const caseStudies = [
     tag: 'Branding',
     heading: 'Transforming Lars Tornøe’s Digital Presence with Modern Branding & Web Design',
     content: 'Revamping Lars Tornøe’s brand with modern web design, we crafted a sleek, high converting e-commerce platform, enhancing user experience, engagement, and positioning the brand as premium.',
-    image: '/case_study/Lars-Tornoe/cover.png',
+    image: '/Case_Study/Lars-Tornoe/cover.png',
     imagePosition: 'right',
     bgColor: 'bg-[#053027]',
     tagColor: 'bg-[#CB73FE] text-white-800',
@@ -25,7 +25,7 @@ const caseStudies = [
     tag: 'UI/UX Design',
     heading: 'Transforming Zonaris with a Cutting-Edge UI/UX & Web Design',
     content: 'We revamped Zonaris’ UI/UX with a sleek, crypto-centric design, improving navigation, trust, and performance boosting user engagement, sign-ups, and Bitcoin staking conversions significantly.',
-    image: '/case_study/Zonaris/cover.webp',
+    image: '/Case_Study/Zonaris/cover.webp',
     imagePosition: 'left',
     bgColor: 'bg-[#65E5F2]',
     tagColor: 'bg-[#51328F] text-white-800',
@@ -38,7 +38,7 @@ const caseStudies = [
     tag: 'Web Development',
     heading: 'Web Design and Development to Improve TrailFire`s Online Presence',
     content: 'We redesigned TrailFire’s website with a high-conversion UI/UX, improved service presentation, and optimized performance, boosting engagement, conversions, and brand authority in PPC solutions.',
-    image: '/case_study/Trailfire/cover.jpeg',
+    image: '/Case_Study/Trailfire/cover.jpeg',
     imagePosition: 'right',
     bgColor: 'bg-[#FCD700]',
     tagColor: 'bg-[#053027] text-white-800',
@@ -53,7 +53,7 @@ const caseStudies = [
     tag: 'SEO',
     heading: 'Strengthening HeyFriday AI’s Online Presence with Strategic SEO & Backlink Building ',
     content: 'We enhanced HeyFriday AI’s SEO through strategic backlink building, increasing domain authority, organic traffic, and search rankings positioning it as a leading AI writing solution.',
-    image: '/case_study/HeyFriday/cover.jpeg',
+    image: '/Case_Study/HeyFriday/cover.jpeg',
     imagePosition: 'left',
     bgColor: 'bg-[#51328F]',
     tagColor: 'bg-[#5E51FE] text-white-800',
@@ -66,7 +66,7 @@ const caseStudies = [
     tag: 'Branding',
     heading: 'Making Epic Teams’ brand identity stronger with powerful design ',
     content: 'We strengthened Epicstreams` brand identity through strategic design, creating a cohesive visual presence, enhancing engagement, and optimizing digital platforms resulting in increased recognition, credibility, and audience inquiries.',
-    image: '/case_study/Epic-Teams/cover.png',
+    image: '/Case_Study/Epic-Teams/cover.png',
     imagePosition: 'right',
     bgColor: 'bg-[#5E51FE]',
     tagColor: 'bg-[#FCD700] text-[#000000]',
@@ -135,7 +135,7 @@ const CaseStudyPage = () => {
           >
             <Breadcrumb
               title="Case Study"
-              backgroundImage="/case_study/bg.avif"
+              backgroundImage="/Case_Study/bg.avif"
             />
           </motion.div>
 

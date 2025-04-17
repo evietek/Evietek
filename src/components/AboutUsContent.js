@@ -98,7 +98,7 @@ const AboutPageContent = () => {
 
       <motion.div variants={itemVariants}>
         <AboutBanner
-          imageUrl="/About_us/4.jpg"
+          imageUrl="/About_Us/4.jpg"
           heading="24/7 Support"
           content="Get real-time assistance for all your digital transformation needs, from branding strategies and content creation to web development whenever you need it."
           startColor='#8750F7'

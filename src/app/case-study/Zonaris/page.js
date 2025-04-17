@@ -30,7 +30,7 @@ const Zonaris = () => {
         >
           <Breadcrumb
             title="Zonaris"
-            backgroundImage="/case_study/bg.avif"
+            backgroundImage="/Case_Study/bg.avif"
           />
         </motion.div>
       </section>

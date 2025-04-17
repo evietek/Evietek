@@ -44,6 +44,7 @@ export default function ServicesSection() {
             icon: "/Our_Services/Website_Logo.svg",
             decoration: "/Our_Services/Decor_1.svg",
             link: "/website-design",
+            variant:1
         },
         {
             title: "Branding Design",
@@ -51,7 +52,8 @@ export default function ServicesSection() {
             icon: "/Our_Services/Branding_Design_Logo.svg",
             decoration: "/Our_Services/Decor_2.svg",
             link: "/branding",
-            borderColor: "border-[#5E51FE]/30"
+            borderColor: "border-[#5E51FE]/30",
+            variant:2
 
         },
         {
@@ -59,7 +61,8 @@ export default function ServicesSection() {
             description: "Dominate digital platforms with strategic content that attracts, engages, and converts your audience.",
             icon: "/Our_Services/Marketing_Logo.svg",
             decoration: "/Our_Services/Decor_3.svg",
-            link: "/social-media-marketing"
+            link: "/social-media-marketing",
+            variant:3
         }
     ];
 
@@ -115,20 +118,22 @@ export default function ServicesSection() {
 
             {/* Services Cards Section */}
             <div className="mt-10 flex flex-wrap justify-center gap-4 lg:gap-6">
-                {services.map((service) => (
-                    <Link key={service.title} href={service.link} passHref>
-                        <div className="cursor-pointer">
-                            <ServiceCard
-                                background="white"
-                                title={service.title}
-                                description={service.description}
-                                icon={service.icon}
-                                decoration={service.decoration}
-                                borderColor={service.borderColor}
-                            />
-                        </div>
-                    </Link>
-                ))}
+                {services.map((service) => {
+                    return (
+                        <Link key={service.title} href={service.link} passHref>
+                            <div className="cursor-pointer">
+                                <ServiceCard
+                                    background="white"
+                                    title={service.title}
+                                    description={service.description}
+                                    icon={service.icon}
+                                    decoration={service.decoration}
+                                    variant={service.variant}
+                                    borderColor={service.borderColor} />
+                            </div>
+                        </Link>
+                    );
+                })}
             </div>
 
             {/* Decorative Sticker (Right Corner) */}

@@ -155,7 +155,7 @@ export default function WorkProcessSection() {
             >
               <div className="w-7 h-7">
                 <Image
-                  src="/phone.svg"
+                  src="/Phone.svg"
                   alt="Phone"
                   width={20}
                   height={20}
@@ -175,7 +175,7 @@ export default function WorkProcessSection() {
           >
             <div className="w-7 h-7">
               <Image
-                src="/phone.svg"
+                src="/Phone.svg"
                 alt="Phone"
                 width={20}
                 height={20}

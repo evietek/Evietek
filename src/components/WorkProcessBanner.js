@@ -3,19 +3,27 @@
 export default function WorkProcessBanner() {
   const marqueeContent = (
     <>
-      <span>UX/UI Design</span>
+      <span>UI/Ux Design</span>
       <span className="mx-4">-</span>
       <span>Web Development</span>
       <span className="mx-4">-</span>
-      <span>Landing Page Design</span>
+      <span>Mobile App Development</span>
       <span className="mx-4">-</span>
       <span>Graphic Design</span>
       <span className="mx-4">-</span>
-      <span>UX/UI Design</span>
+      <span>UI/UX Design</span>
       <span className="mx-4">-</span>
       <span>Web Development</span>
       <span className="mx-4">-</span>
-      <span>Landing Page Design</span>
+      <span>Mobile App Development</span>
+      <span className="mx-4">-</span>
+      <span>Graphic Design</span>
+      <span className="mx-4">-</span>
+      <span>UI/UX Design</span>
+      <span className="mx-4">-</span>
+      <span>Web Development</span>
+      <span className="mx-4">-</span>
+      <span>Mobile App Development</span>
       <span className="mx-4">-</span>
       <span>Graphic Design</span>
       <span className="mx-4">-</span>

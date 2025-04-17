@@ -30,7 +30,7 @@ const EpicTeams = () => {
         >
           <Breadcrumb
             title="EpicTeams"
-            backgroundImage="/case_study/bg.avif"
+            backgroundImage="/Case_Study/bg.avif"
           />
         </motion.div>
       </section>

@@ -101,7 +101,7 @@ export default function AboutContent() {
       transition={{ duration: 0.3 }}
     >
       <Image 
-        src="/phone.svg" 
+        src="/Phone.svg" 
         alt="Phone" 
         width={20} 
         height={20} 

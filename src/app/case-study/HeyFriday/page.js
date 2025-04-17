@@ -30,7 +30,7 @@ const HeyFriday = () => {
         >
           <Breadcrumb
             title="HeyFriday"
-            backgroundImage="/case_study/bg.avif"
+            backgroundImage="/Case_Study/bg.avif"
           />
         </motion.div>
       </section>
