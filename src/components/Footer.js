@@ -197,9 +197,9 @@ export default function Footer() {
     <p>201 Barry Pl, London, Ontario, Canada</p>
   </div>
 </li>
-<li className="flex justify-center space-x-4 pt-3">
+<li className="flex space-x-4 pt-3">
   <a href="#" className="hover:opacity-80 transition-opacity">
-    <Image src="/Footer/Linkedin.svg" alt="LinkedIn" width={24} height={24} className="w-10 h-10" />
+    <Image src="/Footer/Linkedin.svg" alt="linkedIn" width={24} height={24} className="w-10 h-10" />
   </a>
   <a href="https://www.behance.net/evietekstudio" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
     <Image src="/Footer/Behance.svg" alt="Behance" width={24} height={24} className="w-10 h-10" />
