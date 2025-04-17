@@ -44,7 +44,7 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
-  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials, ...testimonials, ...testimonials];
 
   const tickerRef1 = useRef(null);
   const tickerRef2 = useRef(null);
@@ -63,6 +63,10 @@ export default function TestimonialsSection() {
 
   const [hasPlayedMagnet, setHasPlayedMagnet] = useState(false);
 
+  // 👇 Speed Variables (adjust here)
+  const SCROLL_SPEED_TOP = 1;
+  const SCROLL_SPEED_BOTTOM = 1;
+
   const handleMagnetEnter = () => {
     if (!hasPlayedMagnet) {
       setHasPlayedMagnet(true);
@@ -79,8 +83,10 @@ export default function TestimonialsSection() {
         if (firstItem1 && firstItem2) {
           const width1 = firstItem1.offsetWidth;
           const width2 = firstItem2.offsetWidth;
+
           setItemWidth1(width1);
           setItemWidth2(width2);
+
           position2.current = -width2 * (duplicatedTestimonials.length - testimonials.length);
         }
       }
@@ -93,10 +99,12 @@ export default function TestimonialsSection() {
 
   const animate1 = () => {
     if (!isPaused1 && tickerRef1.current) {
-      position1.current -= 1.5;
-      if (position1.current <= -itemWidth1) {
+      position1.current -= SCROLL_SPEED_TOP;
+
+      if (position1.current <= -itemWidth1 * duplicatedTestimonials.length) {
         position1.current = 0;
       }
+
       tickerRef1.current.querySelector(".ticker-track").style.transform = `translateX(${position1.current}px)`;
     }
     animationRef1.current = requestAnimationFrame(animate1);
@@ -104,10 +112,12 @@ export default function TestimonialsSection() {
 
   const animate2 = () => {
     if (!isPaused2 && tickerRef2.current) {
-      position2.current += 1.5;
+      position2.current += SCROLL_SPEED_BOTTOM;
+
       if (position2.current >= 0) {
-        position2.current = -itemWidth2;
+        position2.current = -itemWidth2 * (duplicatedTestimonials.length - testimonials.length);
       }
+
       tickerRef2.current.querySelector(".ticker-track").style.transform = `translateX(${position2.current}px)`;
     }
     animationRef2.current = requestAnimationFrame(animate2);
