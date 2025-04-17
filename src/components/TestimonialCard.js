@@ -1,95 +1,65 @@
-// import { useState } from "react";
-
-// export default function TestimonialCard({ name, title, review, stars = 5, link }) {
-//   const [isHovered, setIsHovered] = useState(false);
-
-//   const handleMouseEnter = () => {
-//     setIsHovered(true);
-//   };
-
-//   const handleMouseLeave = () => {
-//     setIsHovered(false);
-//   };
-
-//   // Shadow styling based on the screenshot (X:0, Y:0, Blur:103, Spread:0, #CCCBEE)
-//   const shadowStyle = isHovered 
-//     ? "0 0 30px 0 rgba(204, 203, 238, 1)" 
-//     : "0 1px 1px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"; // Default shadow-md
-
-//   return (
-//     <a
-//       href={link || "#"}
-//       target="_blank"
-//       rel="noopener noreferrer"
-//     >
-//       <div
-//         className={`bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 ${isHovered ? '-translate-y-1' : ''} h-[300px] md:h-[320px] lg:h-[280px] w-full cursor-pointer border-2 border-[#030438]`} // Added border-4 and custom border color
-//         style={{ boxShadow: shadowStyle }}
-//         onMouseEnter={handleMouseEnter}
-//         onMouseLeave={handleMouseLeave}
-//       >
-//         <h3 className="text-xl font-semibold text-[#341E61] mb-1 md:mb-2">{title}</h3>
-
-//         {/* Trustpilot Style Stars */}
-//         <div className="flex justify-center gap-1 mb-2 md:mb-4">
-//           {[...Array(stars)].map((_, i) => (
-//             <span key={i} className="text-[#00B67A] text-2xl">★</span>
-//           ))}
-//         </div>
-
-//         <p className="text-gray-600 text-sm mb-2 md:mb-6 italic">{review}</p>
-//         <p className="font-medium text-[#341E61]">{name}</p>
-//       </div>
-//     </a>
-//   );
-// }
-
-
 import { useState } from "react";
+import TrustpilotStars from "./TrustpilotStars";
 
-export default function TestimonialCard({ name, title, review, stars = 5, link }) {
+export default function TestimonialCard({ 
+  name, 
+  position, 
+  company, 
+  review, 
+  rating = 5, // Rating out of 5
+  date = "18/02/2025", 
+  avatar,
+  link = "#", 
+}) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  // Convert your 5-star rating to TrustPilot's 10-point scale
+  const trustpilotScore = (rating * 2).toFixed(1);
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  // Shadow styling based on the screenshot (X:0, Y:0, Blur:103, Spread:0, #CCCBEE)
+  // Shadow styling
   const shadowStyle = isHovered 
     ? "0 0 30px 0 rgba(204, 203, 238, 1)" 
-    : "0 1px 1px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"; // Default shadow-md
+    : "0 1px 1px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)";
 
   return (
     <a
-      href={link || "#"}
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
+      className="block h-full"
     >
       <div
-        className={`bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 ${isHovered ? '-translate-y-1' : ''} h-[320px] w-full cursor-pointer border-2 border-[#030438] flex flex-col justify-between`} // Added flexbox and fixed height
+        className={`bg-[#F6F5FF] rounded-xl px-6 py-4 transition-all duration-300 ${isHovered ? '-translate-y-1' : ''} w-full cursor-pointer flex flex-col justify-between h-full min-h-[140px]`}
         style={{ boxShadow: shadowStyle }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Heading */}
-        <h3 className="text-xl font-semibold text-[#341E61] mb-2">{title}</h3>
-
-        {/* Trustpilot Style Stars */}
-        <div className="flex justify-center gap-1 mb-2">
-          {[...Array(stars)].map((_, i) => (
-            <span key={i} className="text-[#00B67A] text-2xl">★</span>
-          ))}
+        {/* Date and Stars Row */}
+        <div className="flex flex-col mb-4">
+          <div className="flex justify-between items-center">
+            {/* TrustPilot Stars (in exact style) */}
+            <div className="w-36">
+              <TrustpilotStars score={parseFloat(trustpilotScore)} />
+            </div>
+            <span className="text-gray-500 font-medium text-sm">{date}</span>
+          </div>
         </div>
 
-        {/* Review */}
-        <p className="text-gray-600 text-sm mb-4 italic">{review}</p>
+        {/* Review Text - Limited to 2 lines with ellipsis */}
+        <p className="text-gray-900 italic text-sm line-clamp-2 mb-4">"{review}"</p>
 
-        {/* Name */}
-        <p className="font-medium text-[#341E61]">{name}</p>
+        {/* Profile Section */}
+        <div className="flex items-center mt-auto">
+          {avatar && (
+            <div className="w-10 h-10 rounded-full overflow-hidden mr-3 flex-shrink-0">
+              <img src={avatar} alt={`${name}'s avatar`} className="w-full h-full object-cover" />
+            </div>
+          )}
+          <div className="text-left">
+            <p className="font-medium text-[#341E61]">{name}</p>
+            <p className="text-gray-500 text-xs">{position} {company && `- ${company}`}</p>
+          </div>
+        </div>
       </div>
     </a>
   );

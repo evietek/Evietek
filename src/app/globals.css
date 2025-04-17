@@ -333,3 +333,28 @@ button,
     }
   }
 }
+
+
+/* TrustPilot styling */
+.trustpilot-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trustpilot-banner__stars {
+  width: 100%;
+  height: auto;
+}
+
+.trustpilot-banner__score {
+  text-align: center;
+  color: #007f4e;
+  font-weight: bold;
+  font-size: 0.75rem;
+  font-family: Helvetica, Arial, Sans-serif;
+  line-height: 1.2;
+  margin-top: 0.3em;
+}
+
+/* These styles can be added to your global CSS or imported as a module */
