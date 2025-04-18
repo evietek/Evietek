@@ -126,22 +126,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#030438] text-white pt-20 pb-7 relative select-none">
-
-      {/* Project Inquiry Section */}
-      <div className="px-6 pb-10 text-center">
-        <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[107%] font-bricolage font-bold text-[#F6F5FF] mb-6 select-none cursor-default">
-          Have a Project To Discuss?
-        </h2>
-        <Link href="/book-a-meeting">
-          <button className="bg-[#5E51FE] hover:bg-[#4A40E4] text-white font-medium px-6 py-3 rounded-md shadow transition duration-300">
-            CONTACT US
-          </button>
-        </Link>
-      </div>
+    <footer className="bg-[#030438] text-white pt-0 pb-7 relative select-none">
 
       {/* Footer Links Section */}
-      <div className="mx-auto px-6 mt-12 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-white justify-items-start sm:justify-items-center py-8">
+      <div className="mx-auto px-4 mt-6 mb-12 flex flex-wrap justify-start sm:justify-center text-left gap-x-16 xl:gap-x-32 gap-y-6 text-white pt-0">
       {/* Services */}
         <div className="my-6">
           <h3 className="text-2xl md:text-xl lg:text-2xl font-semibold mb-6 text-white">Services</h3>
@@ -194,10 +182,15 @@ export default function Footer() {
     className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 flex-shrink-0 mt-1"
   />
   <div className="text-left leading-tight text-gray-300 text-lg">
-    <p>201 Barry Pl, London, Ontario, Canada</p>
+    <p>201 Barry Pl, London, <br/ >Ontario, Canada</p>
   </div>
 </li>
-<li className="flex space-x-4 pt-3">
+
+
+          </ul>
+        </div>
+      </div>
+      <div><li className="flex space-x-4 pt-0 justify-center gap-4">
   <a href="#" className="hover:opacity-80 transition-opacity">
     <Image src="/Footer/Linkedin.svg" alt="linkedIn" width={24} height={24} className="w-10 h-10" />
   </a>
@@ -213,12 +206,7 @@ export default function Footer() {
   <a href="https://www.facebook.com/evietek" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
     <Image src="/Footer/Facebook.svg" alt="Facebook" width={24} height={24} className="w-10 h-10" />
   </a>
-</li>
-
-
-          </ul>
-        </div>
-      </div>
+</li></div>
 
        {/* Copyright */}
       <div className="px-6 relative">
@@ -228,7 +216,7 @@ export default function Footer() {
       </div>
 
       {/* Corner Icon */}
-      <div className="absolute bottom-2 md:bottom-0 left-3 sm:left-6 lg:left-10 w-7 h-7 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+      <div className="absolute bottom-2 md:bottom-10 left-3 sm:left-6 lg:left-10 w-7 h-7 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
         <Image src="/Footer/icon.svg" alt="Icon" fill style={{ objectFit: "contain" }} />
       </div>
     </footer>

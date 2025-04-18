@@ -122,7 +122,7 @@ const AccordionColumn = ({ faqs, columnType }) => {
 
 export default function FAQSection() {
   return (
-    <section className="bg-white py-16 px-6">
+    <section className="bg-white pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[107%] font-bricolage font-bold text-[#341E61] mb-12 select-none cursor-default text-center">
           <span className="text-[#5E51FE]">Frequently</span>{" "}
