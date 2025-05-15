@@ -11,36 +11,124 @@ const testimonials = [
     title: "Professional and Attentive Team",
     review: "The team was professional and took the time to understand our unique needs, delivering solutions just for us.",
     link: "https://www.trustpilot.com/reviews/67f6b09c284f277bb7444ef6",
-    date: "10/04/2025"
+    date: "April 08, 2025",
+    rating: 5,
   },
   {
     name: "Bolt",
     title: "Perfect for Startups Needing Everything in One Place",
     review: "I was launching a new business and needed everything-logo, website, SEO. They handled it all and made my life so much easier.",
     link: "https://www.trustpilot.com/reviews/67d453b0d4e26444c894ffda",
-    date: "13/03/2025"
+    date: "March 13, 2025",
+    rating: 5,
+  },
+  {
+    name: "Ros H",
+    title: "Open to Feedback",
+    review: "They listened to our feedback and made changes quickly, matching our vision.",
+    link: "https://www.trustpilot.com/reviews/67faa175af5bc07803ba432a",
+    date: "April 11, 2025",
+    rating: 4,
   },
   {
     name: "Mateo",
     title: "There Was a Delay, But They Handled It Well",
     review: "Our project took a little longer than expected, but they were upfront about it and even included some free social media designs to apologize. Great customer service.",
     link: "https://www.trustpilot.com/reviews/67cc657f900c2b6374720ba7",
-    date: "07/03/2025"
+    date: "March 07, 2025",
+    rating: 5,
   },
   {
     name: "Deny K",
     title: "Affordable Solutions",
     review: "They offered options that fit our budget without lowering quality.",
     link: "https://www.trustpilot.com/reviews/68009ce8057ff7cd864cdade",
-    date: "12/04/2025"
+    date: "April 12, 2025",
+    rating: 5,
   },
   {
     name: "Baler F",
     title: "Improved Search Ranking",
     review: "Their knowledge boosted our website's position on search engines, bringing in more visitors.",
     link: "https://www.trustpilot.com/reviews/67f95765f0629f8326a41fea",
-    date: "09/04/2025"
+    date: "April 09, 2025",
+    rating: 5,
   },
+  {
+    name: "Greyson Nova",
+    title: "Innovative Chatbot Integration",
+    review: "Adding a chatbot to our website has greatly improved customer service and engagement.",
+    link: "https://www.trustpilot.com/reviews/68254b2c4e59a56890bb1e08",
+    date: "May 14, 2025",
+    rating: 4,
+  },
+  {
+    name: "Walker John",
+    title: "Better Website Experience",
+    review: "Our website is now easier to use, leading to happier customers.",
+    link: "https://www.trustpilot.com/reviews/68021be25cfc73f96146b26b",
+    date: "April 16, 2025",
+    rating: 5,
+  },
+  {
+    name: "Mark H",
+    title: "Passionate Team",
+    review: "The team's enthusiasm made working together enjoyable and productive.",
+    link: "https://www.trustpilot.com/reviews/6803e86e177a53b3f5b2ec50",
+    date: "April 17, 2025",
+    rating: 5,
+  },
+  {
+    name: "Finn",
+    title: "Dedicated to Client Happiness",
+    review: "Even though there was a small delay, they gave us an extra month of maintenance, showing their commitment to our success.",
+    link: "https://www.trustpilot.com/reviews/67f23247fc1fc3d9c925fc3b",
+    date: "April 04, 2025",
+    rating: 4,
+  },
+
+  {
+    name: "Phillip",
+    title: "Smooth Branding and Web Design",
+    review: "From logo design to website launch, they provided a unified branding experience that truly represents our company.",
+    link: "https://www.trustpilot.com/reviews/6804aa1b5a370e8453812e2e",
+    date: "April 16, 2025",
+    rating: 5,
+  },
+
+  {
+    name: "Calu k",
+    title: "Complete SEO Services",
+    review: "Thanks to their SEO expertise, our website now ranks higher on search engines, bringing more visitors and potential customers to our business.",
+    link: "https://www.trustpilot.com/reviews/680e6b66d454eac68aba01ff",
+    date: "April 24, 2025",
+    rating: 5,
+  },
+  {
+    name: "Lope",
+    title: "Stronger Online Presence",
+    review: "After launching, we've seen a big improvement in our online visibility, thanks to their expertise.",
+    link: "https://www.trustpilot.com/reviews/681b78bcfca40ee1fdd524b1",
+    date: "May 06, 2025",
+    rating: 5,
+  },
+  {
+    name: "Jasec",
+    title: "Modern Logo Redesign",
+    review: "They handled our logo redesign professionally, giving us a modern look that appeals to our target audience.",
+    link: "https://www.trustpilot.com/reviews/681cb326d20a4cd5eaa1b2da",
+    date: "May 07, 2025",
+    rating: 5,
+  },
+  {
+    name: "Ester K",
+    title: "SEO and Digital Marketing Experts",
+    review: "Their skills in SEO have greatly improved our website's visibility and traffic.",
+    link: "https://www.trustpilot.com/reviews/681e323e9ca872b1ca5710cd",
+    date: "May 07, 2025",
+    rating: 4,
+  },
+
 ];
 
 export default function TestimonialsSection() {

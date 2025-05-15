@@ -7,8 +7,8 @@ export default function TestimonialCard({
   position, 
   company, 
   review, 
-  rating = 5, // Rating out of 5
-  date = "18/02/2025", 
+  rating, // Rating out of 5
+  date, 
   avatar,
   link = "#", 
 }) {
