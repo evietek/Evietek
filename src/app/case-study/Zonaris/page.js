@@ -3,18 +3,6 @@
 import Breadcrumb from '@/components/BreadCrumb';
 import CaseStudyTitle from '@/components/CaseStudyTitle';
 import CaseStudyContent from '@/components/CaseStudyContent';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-
-// Animation Variants
-const headingVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
-};
 
 const Zonaris = () => {
   return (
@@ -22,36 +10,30 @@ const Zonaris = () => {
       <section className="pt-0 relative bg-white select-none cursor-default">
 
         {/* Breadcrumb */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full"
-        >
+        <div className="w-full">
           <Breadcrumb
             title="Zonaris"
             backgroundImage="/Case_Study/bg.avif"
           />
-        </motion.div>
+        </div>
       </section>
 
       <section className="pt-15 md:pt-0 mt-0 px-6 md:px-16 lg:px-0 relative bg-white select-none cursor-default">
-        {/* Case Study Logo Image */}
-        <motion.div
+        {/* Case Study */}
+        <div
           className="flex items-start text-left max-w-6xl mx-auto md:mt-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={headingVariants}
         >
-          <Image
-            src="/Case_Study/casestudy.svg"
-            alt="Case Study"
-            width={120}
-            height={60}
-            className="w-[110px] h-[55px] sm:w-[130px] sm:h-[65px] md:w-[150px] md:h-[75px] lg:w-[120px] lg:h-[60px]"
-          />
-        </motion.div>
+      <div 
+        className="flex items-center justify-center rounded-[12px] lg:mt-5 py-[5px] px-[15px] bg-[#5E51FE]"
+      >
+        <span 
+          className="font-['Bricolage_Grotesque'] font-extrabold text-white 
+                    text-xl sm:text-xl md:text-2xl lg:text-3xl text-center"
+        >
+          Case Study
+        </span>
+      </div>
+        </div>
 
         {/* Case Study Title Section */}
         <div className="max-w-6xl mx-auto px-6">

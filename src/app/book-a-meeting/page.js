@@ -36,7 +36,7 @@ const BookaMeetingPage = () => {
   return (
     <main className="px-6 pt-16 md:px-16 md:pt-20  lg:px-0 lg:pt-30 lg:pb-10 relative bg-[#FFFFFF]">
 
-      <div className="flex flex-col items-center text-center pt-10">
+      <div className="flex flex-col items-center text-center py-10">
         {/* Heading Image */}
         <motion.div
           initial="hidden"
@@ -44,18 +44,20 @@ const BookaMeetingPage = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={headingVariants}
         >
-          <Image 
-            src="/Meeting/Book_A_Meeting.svg"
-            alt="Book a Meeting"
-            width={180}
-            height={70}
-            className="w-[200px] h-[100px] sm:w-[130px] sm:h-[65px] md:w-[240px] md:h-[120px] lg:w-[260px] lg:h-[130px] xl:w-[300px] xl:h-[150px]"
-          />
+      <div 
+        className="flex items-center justify-center rounded-[12px] py-[5px] px-[15px] bg-[#CB73FE] rotate-[-5.5deg]"
+      >
+        <span 
+          className="font-['Bricolage_Grotesque'] font-extrabold text-white text-xl sm:text-xl md:text-2xl lg:text-3xl text-center"
+        >
+          Book A Meeting
+        </span>
+      </div>
         </motion.div>
         
         {/* Content Heading */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-1 select-none cursor-default"
+          className="text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] xl:text-[50px] 2xl:text-[55px] leading-[107%] font-bricolage font-bold text-[#341E61] mt-1 md:mt-3 select-none cursor-default"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
