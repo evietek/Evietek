@@ -7,32 +7,32 @@ import { usePathname } from 'next/navigation';
 const services = [
     {
     title: "Branding",
-    path: "/branding",
+    path: "/services/branding",
     icon: "🎯"
   },
   {
     title: "Content Writing",
-    path: "/content-writing",
+    path: "/services/content-writing",
     icon: "✍️"
   },
   {
     title: "SEO",
-    path: "/seo",
+    path: "/services/seo",
     icon: "🔍"
   },
   {
     title: "Social Media Marketing",
-    path: "/social-media-marketing",
+    path: "/services/social-media-marketing",
     icon: "📱"
   },
     {
     title: "Website Design",
-    path: "/website-design",
+    path: "/services/website-design",
     icon: "🎨"
   },
     {
     title: "Website Development",
-    path: "/website-development",
+    path: "/services/website-development",
     icon: "💻"
   },
 

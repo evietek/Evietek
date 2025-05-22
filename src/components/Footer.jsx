@@ -13,11 +13,13 @@ export default function Footer() {
   <div className="my-6 w-full sm:w-auto">
           <h3 className="text-2xl md:text-xl lg:text-2xl font-semibold mb-6 text-white">Services</h3>
           <ul className="space-y-1 text-lg md:text-md lg:text-lg text-gray-300">
-            <li><Link href="/services/web-application" className="hover:text-[#5E51FE] transition-colors">Web App Development</Link></li>
-            <li><Link href="/services/logo-designing" className="hover:text-[#5E51FE] transition-colors">Logo Designing</Link></li>
             <li><Link href="/services/branding" className="hover:text-[#5E51FE] transition-colors">Branding</Link></li>
+            <li><Link href="/services/content-writing" className="hover:text-[#5E51FE] transition-colors">Content Writing</Link></li>
+            <li><Link href="/services/seo" className="hover:text-[#5E51FE] transition-colors">SEO</Link></li>
             <li><Link href="/services/social-media-marketing" className="hover:text-[#5E51FE] transition-colors">Social Media Marketing</Link></li>
+            <li><Link href="/services/web-application" className="hover:text-[#5E51FE] transition-colors">Web App Development</Link></li>
             <li><Link href="/services/website-design" className="hover:text-[#5E51FE] transition-colors">Web Design</Link></li>
+
 
           </ul>
         </div>
