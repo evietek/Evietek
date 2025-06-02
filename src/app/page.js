@@ -80,7 +80,7 @@ export default function Home() {
           >
             <HeroSection />
             <AboutSection />
-            <ServicesSection services={["Website Design", "Branding Design", "Social Media Marketing"]} showDecorations={true} />
+<ServicesSection services={["Website Design", "Branding Design", "Social Media Marketing" , "Content Writing" , "Website Development", "SEO" ]} showDecorations={true} carousel={true} />
             <PortfolioSection />
             <WorkProcessSection />
             <Projects />

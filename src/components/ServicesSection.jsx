@@ -4,6 +4,7 @@ import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 
 const allServices = [
     {
@@ -41,8 +42,8 @@ const allServices = [
         link: "/services/seo",
         variant: 1
     },
-        {
-                title: "Website Development",
+    {
+        title: "Website Development",
         description: "We build powerful, user-focused web apps that solve problems, boost growth, and drive real impact.",
         icon: "/Our_Services/Website_Development.svg",
         link: "/services/website-development",
@@ -50,10 +51,140 @@ const allServices = [
     }
 ];
 
-export default function ServicesSection({ services = [], showDecorations = true }) {
+export default function ServicesSection({ services = [], showDecorations = true, carousel = false }) {
     const filteredServices = allServices.filter(service =>
         services.includes(service.title)
     );
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [slidesToShow, setSlidesToShow] = useState(1);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [translateX, setTranslateX] = useState(0);
+    const [dragOffset, setDragOffset] = useState(0);
+    const carouselRef = useRef(null);
+
+    // Determine slides to show based on screen size
+    useEffect(() => {
+        const updateSlidesToShow = () => {
+            const width = window.innerWidth;
+            if (width >= 1440) {
+                setSlidesToShow(3); // lg: 3 slides
+            } else if (width >= 768) {
+                setSlidesToShow(2); // md: 2 slides
+            } else {
+                setSlidesToShow(1); // sm: 1 slide
+            }
+        };
+
+        updateSlidesToShow();
+        window.addEventListener('resize', updateSlidesToShow);
+        return () => window.removeEventListener('resize', updateSlidesToShow);
+    }, []);
+
+    // Auto-slide effect for carousel
+    useEffect(() => {
+        if (!carousel || filteredServices.length === 0) return;
+        
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => {
+                const maxIndex = Math.max(0, filteredServices.length - slidesToShow);
+                return prevIndex >= maxIndex ? 0 : prevIndex + 1;
+            });
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, [carousel, filteredServices.length, slidesToShow]);
+
+    // Update translateX when currentIndex or slidesToShow changes
+    useEffect(() => {
+        if (carousel && carouselRef.current) {
+            const slideWidth = carouselRef.current.offsetWidth / slidesToShow;
+            setTranslateX(-currentIndex * slideWidth);
+        }
+    }, [currentIndex, slidesToShow, carousel]);
+
+    const goToPrevious = () => {
+        setCurrentIndex(prev => Math.max(0, prev - 1));
+    };
+
+    const goToNext = () => {
+        const maxIndex = Math.max(0, filteredServices.length - slidesToShow);
+        setCurrentIndex(prev => Math.min(maxIndex, prev + 1));
+    };
+
+    // Touch/Mouse event handlers for swipe functionality
+    const handleStart = (clientX) => {
+        setIsDragging(true);
+        setStartX(clientX);
+        setDragOffset(0);
+    };
+
+    const handleMove = (clientX) => {
+        if (!isDragging) return;
+        
+        const diff = clientX - startX;
+        setDragOffset(diff);
+    };
+
+    const handleEnd = () => {
+        if (!isDragging) return;
+        
+        const threshold = 50; // Minimum distance to trigger slide change
+        
+        if (Math.abs(dragOffset) > threshold) {
+            if (dragOffset > 0) {
+                // Swiped right - go to previous
+                goToPrevious();
+            } else {
+                // Swiped left - go to next
+                goToNext();
+            }
+        }
+        
+        setIsDragging(false);
+        setDragOffset(0);
+    };
+
+    // Mouse events
+    const handleMouseDown = (e) => {
+        e.preventDefault();
+        handleStart(e.clientX);
+    };
+
+    const handleMouseMove = (e) => {
+        handleMove(e.clientX);
+    };
+
+    const handleMouseUp = () => {
+        handleEnd();
+    };
+
+    // Touch events
+    const handleTouchStart = (e) => {
+        handleStart(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        handleMove(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        handleEnd();
+    };
+
+    // Add mouse event listeners
+    useEffect(() => {
+        if (isDragging) {
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+            
+            return () => {
+                document.removeEventListener('mousemove', handleMouseMove);
+                document.removeEventListener('mouseup', handleMouseUp);
+            };
+        }
+    }, [isDragging, startX]);
 
     const headingVariants = {
         hidden: { opacity: 0, y: 50 },
@@ -81,6 +212,10 @@ export default function ServicesSection({ services = [], showDecorations = true 
             transition: { duration: 1.3, ease: "easeOut" }
         }
     };
+
+    const maxIndex = Math.max(0, filteredServices.length - slidesToShow);
+    const canGoPrev = currentIndex > 0;
+    const canGoNext = currentIndex < maxIndex;
 
     return (
         <section id="services" className="relative bg-[#FFFFFF] text-[#333] py-3 md:py-8 lg:pt-8 px-4 md:px-8 lg:px-12 pb-0">
@@ -118,24 +253,101 @@ export default function ServicesSection({ services = [], showDecorations = true 
                 </motion.h2>
             </div>
 
-            {/* Cards */}
-            <div className="mt-10 flex flex-wrap justify-center gap-4 lg:gap-6">
-                {filteredServices.map(service => (
-                    <Link key={service.title} href={service.link} passHref>
-                        <div className="cursor-pointer">
-                            <ServiceCard
-                                background="white"
-                                title={service.title}
-                                description={service.description}
-                                icon={service.icon}
-                                decoration={service.decoration}
-                                variant={service.variant}
-                                borderColor={service.borderColor}
-                            />
+            {/* Cards - Grid or Carousel */}
+            {carousel ? (
+                <div className="mt-10 relative">
+                    {/* Carousel Container */}
+                    <div className="overflow-hidden">
+                        <div 
+                            ref={carouselRef}
+                            className="flex transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing select-none"
+                            style={{ 
+                                transform: `translateX(${translateX + dragOffset}px)`,
+                                transition: isDragging ? 'none' : 'transform 0.3s ease-out'
+                            }}
+                            onMouseDown={handleMouseDown}
+                            onTouchStart={handleTouchStart}
+                            onTouchMove={handleTouchMove}
+                            onTouchEnd={handleTouchEnd}
+                        >
+                            {filteredServices.map((service, index) => (
+                                <div 
+                                    key={service.title}
+                                    className="flex-shrink-0 md:pl-2 lg:pl-12 xl:pl-16"
+                                    style={{ 
+                                        width: `${100 / slidesToShow}%`
+                                    }}
+                                >
+                                    <Link href={service.link} passHref>
+                                        <div className="cursor-pointer h-full">
+                                            <ServiceCard
+                                                background="white"
+                                                title={service.title}
+                                                description={service.description}
+                                                icon={service.icon}
+                                                decoration={service.decoration}
+                                                variant={service.variant}
+                                                borderColor={service.borderColor}
+                                            />
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))}
                         </div>
-                    </Link>
-                ))}
-            </div>
+                    </div>
+
+                    {/* Carousel Controls */}
+                    <div className="flex justify-center items-center mt-6 gap-4">
+                        <button
+                            onClick={goToPrevious}
+                            disabled={!canGoPrev}
+                            className={`text-white rounded-full p-3 transition-all duration-200 ${
+                                canGoPrev 
+                                    ? 'bg-[#5E51FE] hover:bg-[#4A3FE0] cursor-pointer' 
+                                    : 'bg-gray-300 cursor-not-allowed opacity-50'
+                            }`}
+                            aria-label="Previous service"
+                        >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <button
+                            onClick={goToNext}
+                            disabled={!canGoNext}
+                            className={`text-white rounded-full p-3 transition-all duration-200 ${
+                                canGoNext 
+                                    ? 'bg-[#5E51FE] hover:bg-[#4A3FE0] cursor-pointer' 
+                                    : 'bg-gray-300 cursor-not-allowed opacity-50'
+                            }`}
+                            aria-label="Next service"
+                        >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            ) : (
+                <div className="mt-10 flex flex-wrap justify-center gap-4">
+                    {filteredServices.map(service => (
+                        <Link key={service.title} href={service.link} passHref>
+                            <div className="cursor-pointer">
+                                <ServiceCard
+                                    background="white"
+                                    title={service.title}
+                                    description={service.description}
+                                    icon={service.icon}
+                                    decoration={service.decoration}
+                                    variant={service.variant}
+                                    borderColor={service.borderColor}
+                                />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            )}
 
             {/* Optional Decorations */}
             {showDecorations && (

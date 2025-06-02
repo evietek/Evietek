@@ -16,7 +16,7 @@ That Drive Results`}
 and grow your brand across every digital touchpoint.`}
 />
 <div className="relative pt-16" />
-<ServicesSection services={["Website Design", "Branding Design", "Social Media Marketing" , "Content Writing" , "Website Development", "SEO" ]} showDecorations={false} />
+<ServicesSection services={["Website Design", "Branding Design", "Social Media Marketing" , "Content Writing" , "Website Development", "SEO" ]} showDecorations={false} carousel={false} />
             <IndustriesServed/>
             <PortfolioSection/>
     </main>
