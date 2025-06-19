@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { InlineWidget } from "react-calendly";
 
@@ -33,6 +34,17 @@ const floatingAnimation = {
 };
 
 const BookaMeetingPage = () => {
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.data.event === "calendly.event_scheduled") {
+        if (window.rdt) {
+          window.rdt('track', 'Lead');
+        }
+      }
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
+  }, []);
   return (
     <main className="px-6 pt-16 md:px-16 md:pt-20  lg:px-0 lg:pt-30 lg:pb-10 relative bg-[#FFFFFF]">
 
